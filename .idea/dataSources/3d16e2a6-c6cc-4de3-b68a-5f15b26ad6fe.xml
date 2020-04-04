@@ -36,7 +36,7 @@ sequence|table|34297|34299|1
     <database id="5" parent="1" name="zzz">
       <ObjectId>34379</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>2467</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2469</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|34588|34585|1
 sequence|table|34593|34590|1
@@ -47,10 +47,10 @@ sequence|table|34613|34610|1
 sequence|table|34618|34615|1
 sequence|table|34623|34620|1
 sequence|table|34631|34628|1
+sequence|table|34633|34625|1
 sequence|table|34638|34635|1
 sequence|table|34643|34640|1
 sequence|table|34648|34645|1
-sequence|table|34633|34625|1
 </Relations>
     </database>
     <role id="6" parent="1" name="pg_monitor">
@@ -93,7 +93,7 @@ sequence|table|34633|34625|1
       <Comment>standard public schema</Comment>
       <StateNumber>2359</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>2468</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2470</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="15" parent="5" name="btree">
