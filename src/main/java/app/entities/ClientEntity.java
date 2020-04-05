@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "client", schema = "public", catalog = "zzz")
+@Table(name = "client", schema = "public", catalog = "sale_of_apartments")
 public class ClientEntity {
     private int idClient;
     private String name;
@@ -162,8 +162,8 @@ public class ClientEntity {
         this.apartmentSalesByIdClient_0 = apartmentSalesByIdClient_0;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "role", referencedColumnName = "id_role", nullable = false)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "role", referencedColumnName = "id_role", nullable = false,insertable=false, updatable=false)
     public ClientRoleEntity getClientRoleByRole() {
         return clientRoleByRole;
     }

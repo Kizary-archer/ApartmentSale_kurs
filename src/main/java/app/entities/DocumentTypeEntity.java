@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "document_type", schema = "public", catalog = "zzz")
+@Table(name = "document_type", schema = "public", catalog = "sale_of_apartments")
 public class DocumentTypeEntity {
     private int idType;
     private String nameType;

@@ -5,15 +5,15 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "apartment", schema = "public", catalog = "zzz")
+@Table(name = "apartment", schema = "public", catalog = "sale_of_apartments")
 public class ApartmentEntity {
     private int idApartment;
     private int numberApartment;
-    private float countRoom;
-    private int livingSpace;
-    private Object meterPrice;
+    private int countRoom;
+    private float livingSpace;
     private int house;
     private int apartmentOwner;
+    private int meterPrice;
     private HouseEntity houseByHouse;
     private ClientEntity clientByApartmentOwner;
     private Collection<ApartmentSaleEntity> apartmentSalesByIdApartment;
@@ -39,33 +39,23 @@ public class ApartmentEntity {
     }
 
     @Basic
-    @Column(name = "count_room", nullable = false, precision = 0)
-    public float getCountRoom() {
+    @Column(name = "count_room", nullable = false)
+    public int getCountRoom() {
         return countRoom;
     }
 
-    public void setCountRoom(float countRoom) {
+    public void setCountRoom(int countRoom) {
         this.countRoom = countRoom;
     }
 
     @Basic
-    @Column(name = "living_space", nullable = false)
-    public int getLivingSpace() {
+    @Column(name = "living_space", nullable = false, precision = 0)
+    public float getLivingSpace() {
         return livingSpace;
     }
 
-    public void setLivingSpace(int livingSpace) {
+    public void setLivingSpace(float livingSpace) {
         this.livingSpace = livingSpace;
-    }
-
-    @Basic
-    @Column(name = "meter_price", nullable = false)
-    public Object getMeterPrice() {
-        return meterPrice;
-    }
-
-    public void setMeterPrice(Object meterPrice) {
-        this.meterPrice = meterPrice;
     }
 
     @Basic
@@ -88,6 +78,16 @@ public class ApartmentEntity {
         this.apartmentOwner = apartmentOwner;
     }
 
+    @Basic
+    @Column(name = "meter_price", nullable = false)
+    public int getMeterPrice() {
+        return meterPrice;
+    }
+
+    public void setMeterPrice(int meterPrice) {
+        this.meterPrice = meterPrice;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -95,20 +95,20 @@ public class ApartmentEntity {
         ApartmentEntity that = (ApartmentEntity) o;
         return idApartment == that.idApartment &&
                 numberApartment == that.numberApartment &&
-                Float.compare(that.countRoom, countRoom) == 0 &&
-                livingSpace == that.livingSpace &&
+                countRoom == that.countRoom &&
+                Float.compare(that.livingSpace, livingSpace) == 0 &&
                 house == that.house &&
                 apartmentOwner == that.apartmentOwner &&
-                Objects.equals(meterPrice, that.meterPrice);
+                meterPrice == that.meterPrice;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idApartment, numberApartment, countRoom, livingSpace, meterPrice, house, apartmentOwner);
+        return Objects.hash(idApartment, numberApartment, countRoom, livingSpace, house, apartmentOwner, meterPrice);
     }
 
-    @ManyToOne
-    @JoinColumn(name = "house", referencedColumnName = "id_house", nullable = false)
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "house", referencedColumnName = "id_house", nullable = false,insertable=false, updatable=false)
     public HouseEntity getHouseByHouse() {
         return houseByHouse;
     }
@@ -117,8 +117,8 @@ public class ApartmentEntity {
         this.houseByHouse = houseByHouse;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "apartment_owner", referencedColumnName = "id_client", nullable = false)
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "apartment_owner", referencedColumnName = "id_client", nullable = false,insertable=false, updatable=false)
     public ClientEntity getClientByApartmentOwner() {
         return clientByApartmentOwner;
     }

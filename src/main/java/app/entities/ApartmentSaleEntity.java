@@ -5,7 +5,7 @@ import java.sql.Date;
 import java.util.Objects;
 
 @Entity
-@Table(name = "apartment_sale", schema = "public", catalog = "zzz")
+@Table(name = "apartment_sale", schema = "public", catalog = "sale_of_apartments")
 public class ApartmentSaleEntity {
     private int idSale;
     private int apartment;
@@ -13,8 +13,8 @@ public class ApartmentSaleEntity {
     private int buyer;
     private int agent;
     private Date date;
-    private Object price;
     private Integer searchApartment;
+    private int price;
     private ApartmentEntity apartmentByApartment;
     private ClientEntity clientByOwnerApartment;
     private ClientEntity clientByBuyer;
@@ -82,16 +82,6 @@ public class ApartmentSaleEntity {
     }
 
     @Basic
-    @Column(name = "price", nullable = false)
-    public Object getPrice() {
-        return price;
-    }
-
-    public void setPrice(Object price) {
-        this.price = price;
-    }
-
-    @Basic
     @Column(name = "search_apartment", nullable = true)
     public Integer getSearchApartment() {
         return searchApartment;
@@ -99,6 +89,16 @@ public class ApartmentSaleEntity {
 
     public void setSearchApartment(Integer searchApartment) {
         this.searchApartment = searchApartment;
+    }
+
+    @Basic
+    @Column(name = "price", nullable = false)
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override
@@ -111,18 +111,18 @@ public class ApartmentSaleEntity {
                 ownerApartment == that.ownerApartment &&
                 buyer == that.buyer &&
                 agent == that.agent &&
+                price == that.price &&
                 Objects.equals(date, that.date) &&
-                Objects.equals(price, that.price) &&
                 Objects.equals(searchApartment, that.searchApartment);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idSale, apartment, ownerApartment, buyer, agent, date, price, searchApartment);
+        return Objects.hash(idSale, apartment, ownerApartment, buyer, agent, date, searchApartment, price);
     }
 
-    @ManyToOne
-    @JoinColumn(name = "apartment", referencedColumnName = "id_apartment", nullable = false)
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "apartment", referencedColumnName = "id_apartment", nullable = false,insertable=false, updatable=false)
     public ApartmentEntity getApartmentByApartment() {
         return apartmentByApartment;
     }
@@ -131,8 +131,8 @@ public class ApartmentSaleEntity {
         this.apartmentByApartment = apartmentByApartment;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "owner_apartment", referencedColumnName = "id_client", nullable = false)
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "owner_apartment", referencedColumnName = "id_client", nullable = false,insertable=false, updatable=false)
     public ClientEntity getClientByOwnerApartment() {
         return clientByOwnerApartment;
     }
@@ -141,8 +141,8 @@ public class ApartmentSaleEntity {
         this.clientByOwnerApartment = clientByOwnerApartment;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "buyer", referencedColumnName = "id_client", nullable = false)
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "buyer", referencedColumnName = "id_client", nullable = false,insertable=false, updatable=false)
     public ClientEntity getClientByBuyer() {
         return clientByBuyer;
     }
@@ -151,8 +151,8 @@ public class ApartmentSaleEntity {
         this.clientByBuyer = clientByBuyer;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "agent", referencedColumnName = "id_agent", nullable = false)
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "agent", referencedColumnName = "id_agent", nullable = false,insertable=false, updatable=false)
     public AgentEntity getAgentByAgent() {
         return agentByAgent;
     }
@@ -161,8 +161,8 @@ public class ApartmentSaleEntity {
         this.agentByAgent = agentByAgent;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "search_apartment", referencedColumnName = "id_apartment")
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "search_apartment", referencedColumnName = "id_apartment",insertable=false, updatable=false)
     public SearchApartmentEntity getSearchApartmentBySearchApartment() {
         return searchApartmentBySearchApartment;
     }

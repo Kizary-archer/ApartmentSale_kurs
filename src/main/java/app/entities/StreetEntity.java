@@ -5,14 +5,15 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "street", schema = "public", catalog = "zzz")
+@Table(name = "street", schema = "public", catalog = "sale_of_apartments")
 public class StreetEntity {
     private int idStreet;
-    private String nameStreet;
+    private int nameStreet;
     private int district;
     private Collection<HouseEntity> housesByIdStreet;
     private Collection<SearchApartmentEntity> searchApartmentsByIdStreet;
-    private DisrictEntity disrictByDistrict;
+    private NameStreetEntity nameStreetByNameStreet;
+    private DistrictEntity districtByDistrict;
 
     @Id
     @Column(name = "id_street", nullable = false)
@@ -25,12 +26,12 @@ public class StreetEntity {
     }
 
     @Basic
-    @Column(name = "name_street", nullable = false, length = 50)
-    public String getNameStreet() {
+    @Column(name = "name_street", nullable = false)
+    public int getNameStreet() {
         return nameStreet;
     }
 
-    public void setNameStreet(String nameStreet) {
+    public void setNameStreet(int nameStreet) {
         this.nameStreet = nameStreet;
     }
 
@@ -50,8 +51,8 @@ public class StreetEntity {
         if (o == null || getClass() != o.getClass()) return false;
         StreetEntity that = (StreetEntity) o;
         return idStreet == that.idStreet &&
-                district == that.district &&
-                Objects.equals(nameStreet, that.nameStreet);
+                nameStreet == that.nameStreet &&
+                district == that.district;
     }
 
     @Override
@@ -77,13 +78,23 @@ public class StreetEntity {
         this.searchApartmentsByIdStreet = searchApartmentsByIdStreet;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "district", referencedColumnName = "id_district", nullable = false)
-    public DisrictEntity getDisrictByDistrict() {
-        return disrictByDistrict;
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "name_street", referencedColumnName = "id_name", nullable = false,insertable=false, updatable=false)
+    public NameStreetEntity getNameStreetByNameStreet() {
+        return nameStreetByNameStreet;
     }
 
-    public void setDisrictByDistrict(DisrictEntity disrictByDistrict) {
-        this.disrictByDistrict = disrictByDistrict;
+    public void setNameStreetByNameStreet(NameStreetEntity nameStreetByNameStreet) {
+        this.nameStreetByNameStreet = nameStreetByNameStreet;
+    }
+
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "district", referencedColumnName = "id_district", nullable = false, insertable=false, updatable=false)
+    public DistrictEntity getDistrictByDistrict() {
+        return districtByDistrict;
+    }
+
+    public void setDistrictByDistrict(DistrictEntity districtByDistrict) {
+        this.districtByDistrict = districtByDistrict;
     }
 }

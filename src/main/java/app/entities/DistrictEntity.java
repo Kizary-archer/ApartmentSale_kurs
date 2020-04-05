@@ -5,8 +5,8 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "disrict", schema = "public", catalog = "zzz")
-public class DisrictEntity {
+@Table(name = "district", schema = "public", catalog = "sale_of_apartments")
+public class DistrictEntity {
     private int idDistrict;
     private String nameDistrict;
     private int city;
@@ -48,7 +48,7 @@ public class DisrictEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        DisrictEntity that = (DisrictEntity) o;
+        DistrictEntity that = (DistrictEntity) o;
         return idDistrict == that.idDistrict &&
                 city == that.city &&
                 Objects.equals(nameDistrict, that.nameDistrict);
@@ -59,8 +59,8 @@ public class DisrictEntity {
         return Objects.hash(idDistrict, nameDistrict, city);
     }
 
-    @ManyToOne
-    @JoinColumn(name = "city", referencedColumnName = "id_city", nullable = false)
+    @ManyToOne(optional=false)
+    @JoinColumn(name = "city", referencedColumnName = "id_city", nullable = false,insertable=false, updatable=false)
     public CityEntity getCityByCity() {
         return cityByCity;
     }
@@ -69,7 +69,7 @@ public class DisrictEntity {
         this.cityByCity = cityByCity;
     }
 
-    @OneToMany(mappedBy = "disrictByDistrict")
+    @OneToMany(mappedBy = "districtByDistrict")
     public Collection<SearchApartmentEntity> getSearchApartmentsByIdDistrict() {
         return searchApartmentsByIdDistrict;
     }
@@ -78,7 +78,7 @@ public class DisrictEntity {
         this.searchApartmentsByIdDistrict = searchApartmentsByIdDistrict;
     }
 
-    @OneToMany(mappedBy = "disrictByDistrict")
+    @OneToMany(mappedBy = "districtByDistrict")
     public Collection<StreetEntity> getStreetsByIdDistrict() {
         return streetsByIdDistrict;
     }

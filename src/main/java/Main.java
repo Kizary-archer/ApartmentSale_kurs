@@ -9,7 +9,7 @@ import javax.persistence.metamodel.EntityType;
 
 import java.util.Map;
 
-public class hibernateExample {
+public class Main {
     private static final SessionFactory ourSessionFactory;
 
     static {

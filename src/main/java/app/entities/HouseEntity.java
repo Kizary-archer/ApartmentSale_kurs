@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "house", schema = "public", catalog = "zzz")
+@Table(name = "house", schema = "public", catalog = "sale_of_apartments")
 public class HouseEntity {
     private int idHouse;
     private String numberHouse;
@@ -80,8 +80,8 @@ public class HouseEntity {
         this.apartmentsByIdHouse = apartmentsByIdHouse;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "street", referencedColumnName = "id_street", nullable = false)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "street", referencedColumnName = "id_street", nullable = false,insertable=false, updatable=false)
     public StreetEntity getStreetByStreet() {
         return streetByStreet;
     }
@@ -90,8 +90,8 @@ public class HouseEntity {
         this.streetByStreet = streetByStreet;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "series", referencedColumnName = "id_series")
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "series", referencedColumnName = "id_series",insertable=false, updatable=false)
     public SeriesHouseEntity getSeriesHouseBySeries() {
         return seriesHouseBySeries;
     }

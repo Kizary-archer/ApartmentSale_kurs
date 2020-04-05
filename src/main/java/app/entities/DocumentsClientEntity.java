@@ -5,7 +5,7 @@ import java.sql.Date;
 import java.util.Objects;
 
 @Entity
-@Table(name = "documents_client", schema = "public", catalog = "zzz")
+@Table(name = "documents_client", schema = "public", catalog = "sale_of_apartments")
 public class DocumentsClientEntity {
     private int idPassport;
     private int series;
@@ -106,8 +106,8 @@ public class DocumentsClientEntity {
         return Objects.hash(idPassport, series, number, issued, dateOfIssue, typeDocument, client);
     }
 
-    @ManyToOne
-    @JoinColumn(name = "type_document", referencedColumnName = "id_type", nullable = false)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "type_document", referencedColumnName = "id_type", nullable = false,insertable=false, updatable=false)
     public DocumentTypeEntity getDocumentTypeByTypeDocument() {
         return documentTypeByTypeDocument;
     }
@@ -116,8 +116,8 @@ public class DocumentsClientEntity {
         this.documentTypeByTypeDocument = documentTypeByTypeDocument;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "client", referencedColumnName = "id_client", nullable = false)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "client", referencedColumnName = "id_client", nullable = false,insertable=false, updatable=false)
     public ClientEntity getClientByClient() {
         return clientByClient;
     }

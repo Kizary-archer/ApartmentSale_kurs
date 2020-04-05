@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "series_house", schema = "public", catalog = "zzz")
+@Table(name = "series_house", schema = "public", catalog = "sale_of_apartments")
 public class SeriesHouseEntity {
     private int idSeries;
     private String nameSeries;

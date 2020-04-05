@@ -5,11 +5,11 @@ import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "city", schema = "public", catalog = "zzz")
+@Table(name = "city", schema = "public", catalog = "sale_of_apartments")
 public class CityEntity {
     private int idCity;
     private String nameCity;
-    private Collection<DisrictEntity> disrictsByIdCity;
+    private Collection<DistrictEntity> districtsByIdCity;
     private Collection<SearchApartmentEntity> searchApartmentsByIdCity;
 
     @Id
@@ -47,12 +47,12 @@ public class CityEntity {
     }
 
     @OneToMany(mappedBy = "cityByCity")
-    public Collection<DisrictEntity> getDisrictsByIdCity() {
-        return disrictsByIdCity;
+    public Collection<DistrictEntity> getDistrictsByIdCity() {
+        return districtsByIdCity;
     }
 
-    public void setDisrictsByIdCity(Collection<DisrictEntity> disrictsByIdCity) {
-        this.disrictsByIdCity = disrictsByIdCity;
+    public void setDistrictsByIdCity(Collection<DistrictEntity> districtsByIdCity) {
+        this.districtsByIdCity = districtsByIdCity;
     }
 
     @OneToMany(mappedBy = "cityByCity")
