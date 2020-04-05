@@ -12,6 +12,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.11</maven.compiler.source>
         <maven.compiler.target>1.11</maven.compiler.target>
+
+        <hibernate-version>5.4.13.Final</hibernate-version>
     </properties>
 
     <dependencies>
@@ -27,11 +29,18 @@
             <version>2.3.3</version>
             <scope>provided</scope>
         </dependency>
+<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
+=======
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.4.13.Final</version>
-            <scope>provided</scope>
+            <version>${hibernate-version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate-version}</version>
+        </dependency>
+>>>>>>> hibernate fix
     </dependencies>
 </project>

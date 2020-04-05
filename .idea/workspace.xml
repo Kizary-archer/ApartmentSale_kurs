@@ -7,24 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41128b31-7b8c-420e-88dd-cf1b1b87abe5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/DAO/intefaces/BdCRUDDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/AgentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/ApartmentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/ApartmentSaleEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/CityEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/ClientEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/ClientRoleEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/DisrictEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/DocumentTypeEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/DocumentsClientEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/HouseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/SearchApartmentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/SeriesHouseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/StreetEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hibernateExample.java" afterDir="false" />
+<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/WEB-INF/classes/META-INF/ApartmentSale_kurs.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/WEB-INF/classes/app/entities/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/WEB-INF/classes/app/model/Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/WEB-INF/classes/app/servlets/AddServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/WEB-INF/classes/app/servlets/ListServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/view/add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/view/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+>>>>>>> hibernate fix
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,11 +90,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Quick start" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
+<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
+    <property name="project.structure.side.proportion" value="0.2" />
+=======
     <property name="project.structure.side.proportion" value="0.5908046" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JPA/Hibernate QL" />
+>>>>>>> hibernate fix
   </component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
@@ -100,13 +107,24 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
+=======
+      <recent name="C:\GIT\ApartmentSale_kurs\src\main\resources" />
       <recent name="C:\GIT\ApartmentSale_kurs\bd_damp" />
+>>>>>>> hibernate fix
       <recent name="C:\GIT\ApartmentSale_kurs\src\main" />
       <recent name="C:\GIT\ApartmentSale_kurs\src" />
       <recent name="C:\GIT\ApartmentSale_kurs\src\main\java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.hibernateExample">
+    <configuration name="hibernateExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hibernateExample" />
+      <module name="ApartmentSale_kurs" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.30" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.30" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -181,6 +199,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.hibernateExample" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -217,7 +240,12 @@
       <workItem from="1585928826499" duration="975000" />
       <workItem from="1585930452767" duration="110000" />
       <workItem from="1585941602316" duration="455000" />
+<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
+      <workItem from="1585994884253" duration="103000" />
+=======
       <workItem from="1585994884253" duration="2989000" />
+      <workItem from="1586015995545" duration="2373000" />
+>>>>>>> hibernate fix
     </task>
     <servers />
   </component>
@@ -229,11 +257,19 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="33" key="#HTTP_Proxy/0.0.1366.728@0.0.1366.728" timestamp="1585939517965" />
-    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585998314840">
+<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585941692296">
+=======
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586016240249">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585998314840" />
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586016240249" />
     <state x="511" y="138" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1585998488833">
+>>>>>>> hibernate fix
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585941692296" />
+    <state x="310" y="12" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1585930072489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="511" y="138" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1585998488833" />
@@ -253,9 +289,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="167" width="640" height="421" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1366.728@0.0.1366.728" timestamp="1585941306975" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1585941233631">
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1586017713141">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585941233631" />
     <state width="904" height="151" key="GridCell.Tab.0.bottom" timestamp="1585998340633">
       <screen x="0" y="0" width="1366" height="728" />
@@ -272,12 +309,32 @@
     <state width="904" height="151" key="GridCell.Tab.0.right" timestamp="1585998340633">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="151" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585998340633" />
-    <state width="904" height="151" key="GridCell.Tab.1.bottom" timestamp="1585998340430">
+    <state width="904" height="151" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585941318435" />
+    <state width="904" height="151" key="GridCell.Tab.1.bottom" timestamp="1585941318435">
+=======
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586017713141" />
+    <state width="1322" height="156" key="GridCell.Tab.0.bottom" timestamp="1586020134211">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="151" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585998340430" />
-    <state width="904" height="151" key="GridCell.Tab.1.center" timestamp="1585998340430">
+    <state width="1322" height="156" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586020134211" />
+    <state width="1322" height="156" key="GridCell.Tab.0.center" timestamp="1586020134210">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="156" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586020134210" />
+    <state width="1322" height="156" key="GridCell.Tab.0.left" timestamp="1586020134210">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="156" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586020134210" />
+    <state width="1322" height="156" key="GridCell.Tab.0.right" timestamp="1586020134211">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="156" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586020134211" />
+    <state width="904" height="151" key="GridCell.Tab.1.bottom" timestamp="1585998340430">
+>>>>>>> hibernate fix
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="904" height="151" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585941318435" />
+    <state width="904" height="151" key="GridCell.Tab.1.center" timestamp="1585941318435">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="904" height="151" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1585998340430" />
@@ -304,11 +361,19 @@
     <state width="904" height="151" key="GridCell.Tab.2.right" timestamp="1585998340430">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="151" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1585998340430" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1585998448974">
+<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
+    <state width="904" height="151" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1585941318435" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1585938608617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585998448974" />
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585938608617" />
+=======
+    <state width="904" height="151" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1585998340430" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1586020377417">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586020377417" />
+>>>>>>> hibernate fix
     <state x="339" y="157" key="run.anything.popup" timestamp="1585940852913">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
