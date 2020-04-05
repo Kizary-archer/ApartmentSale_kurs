@@ -15,17 +15,14 @@
         </sourceRoots>
       </configuration>
     </facet>
-<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
-=======
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="dfd9c002-7681-4d8c-9105-a6da05e88d1c" />
+          <unit-entry name="hibernate.cfg.xml" value="e1f9f52a-f225-4525-a89b-d0c5ab131f8e" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
       </configuration>
     </facet>
->>>>>>> hibernate fix
   </component>
 </module>

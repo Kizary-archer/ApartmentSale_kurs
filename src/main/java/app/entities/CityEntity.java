@@ -1,7 +1,6 @@
 package app.entities;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -9,11 +8,9 @@ import java.util.Objects;
 public class CityEntity {
     private int idCity;
     private String nameCity;
-    private Collection<DistrictEntity> districtsByIdCity;
-    private Collection<SearchApartmentEntity> searchApartmentsByIdCity;
 
     @Id
-    @Column(name = "id_city", nullable = false)
+    @Column(name = "id_city")
     public int getIdCity() {
         return idCity;
     }
@@ -23,7 +20,7 @@ public class CityEntity {
     }
 
     @Basic
-    @Column(name = "name_city", nullable = false, length = 50)
+    @Column(name = "name_city")
     public String getNameCity() {
         return nameCity;
     }
@@ -44,23 +41,5 @@ public class CityEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idCity, nameCity);
-    }
-
-    @OneToMany(mappedBy = "cityByCity")
-    public Collection<DistrictEntity> getDistrictsByIdCity() {
-        return districtsByIdCity;
-    }
-
-    public void setDistrictsByIdCity(Collection<DistrictEntity> districtsByIdCity) {
-        this.districtsByIdCity = districtsByIdCity;
-    }
-
-    @OneToMany(mappedBy = "cityByCity")
-    public Collection<SearchApartmentEntity> getSearchApartmentsByIdCity() {
-        return searchApartmentsByIdCity;
-    }
-
-    public void setSearchApartmentsByIdCity(Collection<SearchApartmentEntity> searchApartmentsByIdCity) {
-        this.searchApartmentsByIdCity = searchApartmentsByIdCity;
     }
 }

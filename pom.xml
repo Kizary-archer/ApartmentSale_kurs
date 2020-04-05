@@ -30,8 +30,6 @@
             <version>2.3.3</version>
             <scope>provided</scope>
         </dependency>
-<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
-=======
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>

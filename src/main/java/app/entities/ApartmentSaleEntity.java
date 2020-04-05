@@ -15,14 +15,9 @@ public class ApartmentSaleEntity {
     private Date date;
     private Integer searchApartment;
     private int price;
-    private ApartmentEntity apartmentByApartment;
-    private ClientEntity clientByOwnerApartment;
-    private ClientEntity clientByBuyer;
-    private AgentEntity agentByAgent;
-    private SearchApartmentEntity searchApartmentBySearchApartment;
 
     @Id
-    @Column(name = "id_sale", nullable = false)
+    @Column(name = "id_sale")
     public int getIdSale() {
         return idSale;
     }
@@ -32,7 +27,7 @@ public class ApartmentSaleEntity {
     }
 
     @Basic
-    @Column(name = "apartment", nullable = false)
+    @Column(name = "apartment")
     public int getApartment() {
         return apartment;
     }
@@ -42,7 +37,7 @@ public class ApartmentSaleEntity {
     }
 
     @Basic
-    @Column(name = "owner_apartment", nullable = false)
+    @Column(name = "owner_apartment")
     public int getOwnerApartment() {
         return ownerApartment;
     }
@@ -52,7 +47,7 @@ public class ApartmentSaleEntity {
     }
 
     @Basic
-    @Column(name = "buyer", nullable = false)
+    @Column(name = "buyer")
     public int getBuyer() {
         return buyer;
     }
@@ -62,7 +57,7 @@ public class ApartmentSaleEntity {
     }
 
     @Basic
-    @Column(name = "agent", nullable = false)
+    @Column(name = "agent")
     public int getAgent() {
         return agent;
     }
@@ -72,7 +67,7 @@ public class ApartmentSaleEntity {
     }
 
     @Basic
-    @Column(name = "date", nullable = false)
+    @Column(name = "date")
     public Date getDate() {
         return date;
     }
@@ -82,7 +77,7 @@ public class ApartmentSaleEntity {
     }
 
     @Basic
-    @Column(name = "search_apartment", nullable = true)
+    @Column(name = "search_apartment")
     public Integer getSearchApartment() {
         return searchApartment;
     }
@@ -92,7 +87,7 @@ public class ApartmentSaleEntity {
     }
 
     @Basic
-    @Column(name = "price", nullable = false)
+    @Column(name = "price")
     public int getPrice() {
         return price;
     }
@@ -119,55 +114,5 @@ public class ApartmentSaleEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idSale, apartment, ownerApartment, buyer, agent, date, searchApartment, price);
-    }
-
-    @ManyToOne(optional=false)
-    @JoinColumn(name = "apartment", referencedColumnName = "id_apartment", nullable = false,insertable=false, updatable=false)
-    public ApartmentEntity getApartmentByApartment() {
-        return apartmentByApartment;
-    }
-
-    public void setApartmentByApartment(ApartmentEntity apartmentByApartment) {
-        this.apartmentByApartment = apartmentByApartment;
-    }
-
-    @ManyToOne(optional=false)
-    @JoinColumn(name = "owner_apartment", referencedColumnName = "id_client", nullable = false,insertable=false, updatable=false)
-    public ClientEntity getClientByOwnerApartment() {
-        return clientByOwnerApartment;
-    }
-
-    public void setClientByOwnerApartment(ClientEntity clientByOwnerApartment) {
-        this.clientByOwnerApartment = clientByOwnerApartment;
-    }
-
-    @ManyToOne(optional=false)
-    @JoinColumn(name = "buyer", referencedColumnName = "id_client", nullable = false,insertable=false, updatable=false)
-    public ClientEntity getClientByBuyer() {
-        return clientByBuyer;
-    }
-
-    public void setClientByBuyer(ClientEntity clientByBuyer) {
-        this.clientByBuyer = clientByBuyer;
-    }
-
-    @ManyToOne(optional=false)
-    @JoinColumn(name = "agent", referencedColumnName = "id_agent", nullable = false,insertable=false, updatable=false)
-    public AgentEntity getAgentByAgent() {
-        return agentByAgent;
-    }
-
-    public void setAgentByAgent(AgentEntity agentByAgent) {
-        this.agentByAgent = agentByAgent;
-    }
-
-    @ManyToOne(optional=false)
-    @JoinColumn(name = "search_apartment", referencedColumnName = "id_apartment",insertable=false, updatable=false)
-    public SearchApartmentEntity getSearchApartmentBySearchApartment() {
-        return searchApartmentBySearchApartment;
-    }
-
-    public void setSearchApartmentBySearchApartment(SearchApartmentEntity searchApartmentBySearchApartment) {
-        this.searchApartmentBySearchApartment = searchApartmentBySearchApartment;
     }
 }

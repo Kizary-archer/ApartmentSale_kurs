@@ -1,7 +1,6 @@
 package app.entities;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -16,14 +15,9 @@ public class SearchApartmentEntity {
     private int client;
     private Integer meterPrice;
     private Integer price;
-    private Collection<ApartmentSaleEntity> apartmentSalesByIdApartment;
-    private StreetEntity streetByStreet;
-    private DistrictEntity districtByDistrict;
-    private CityEntity cityByCity;
-    private ClientEntity clientByClient;
 
     @Id
-    @Column(name = "id_apartment", nullable = false)
+    @Column(name = "id_apartment")
     public int getIdApartment() {
         return idApartment;
     }
@@ -33,7 +27,7 @@ public class SearchApartmentEntity {
     }
 
     @Basic
-    @Column(name = "count_room", nullable = true, precision = 0)
+    @Column(name = "count_room")
     public Float getCountRoom() {
         return countRoom;
     }
@@ -43,7 +37,7 @@ public class SearchApartmentEntity {
     }
 
     @Basic
-    @Column(name = "living_space", nullable = true)
+    @Column(name = "living_space")
     public Integer getLivingSpace() {
         return livingSpace;
     }
@@ -53,7 +47,7 @@ public class SearchApartmentEntity {
     }
 
     @Basic
-    @Column(name = "street", nullable = true)
+    @Column(name = "street")
     public Integer getStreet() {
         return street;
     }
@@ -63,7 +57,7 @@ public class SearchApartmentEntity {
     }
 
     @Basic
-    @Column(name = "district", nullable = true)
+    @Column(name = "district")
     public Integer getDistrict() {
         return district;
     }
@@ -73,7 +67,7 @@ public class SearchApartmentEntity {
     }
 
     @Basic
-    @Column(name = "city", nullable = true)
+    @Column(name = "city")
     public Integer getCity() {
         return city;
     }
@@ -83,7 +77,7 @@ public class SearchApartmentEntity {
     }
 
     @Basic
-    @Column(name = "client", nullable = false)
+    @Column(name = "client")
     public int getClient() {
         return client;
     }
@@ -93,7 +87,7 @@ public class SearchApartmentEntity {
     }
 
     @Basic
-    @Column(name = "meter_price", nullable = true)
+    @Column(name = "meter_price")
     public Integer getMeterPrice() {
         return meterPrice;
     }
@@ -103,7 +97,7 @@ public class SearchApartmentEntity {
     }
 
     @Basic
-    @Column(name = "price", nullable = true)
+    @Column(name = "price")
     public Integer getPrice() {
         return price;
     }
@@ -131,54 +125,5 @@ public class SearchApartmentEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idApartment, countRoom, livingSpace, street, district, city, client, meterPrice, price);
-    }
-
-    @OneToMany(mappedBy = "searchApartmentBySearchApartment")
-    public Collection<ApartmentSaleEntity> getApartmentSalesByIdApartment() {
-        return apartmentSalesByIdApartment;
-    }
-
-    public void setApartmentSalesByIdApartment(Collection<ApartmentSaleEntity> apartmentSalesByIdApartment) {
-        this.apartmentSalesByIdApartment = apartmentSalesByIdApartment;
-    }
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "street", referencedColumnName = "id_street",insertable=false, updatable=false)
-    public StreetEntity getStreetByStreet() {
-        return streetByStreet;
-    }
-
-    public void setStreetByStreet(StreetEntity streetByStreet) {
-        this.streetByStreet = streetByStreet;
-    }
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "district", referencedColumnName = "id_district",insertable=false, updatable=false)
-    public DistrictEntity getDistrictByDistrict() {
-        return districtByDistrict;
-    }
-
-    public void setDistrictByDistrict(DistrictEntity districtByDistrict) {
-        this.districtByDistrict = districtByDistrict;
-    }
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "city", referencedColumnName = "id_city",insertable=false, updatable=false)
-    public CityEntity getCityByCity() {
-        return cityByCity;
-    }
-
-    public void setCityByCity(CityEntity cityByCity) {
-        this.cityByCity = cityByCity;
-    }
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "client", referencedColumnName = "id_client", nullable = false,insertable=false, updatable=false)
-    public ClientEntity getClientByClient() {
-        return clientByClient;
-    }
-
-    public void setClientByClient(ClientEntity clientByClient) {
-        this.clientByClient = clientByClient;
     }
 }

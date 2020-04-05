@@ -1,7 +1,6 @@
 package app.entities;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -9,10 +8,9 @@ import java.util.Objects;
 public class NameStreetEntity {
     private int idName;
     private String nameStreet;
-    private Collection<StreetEntity> streetsByIdName;
 
     @Id
-    @Column(name = "id_name", nullable = false)
+    @Column(name = "id_name")
     public int getIdName() {
         return idName;
     }
@@ -22,7 +20,7 @@ public class NameStreetEntity {
     }
 
     @Basic
-    @Column(name = "name_street", nullable = false, length = 50)
+    @Column(name = "name_street")
     public String getNameStreet() {
         return nameStreet;
     }
@@ -43,14 +41,5 @@ public class NameStreetEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idName, nameStreet);
-    }
-
-    @OneToMany(mappedBy = "nameStreetByNameStreet")
-    public Collection<StreetEntity> getStreetsByIdName() {
-        return streetsByIdName;
-    }
-
-    public void setStreetsByIdName(Collection<StreetEntity> streetsByIdName) {
-        this.streetsByIdName = streetsByIdName;
     }
 }

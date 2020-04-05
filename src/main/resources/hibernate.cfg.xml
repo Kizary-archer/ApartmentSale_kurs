@@ -26,14 +26,9 @@
         <mapping class="app.entities.DocumentTypeEntity"/>
         <mapping class="app.entities.DocumentsClientEntity"/>
         <mapping class="app.entities.HouseEntity"/>
-        <mapping class="app.entities.NameStreetEntity"/>
         <mapping class="app.entities.SearchApartmentEntity"/>
         <mapping class="app.entities.SeriesHouseEntity"/>
         <mapping class="app.entities.StreetEntity"/>
-        <!-- <property name="connection.username"/> -->
-        <!-- <property name="connection.password"/> -->
 
-        <!-- DB schema will be updated if needed -->
-        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
     </session-factory>
 </hibernate-configuration>

@@ -1,7 +1,6 @@
 package app.entities;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -10,10 +9,9 @@ public class SeriesHouseEntity {
     private int idSeries;
     private String nameSeries;
     private String descriotion;
-    private Collection<HouseEntity> housesByIdSeries;
 
     @Id
-    @Column(name = "id_series", nullable = false)
+    @Column(name = "id_series")
     public int getIdSeries() {
         return idSeries;
     }
@@ -23,7 +21,7 @@ public class SeriesHouseEntity {
     }
 
     @Basic
-    @Column(name = "name_series", nullable = false, length = 50)
+    @Column(name = "name_series")
     public String getNameSeries() {
         return nameSeries;
     }
@@ -33,7 +31,7 @@ public class SeriesHouseEntity {
     }
 
     @Basic
-    @Column(name = "descriotion", nullable = true, length = 200)
+    @Column(name = "descriotion")
     public String getDescriotion() {
         return descriotion;
     }
@@ -55,14 +53,5 @@ public class SeriesHouseEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idSeries, nameSeries, descriotion);
-    }
-
-    @OneToMany(mappedBy = "seriesHouseBySeries")
-    public Collection<HouseEntity> getHousesByIdSeries() {
-        return housesByIdSeries;
-    }
-
-    public void setHousesByIdSeries(Collection<HouseEntity> housesByIdSeries) {
-        this.housesByIdSeries = housesByIdSeries;
     }
 }

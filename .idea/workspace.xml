@@ -6,26 +6,27 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41128b31-7b8c-420e-88dd-cf1b1b87abe5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/entities/NameStreetEntity.java" afterDir="false" />
+    <list default="true" id="e57d22d5-a34e-4a94-a120-3d9028074d89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/intefaces/BdCRUDDAO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/AgentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/AgentEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/ApartmentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/ApartmentEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/ApartmentSaleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/ApartmentSaleEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/CityEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/CityEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/ClientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/ClientEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/ClientRoleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/ClientRoleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/DisrictEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/DistrictEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/DistrictEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/DistrictEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/DocumentTypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/DocumentTypeEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/DocumentsClientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/DocumentsClientEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/HouseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/HouseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/NameStreetEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/NameStreetEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/SearchApartmentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/SearchApartmentEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/SeriesHouseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/SeriesHouseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/StreetEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/StreetEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernateExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate.cfg.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ApartmentSale_kurs_war.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,23 +44,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="sale_of_apartments@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="sale_of_apartments@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="hibernate-configuration-5.2" />
         <option value="hibernate-main-5.2" />
         <option value="Class" />
@@ -83,49 +73,31 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1a2LcDv5KXX3wyerFTThNKsJu7b" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1a86ZjyBn9Zu3eEJVWQXomPukrW" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
-    <property name="JPA.DatabaseSchemaImportDialog" value="dfd9c002-7681-4d8c-9105-a6da05e88d1c" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="e1f9f52a-f225-4525-a89b-d0c5ab131f8e" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
     <property name="project.structure.side.proportion" value="0.2" />
-=======
-    <property name="project.structure.side.proportion" value="0.5908046" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JPA/Hibernate QL" />
->>>>>>> hibernate fix
   </component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="app.entities" />
-      <recent name="" />
-      <recent name="app.model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
-=======
       <recent name="C:\GIT\ApartmentSale_kurs\src\main\resources" />
-      <recent name="C:\GIT\ApartmentSale_kurs\bd_damp" />
->>>>>>> hibernate fix
-      <recent name="C:\GIT\ApartmentSale_kurs\src\main" />
-      <recent name="C:\GIT\ApartmentSale_kurs\src" />
-      <recent name="C:\GIT\ApartmentSale_kurs\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.30">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ApartmentSale_kurs" />
@@ -134,8 +106,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.30" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.30" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="ApartmentSale_kurs:war exploded">
           <settings>
@@ -144,7 +115,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ApartmentSale_kurs_3" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_ApartmentSale_kurs_4" />
         <option name="HTTP_PORT" value="8080" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
@@ -153,7 +124,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="25478" />
+        <option name="DEBUG_PORT" value="51655" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -207,6 +178,10 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.30" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -223,11 +198,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -240,23 +210,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="41128b31-7b8c-420e-88dd-cf1b1b87abe5" name="Default Changelist" comment="" />
-      <created>1585928819633</created>
+      <changelist id="e57d22d5-a34e-4a94-a120-3d9028074d89" name="Default Changelist" comment="" />
+      <created>1586104931291</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1585928819633</updated>
-      <workItem from="1585928826499" duration="975000" />
-      <workItem from="1585930452767" duration="110000" />
-      <workItem from="1585941602316" duration="455000" />
-<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
-      <workItem from="1585994884253" duration="103000" />
-=======
-      <workItem from="1585994884253" duration="2989000" />
-      <workItem from="1586015995545" duration="2373000" />
-      <workItem from="1586026687806" duration="1240000" />
-      <workItem from="1586028009993" duration="240000" />
-      <workItem from="1586082654081" duration="6232000" />
-      <workItem from="1586100174922" duration="1865000" />
+      <updated>1586104931291</updated>
+      <workItem from="1586104939119" duration="1222000" />
+      <workItem from="1586106333458" duration="127000" />
     </task>
     <servers />
   </component>
@@ -264,120 +224,85 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="21" key="#Assign_Data_Sources" timestamp="1586028189083">
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586106019980">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="21" key="#Assign_Data_Sources/0.0.1366.728@0.0.1366.728" timestamp="1586028189083" />
-    <state x="137" y="33" key="#HTTP_Proxy" timestamp="1585939517965">
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586106019980" />
+    <state x="412" y="138" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1586105797866">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="33" key="#HTTP_Proxy/0.0.1366.728@0.0.1366.728" timestamp="1585939517965" />
-    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586100196345">
+    <state x="412" y="138" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1586105797866" />
+    <state x="310" y="14" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1586105785303">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1586100196345" />
-    <state x="511" y="138" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1585998488833">
->>>>>>> hibernate fix
+    <state x="310" y="14" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.728@0.0.1366.728" timestamp="1586105785303" />
+    <state x="481" y="283" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath" timestamp="1586105219201">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1585941692296" />
-    <state x="310" y="12" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1585930072489">
+    <state x="481" y="283" key="#com.intellij.javaee.module.view.common.J2EE.J2EEDeploymentDescriptorLocationPanel.changeDDPath/0.0.1366.728@0.0.1366.728" timestamp="1586105219201" />
+    <state x="482" y="273" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1586105233569">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="511" y="138" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1585998488833" />
-    <state x="310" y="12" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1586097578500">
+    <state x="482" y="273" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1366.728@0.0.1366.728" timestamp="1586105233569" />
+    <state x="353" y="0" key="#com.intellij.jpa.generation.ui.DatabaseSchemaImportDialog" timestamp="1586105815508">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="310" y="12" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1366.728@0.0.1366.728" timestamp="1586097578500" />
-    <state x="482" y="273" key="#com.intellij.javaee.module.view.web.EditWebRootDialog" timestamp="1585938607558">
+    <state x="353" y="0" key="#com.intellij.jpa.generation.ui.DatabaseSchemaImportDialog/0.0.1366.728@0.0.1366.728" timestamp="1586105815508" />
+    <state x="359" y="104" key="FileChooserDialogImpl" timestamp="1586105231194">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="482" y="273" key="#com.intellij.javaee.module.view.web.EditWebRootDialog/0.0.1366.728@0.0.1366.728" timestamp="1585938607558" />
-    <state x="353" y="0" width="856" height="728" key="#com.intellij.jpa.generation.ui.DatabaseSchemaImportDialog" timestamp="1586097637846">
+    <state x="359" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586105231194" />
+    <state width="1322" height="151" key="GridCell.Tab.0.bottom" timestamp="1586106458179">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="353" y="0" width="856" height="728" key="#com.intellij.jpa.generation.ui.DatabaseSchemaImportDialog/0.0.1366.728@0.0.1366.728" timestamp="1586097637846" />
-    <state x="363" y="167" width="640" height="421" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1585941306975">
+    <state width="1322" height="151" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586106458179" />
+    <state width="1322" height="151" key="GridCell.Tab.0.center" timestamp="1586106458179">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="363" y="167" width="640" height="421" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1366.728@0.0.1366.728" timestamp="1585941306975" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1586082864740">
+    <state width="1322" height="151" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586106458179" />
+    <state width="1322" height="151" key="GridCell.Tab.0.left" timestamp="1586106458179">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1586082864740" />
-    <state width="1322" height="192" key="GridCell.Tab.0.bottom" timestamp="1586100884624">
+    <state width="1322" height="151" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586106458179" />
+    <state width="1322" height="151" key="GridCell.Tab.0.right" timestamp="1586106458179">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586100884624" />
-    <state width="1322" height="192" key="GridCell.Tab.0.center" timestamp="1586100884624">
+    <state width="1322" height="151" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586106458179" />
+    <state width="904" height="151" key="GridCell.Tab.1.bottom" timestamp="1586106178716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586100884624" />
-    <state width="1322" height="192" key="GridCell.Tab.0.left" timestamp="1586100884624">
+    <state width="904" height="151" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586106178716" />
+    <state width="904" height="151" key="GridCell.Tab.1.center" timestamp="1586106178716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586100884624" />
-    <state width="1322" height="192" key="GridCell.Tab.0.right" timestamp="1586100884624">
+    <state width="904" height="151" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586106178716" />
+    <state width="904" height="151" key="GridCell.Tab.1.left" timestamp="1586106178716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586100884624" />
-    <state width="1322" height="192" key="GridCell.Tab.1.bottom" timestamp="1586100873858">
+    <state width="904" height="151" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586106178716" />
+    <state width="904" height="151" key="GridCell.Tab.1.right" timestamp="1586106178716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586100873858" />
-    <state width="1322" height="192" key="GridCell.Tab.1.center" timestamp="1586100873858">
+    <state width="904" height="151" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586106178716" />
+    <state width="904" height="151" key="GridCell.Tab.2.bottom" timestamp="1586106178716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1586100873858" />
-    <state width="1322" height="192" key="GridCell.Tab.1.left" timestamp="1586100873858">
+    <state width="904" height="151" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586106178716" />
+    <state width="904" height="151" key="GridCell.Tab.2.center" timestamp="1586106178716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1586100873858" />
-    <state width="1322" height="192" key="GridCell.Tab.1.right" timestamp="1586100873858">
+    <state width="904" height="151" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1586106178716" />
+    <state width="904" height="151" key="GridCell.Tab.2.left" timestamp="1586106178716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1586100873858" />
-    <state width="904" height="151" key="GridCell.Tab.2.bottom" timestamp="1585998340430">
+    <state width="904" height="151" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1586106178716" />
+    <state width="904" height="151" key="GridCell.Tab.2.right" timestamp="1586106178716">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="151" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585998340430" />
-    <state width="904" height="151" key="GridCell.Tab.2.center" timestamp="1585998340430">
+    <state width="904" height="151" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1586106178716" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1586105906715">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="151" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1585998340430" />
-    <state width="904" height="151" key="GridCell.Tab.2.left" timestamp="1585998340430">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="904" height="151" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1585998340430" />
-    <state width="904" height="151" key="GridCell.Tab.2.right" timestamp="1585998340430">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-<<<<<<< df0fb36eee45bb6123ad2c6198fa23e14d98a4f8
-    <state width="904" height="151" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1585941318435" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1585938608617">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585938608617" />
-=======
-    <state width="904" height="151" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1585998340430" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1586097566468">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586097566468" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1585940852913">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1585940852913" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586105906715" />
   </component>
 </project>

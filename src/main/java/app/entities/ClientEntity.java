@@ -2,7 +2,6 @@ package app.entities;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -17,15 +16,9 @@ public class ClientEntity {
     private String phoneNumber;
     private String email;
     private Boolean gender;
-    private Collection<ApartmentEntity> apartmentsByIdClient;
-    private Collection<ApartmentSaleEntity> apartmentSalesByIdClient;
-    private Collection<ApartmentSaleEntity> apartmentSalesByIdClient_0;
-    private ClientRoleEntity clientRoleByRole;
-    private Collection<DocumentsClientEntity> documentsClientsByIdClient;
-    private Collection<SearchApartmentEntity> searchApartmentsByIdClient;
 
     @Id
-    @Column(name = "id_client", nullable = false)
+    @Column(name = "id_client")
     public int getIdClient() {
         return idClient;
     }
@@ -35,7 +28,7 @@ public class ClientEntity {
     }
 
     @Basic
-    @Column(name = "name", nullable = false, length = 50)
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -45,7 +38,7 @@ public class ClientEntity {
     }
 
     @Basic
-    @Column(name = "surname", nullable = false, length = 50)
+    @Column(name = "surname")
     public String getSurname() {
         return surname;
     }
@@ -55,7 +48,7 @@ public class ClientEntity {
     }
 
     @Basic
-    @Column(name = "patronymic", nullable = true, length = 50)
+    @Column(name = "patronymic")
     public String getPatronymic() {
         return patronymic;
     }
@@ -65,7 +58,7 @@ public class ClientEntity {
     }
 
     @Basic
-    @Column(name = "date_of_birth", nullable = false)
+    @Column(name = "date_of_birth")
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
@@ -75,7 +68,7 @@ public class ClientEntity {
     }
 
     @Basic
-    @Column(name = "role", nullable = false)
+    @Column(name = "role")
     public int getRole() {
         return role;
     }
@@ -85,7 +78,7 @@ public class ClientEntity {
     }
 
     @Basic
-    @Column(name = "phone_number", nullable = false, length = 10)
+    @Column(name = "phone_number")
     public String getPhoneNumber() {
         return phoneNumber;
     }
@@ -95,7 +88,7 @@ public class ClientEntity {
     }
 
     @Basic
-    @Column(name = "email", nullable = true, length = 50)
+    @Column(name = "email")
     public String getEmail() {
         return email;
     }
@@ -105,7 +98,7 @@ public class ClientEntity {
     }
 
     @Basic
-    @Column(name = "gender", nullable = true)
+    @Column(name = "gender")
     public Boolean getGender() {
         return gender;
     }
@@ -133,60 +126,5 @@ public class ClientEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idClient, name, surname, patronymic, dateOfBirth, role, phoneNumber, email, gender);
-    }
-
-    @OneToMany(mappedBy = "clientByApartmentOwner")
-    public Collection<ApartmentEntity> getApartmentsByIdClient() {
-        return apartmentsByIdClient;
-    }
-
-    public void setApartmentsByIdClient(Collection<ApartmentEntity> apartmentsByIdClient) {
-        this.apartmentsByIdClient = apartmentsByIdClient;
-    }
-
-    @OneToMany(mappedBy = "clientByOwnerApartment")
-    public Collection<ApartmentSaleEntity> getApartmentSalesByIdClient() {
-        return apartmentSalesByIdClient;
-    }
-
-    public void setApartmentSalesByIdClient(Collection<ApartmentSaleEntity> apartmentSalesByIdClient) {
-        this.apartmentSalesByIdClient = apartmentSalesByIdClient;
-    }
-
-    @OneToMany(mappedBy = "clientByBuyer")
-    public Collection<ApartmentSaleEntity> getApartmentSalesByIdClient_0() {
-        return apartmentSalesByIdClient_0;
-    }
-
-    public void setApartmentSalesByIdClient_0(Collection<ApartmentSaleEntity> apartmentSalesByIdClient_0) {
-        this.apartmentSalesByIdClient_0 = apartmentSalesByIdClient_0;
-    }
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "role", referencedColumnName = "id_role", nullable = false,insertable=false, updatable=false)
-    public ClientRoleEntity getClientRoleByRole() {
-        return clientRoleByRole;
-    }
-
-    public void setClientRoleByRole(ClientRoleEntity clientRoleByRole) {
-        this.clientRoleByRole = clientRoleByRole;
-    }
-
-    @OneToMany(mappedBy = "clientByClient")
-    public Collection<DocumentsClientEntity> getDocumentsClientsByIdClient() {
-        return documentsClientsByIdClient;
-    }
-
-    public void setDocumentsClientsByIdClient(Collection<DocumentsClientEntity> documentsClientsByIdClient) {
-        this.documentsClientsByIdClient = documentsClientsByIdClient;
-    }
-
-    @OneToMany(mappedBy = "clientByClient")
-    public Collection<SearchApartmentEntity> getSearchApartmentsByIdClient() {
-        return searchApartmentsByIdClient;
-    }
-
-    public void setSearchApartmentsByIdClient(Collection<SearchApartmentEntity> searchApartmentsByIdClient) {
-        this.searchApartmentsByIdClient = searchApartmentsByIdClient;
     }
 }

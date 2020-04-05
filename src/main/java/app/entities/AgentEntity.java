@@ -1,7 +1,6 @@
 package app.entities;
 
 import javax.persistence.*;
-import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -13,10 +12,9 @@ public class AgentEntity {
     private String patronymic;
     private int percent;
     private int phoneNumber;
-    private Collection<ApartmentSaleEntity> apartmentSalesByIdAgent;
 
     @Id
-    @Column(name = "id_agent", nullable = false)
+    @Column(name = "id_agent")
     public int getIdAgent() {
         return idAgent;
     }
@@ -26,7 +24,7 @@ public class AgentEntity {
     }
 
     @Basic
-    @Column(name = "name", nullable = false, length = 50)
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -36,7 +34,7 @@ public class AgentEntity {
     }
 
     @Basic
-    @Column(name = "surname", nullable = false, length = 50)
+    @Column(name = "surname")
     public String getSurname() {
         return surname;
     }
@@ -46,7 +44,7 @@ public class AgentEntity {
     }
 
     @Basic
-    @Column(name = "patronymic", nullable = false, length = 50)
+    @Column(name = "patronymic")
     public String getPatronymic() {
         return patronymic;
     }
@@ -56,7 +54,7 @@ public class AgentEntity {
     }
 
     @Basic
-    @Column(name = "percent", nullable = false)
+    @Column(name = "percent")
     public int getPercent() {
         return percent;
     }
@@ -66,7 +64,7 @@ public class AgentEntity {
     }
 
     @Basic
-    @Column(name = "phone_number", nullable = false)
+    @Column(name = "phone_number")
     public int getPhoneNumber() {
         return phoneNumber;
     }
@@ -91,14 +89,5 @@ public class AgentEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idAgent, name, surname, patronymic, percent, phoneNumber);
-    }
-
-    @OneToMany(mappedBy = "agentByAgent")
-    public Collection<ApartmentSaleEntity> getApartmentSalesByIdAgent() {
-        return apartmentSalesByIdAgent;
-    }
-
-    public void setApartmentSalesByIdAgent(Collection<ApartmentSaleEntity> apartmentSalesByIdAgent) {
-        this.apartmentSalesByIdAgent = apartmentSalesByIdAgent;
     }
 }

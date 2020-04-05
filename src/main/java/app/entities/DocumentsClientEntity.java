@@ -14,11 +14,9 @@ public class DocumentsClientEntity {
     private Date dateOfIssue;
     private int typeDocument;
     private int client;
-    private DocumentTypeEntity documentTypeByTypeDocument;
-    private ClientEntity clientByClient;
 
     @Id
-    @Column(name = "id_passport", nullable = false)
+    @Column(name = "id_passport")
     public int getIdPassport() {
         return idPassport;
     }
@@ -28,7 +26,7 @@ public class DocumentsClientEntity {
     }
 
     @Basic
-    @Column(name = "series", nullable = false)
+    @Column(name = "series")
     public int getSeries() {
         return series;
     }
@@ -38,7 +36,7 @@ public class DocumentsClientEntity {
     }
 
     @Basic
-    @Column(name = "number", nullable = false)
+    @Column(name = "number")
     public int getNumber() {
         return number;
     }
@@ -48,7 +46,7 @@ public class DocumentsClientEntity {
     }
 
     @Basic
-    @Column(name = "issued", nullable = false, length = 200)
+    @Column(name = "issued")
     public String getIssued() {
         return issued;
     }
@@ -58,7 +56,7 @@ public class DocumentsClientEntity {
     }
 
     @Basic
-    @Column(name = "date_of_issue", nullable = false)
+    @Column(name = "date_of_issue")
     public Date getDateOfIssue() {
         return dateOfIssue;
     }
@@ -68,7 +66,7 @@ public class DocumentsClientEntity {
     }
 
     @Basic
-    @Column(name = "type_document", nullable = false)
+    @Column(name = "type_document")
     public int getTypeDocument() {
         return typeDocument;
     }
@@ -78,7 +76,7 @@ public class DocumentsClientEntity {
     }
 
     @Basic
-    @Column(name = "client", nullable = false)
+    @Column(name = "client")
     public int getClient() {
         return client;
     }
@@ -104,25 +102,5 @@ public class DocumentsClientEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idPassport, series, number, issued, dateOfIssue, typeDocument, client);
-    }
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "type_document", referencedColumnName = "id_type", nullable = false,insertable=false, updatable=false)
-    public DocumentTypeEntity getDocumentTypeByTypeDocument() {
-        return documentTypeByTypeDocument;
-    }
-
-    public void setDocumentTypeByTypeDocument(DocumentTypeEntity documentTypeByTypeDocument) {
-        this.documentTypeByTypeDocument = documentTypeByTypeDocument;
-    }
-
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "client", referencedColumnName = "id_client", nullable = false,insertable=false, updatable=false)
-    public ClientEntity getClientByClient() {
-        return clientByClient;
-    }
-
-    public void setClientByClient(ClientEntity clientByClient) {
-        this.clientByClient = clientByClient;
     }
 }
