@@ -5,7 +5,7 @@ import app.DAO.CityDAOImpl;
 
 import java.sql.SQLException;
 
-public class UserServices {
+public class CityServices {
     private CityDAOImpl cityDAO = new CityDAOImpl();
 
     public boolean AddCity(CityEntity city) throws SQLException {

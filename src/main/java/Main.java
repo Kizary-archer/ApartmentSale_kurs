@@ -30,8 +30,8 @@ public class Main {
         } finally {
             session.close();
         }
-      //  CityServices cityServices = new CityServices();
-      //  CityEntity city = new CityEntity("Санкт-Петербург");
-       // cityServices.AddCity(city);
+        CityServices cityServices = new CityServices();
+        CityEntity city = new CityEntity("Санкт-Петербург");
+        cityServices.AddCity(city);
     }
 }

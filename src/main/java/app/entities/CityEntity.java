@@ -14,6 +14,7 @@ public class  CityEntity {
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_city")
     public int getIdCity() {
         return idCity;

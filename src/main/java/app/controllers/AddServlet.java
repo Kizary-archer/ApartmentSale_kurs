@@ -1,4 +1,4 @@
-package app.servlets;
+package app.controllers;
 
 import app.entities.User;
 import app.model.Model;
@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class AddServlet extends HttpServlet {
 
