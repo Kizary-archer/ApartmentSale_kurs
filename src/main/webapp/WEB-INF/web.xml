@@ -6,7 +6,7 @@
 
 <servlet>
 <servlet-name>add</servlet-name>
-<servlet-class>app.servlets.AddServlet</servlet-class>
+<servlet-class>app.controllers.AddServlet</servlet-class>
 </servlet>
 
 <servlet-mapping>
@@ -17,7 +17,7 @@
         <!-- list servlet -->
 <servlet>
 <servlet-name>list</servlet-name>
-<servlet-class>app.servlets.ListServlet</servlet-class>
+<servlet-class>app.controllers.ListServlet</servlet-class>
 </servlet>
 
 <servlet-mapping>

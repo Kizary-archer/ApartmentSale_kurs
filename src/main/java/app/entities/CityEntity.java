@@ -5,9 +5,13 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "city", schema = "public", catalog = "sale_of_apartments")
-public class CityEntity {
+public class  CityEntity {
     private int idCity;
     private String nameCity;
+
+    public CityEntity(String nameCity){
+        this.nameCity = nameCity;
+    }
 
     @Id
     @Column(name = "id_city")
