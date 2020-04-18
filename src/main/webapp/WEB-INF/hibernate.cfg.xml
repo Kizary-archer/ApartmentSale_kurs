@@ -30,6 +30,7 @@
         <mapping class="app.entities.SearchApartmentEntity"/>
         <mapping class="app.entities.SeriesHouseEntity"/>
         <mapping class="app.entities.StreetEntity"/>
+        <mapping class="app.entities.NameStreetEntity"/>
 
     </session-factory>
 </hibernate-configuration>

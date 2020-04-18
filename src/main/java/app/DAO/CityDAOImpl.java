@@ -8,41 +8,44 @@ import java.sql.SQLException;
 import java.util.Collection;
 
 public class CityDAOImpl implements CityDAO {
+
+
     @Override
-    public boolean AddCity(CityEntity city)throws SQLException {
+    public boolean addCity(CityEntity city)throws SQLException {
         Session session = null;
         try {
             session = getSession();
             session.beginTransaction();
             session.save(city);
             session.getTransaction().commit();
+            return true;
         } catch (Exception e) {
            System.out.println(e);
+            return false;
         } finally {
             if (session != null && session.isOpen()) {
                 session.close();
             }
         }
-        return true;
     }
 
     @Override
-    public boolean Create(String query) {
-        return false;
-    }
-
-    @Override
-    public Collection Select(String query) {
+    public Collection getDistrictByCity(CityEntity city) throws SQLException {
         return null;
     }
 
     @Override
-    public boolean Update(String query) {
+    public CityEntity getCity(String id) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean deleteCity(CityEntity city) throws SQLException {
         return false;
     }
 
     @Override
-    public boolean Delete(String query) {
+    public boolean updateCity(CityEntity city) throws SQLException {
         return false;
     }
 }

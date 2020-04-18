@@ -1,6 +1,7 @@
 package app.entities;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -8,9 +9,10 @@ import java.util.Objects;
 public class ClientRoleEntity {
     private int idRole;
     private String nameStatus;
+    private Collection<ClientEntity> clientsByIdRole;
 
     @Id
-    @Column(name = "id_role")
+    @Column(name = "id_role", nullable = false)
     public int getIdRole() {
         return idRole;
     }
@@ -20,7 +22,7 @@ public class ClientRoleEntity {
     }
 
     @Basic
-    @Column(name = "name_status")
+    @Column(name = "name_status", nullable = false, length = 50)
     public String getNameStatus() {
         return nameStatus;
     }
@@ -41,5 +43,14 @@ public class ClientRoleEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idRole, nameStatus);
+    }
+
+    @OneToMany(mappedBy = "clientRoleByRole")
+    public Collection<ClientEntity> getClientsByIdRole() {
+        return clientsByIdRole;
+    }
+
+    public void setClientsByIdRole(Collection<ClientEntity> clientsByIdRole) {
+        this.clientsByIdRole = clientsByIdRole;
     }
 }

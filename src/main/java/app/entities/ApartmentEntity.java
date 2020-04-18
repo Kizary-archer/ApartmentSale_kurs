@@ -1,6 +1,7 @@
 package app.entities;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -13,9 +14,12 @@ public class ApartmentEntity {
     private int house;
     private int apartmentOwner;
     private int meterPrice;
+    private HouseEntity houseByHouse;
+    private ClientEntity clientByApartmentOwner;
+    private Collection<ApartmentSaleEntity> apartmentSalesByIdApartment;
 
     @Id
-    @Column(name = "id_apartment")
+    @Column(name = "id_apartment", nullable = false)
     public int getIdApartment() {
         return idApartment;
     }
@@ -25,7 +29,7 @@ public class ApartmentEntity {
     }
 
     @Basic
-    @Column(name = "number_apartment")
+    @Column(name = "number_apartment", nullable = false)
     public int getNumberApartment() {
         return numberApartment;
     }
@@ -35,7 +39,7 @@ public class ApartmentEntity {
     }
 
     @Basic
-    @Column(name = "count_room")
+    @Column(name = "count_room", nullable = false)
     public int getCountRoom() {
         return countRoom;
     }
@@ -45,7 +49,7 @@ public class ApartmentEntity {
     }
 
     @Basic
-    @Column(name = "living_space")
+    @Column(name = "living_space", nullable = false, precision = 0)
     public float getLivingSpace() {
         return livingSpace;
     }
@@ -55,7 +59,7 @@ public class ApartmentEntity {
     }
 
     @Basic
-    @Column(name = "house")
+    @Column(name = "house", nullable = false)
     public int getHouse() {
         return house;
     }
@@ -65,7 +69,7 @@ public class ApartmentEntity {
     }
 
     @Basic
-    @Column(name = "apartment_owner")
+    @Column(name = "apartment_owner", nullable = false)
     public int getApartmentOwner() {
         return apartmentOwner;
     }
@@ -75,7 +79,7 @@ public class ApartmentEntity {
     }
 
     @Basic
-    @Column(name = "meter_price")
+    @Column(name = "meter_price", nullable = false)
     public int getMeterPrice() {
         return meterPrice;
     }
@@ -101,5 +105,34 @@ public class ApartmentEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idApartment, numberApartment, countRoom, livingSpace, house, apartmentOwner, meterPrice);
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "house", referencedColumnName = "id_house", nullable = false,insertable = false, updatable = false)
+    public HouseEntity getHouseByHouse() {
+        return houseByHouse;
+    }
+
+    public void setHouseByHouse(HouseEntity houseByHouse) {
+        this.houseByHouse = houseByHouse;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "apartment_owner", referencedColumnName = "id_client", nullable = false,insertable = false, updatable = false)
+    public ClientEntity getClientByApartmentOwner() {
+        return clientByApartmentOwner;
+    }
+
+    public void setClientByApartmentOwner(ClientEntity clientByApartmentOwner) {
+        this.clientByApartmentOwner = clientByApartmentOwner;
+    }
+
+    @OneToMany(mappedBy = "apartmentByApartment")
+    public Collection<ApartmentSaleEntity> getApartmentSalesByIdApartment() {
+        return apartmentSalesByIdApartment;
+    }
+
+    public void setApartmentSalesByIdApartment(Collection<ApartmentSaleEntity> apartmentSalesByIdApartment) {
+        this.apartmentSalesByIdApartment = apartmentSalesByIdApartment;
     }
 }

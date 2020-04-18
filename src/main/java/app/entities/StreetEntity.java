@@ -1,6 +1,7 @@
 package app.entities;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -9,9 +10,13 @@ public class StreetEntity {
     private int idStreet;
     private int nameStreet;
     private int district;
+    private Collection<HouseEntity> housesByIdStreet;
+    private Collection<SearchApartmentEntity> searchApartmentsByIdStreet;
+    private NameStreetEntity nameStreetByNameStreet;
+    private DistrictEntity districtByDistrict;
 
     @Id
-    @Column(name = "id_street")
+    @Column(name = "id_street", nullable = false)
     public int getIdStreet() {
         return idStreet;
     }
@@ -21,7 +26,7 @@ public class StreetEntity {
     }
 
     @Basic
-    @Column(name = "name_street")
+    @Column(name = "name_street", nullable = false)
     public int getNameStreet() {
         return nameStreet;
     }
@@ -31,7 +36,7 @@ public class StreetEntity {
     }
 
     @Basic
-    @Column(name = "district")
+    @Column(name = "district", nullable = false)
     public int getDistrict() {
         return district;
     }
@@ -53,5 +58,43 @@ public class StreetEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idStreet, nameStreet, district);
+    }
+
+    @OneToMany(mappedBy = "streetByStreet")
+    public Collection<HouseEntity> getHousesByIdStreet() {
+        return housesByIdStreet;
+    }
+
+    public void setHousesByIdStreet(Collection<HouseEntity> housesByIdStreet) {
+        this.housesByIdStreet = housesByIdStreet;
+    }
+
+    @OneToMany(mappedBy = "streetByStreet")
+    public Collection<SearchApartmentEntity> getSearchApartmentsByIdStreet() {
+        return searchApartmentsByIdStreet;
+    }
+
+    public void setSearchApartmentsByIdStreet(Collection<SearchApartmentEntity> searchApartmentsByIdStreet) {
+        this.searchApartmentsByIdStreet = searchApartmentsByIdStreet;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "name_street", referencedColumnName = "id_name", nullable = false,insertable = false, updatable = false)
+    public NameStreetEntity getNameStreetByNameStreet() {
+        return nameStreetByNameStreet;
+    }
+
+    public void setNameStreetByNameStreet(NameStreetEntity nameStreetByNameStreet) {
+        this.nameStreetByNameStreet = nameStreetByNameStreet;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "district", referencedColumnName = "id_district", nullable = false,insertable = false, updatable = false)
+    public DistrictEntity getDistrictByDistrict() {
+        return districtByDistrict;
+    }
+
+    public void setDistrictByDistrict(DistrictEntity districtByDistrict) {
+        this.districtByDistrict = districtByDistrict;
     }
 }

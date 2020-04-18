@@ -1,21 +1,23 @@
 package app.entities;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
 @Table(name = "city", schema = "public", catalog = "sale_of_apartments")
-public class  CityEntity {
+public class CityEntity {
     private int idCity;
     private String nameCity;
+    private Collection<DistrictEntity> districtsByIdCity;
+    private Collection<SearchApartmentEntity> searchApartmentsByIdCity;
 
-    public CityEntity(String nameCity){
-        this.nameCity = nameCity;
-    }
+    public CityEntity(){}
+    public CityEntity(String nameCity){this.nameCity = nameCity;}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_city")
+    @Column(name = "id_city", nullable = false)
     public int getIdCity() {
         return idCity;
     }
@@ -25,7 +27,7 @@ public class  CityEntity {
     }
 
     @Basic
-    @Column(name = "name_city")
+    @Column(name = "name_city", nullable = false, length = 50)
     public String getNameCity() {
         return nameCity;
     }
@@ -46,5 +48,23 @@ public class  CityEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idCity, nameCity);
+    }
+
+    @OneToMany(mappedBy = "cityByCity")
+    public Collection<DistrictEntity> getDistrictsByIdCity() {
+        return districtsByIdCity;
+    }
+
+    public void setDistrictsByIdCity(Collection<DistrictEntity> districtsByIdCity) {
+        this.districtsByIdCity = districtsByIdCity;
+    }
+
+    @OneToMany(mappedBy = "cityByCity")
+    public Collection<SearchApartmentEntity> getSearchApartmentsByIdCity() {
+        return searchApartmentsByIdCity;
+    }
+
+    public void setSearchApartmentsByIdCity(Collection<SearchApartmentEntity> searchApartmentsByIdCity) {
+        this.searchApartmentsByIdCity = searchApartmentsByIdCity;
     }
 }

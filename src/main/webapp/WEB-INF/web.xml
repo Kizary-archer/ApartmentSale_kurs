@@ -24,4 +24,15 @@
 <servlet-name>list</servlet-name>
 <url-pattern>/list</url-pattern>
 </servlet-mapping>
+
+
+<servlet>
+<servlet-name>addCity</servlet-name>
+<servlet-class>app.controllers.CityServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>addCity</servlet-name>
+<url-pattern>/addCity</url-pattern>
+</servlet-mapping>
 </web-app>

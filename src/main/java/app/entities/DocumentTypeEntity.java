@@ -1,6 +1,7 @@
 package app.entities;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -8,9 +9,10 @@ import java.util.Objects;
 public class DocumentTypeEntity {
     private int idType;
     private String nameType;
+    private Collection<DocumentsClientEntity> documentsClientsByIdType;
 
     @Id
-    @Column(name = "id_type")
+    @Column(name = "id_type", nullable = false)
     public int getIdType() {
         return idType;
     }
@@ -20,7 +22,7 @@ public class DocumentTypeEntity {
     }
 
     @Basic
-    @Column(name = "name_type")
+    @Column(name = "name_type", nullable = false, length = 50)
     public String getNameType() {
         return nameType;
     }
@@ -41,5 +43,14 @@ public class DocumentTypeEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idType, nameType);
+    }
+
+    @OneToMany(mappedBy = "documentTypeByTypeDocument")
+    public Collection<DocumentsClientEntity> getDocumentsClientsByIdType() {
+        return documentsClientsByIdType;
+    }
+
+    public void setDocumentsClientsByIdType(Collection<DocumentsClientEntity> documentsClientsByIdType) {
+        this.documentsClientsByIdType = documentsClientsByIdType;
     }
 }

@@ -1,6 +1,7 @@
 package app.entities;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -10,9 +11,12 @@ public class HouseEntity {
     private String numberHouse;
     private int street;
     private Integer series;
+    private Collection<ApartmentEntity> apartmentsByIdHouse;
+    private StreetEntity streetByStreet;
+    private SeriesHouseEntity seriesHouseBySeries;
 
     @Id
-    @Column(name = "id_house")
+    @Column(name = "id_house", nullable = false)
     public int getIdHouse() {
         return idHouse;
     }
@@ -22,7 +26,7 @@ public class HouseEntity {
     }
 
     @Basic
-    @Column(name = "number_house")
+    @Column(name = "number_house", nullable = false, length = 10)
     public String getNumberHouse() {
         return numberHouse;
     }
@@ -32,7 +36,7 @@ public class HouseEntity {
     }
 
     @Basic
-    @Column(name = "street")
+    @Column(name = "street", nullable = false)
     public int getStreet() {
         return street;
     }
@@ -42,7 +46,7 @@ public class HouseEntity {
     }
 
     @Basic
-    @Column(name = "series")
+    @Column(name = "series", nullable = true)
     public Integer getSeries() {
         return series;
     }
@@ -65,5 +69,34 @@ public class HouseEntity {
     @Override
     public int hashCode() {
         return Objects.hash(idHouse, numberHouse, street, series);
+    }
+
+    @OneToMany(mappedBy = "houseByHouse")
+    public Collection<ApartmentEntity> getApartmentsByIdHouse() {
+        return apartmentsByIdHouse;
+    }
+
+    public void setApartmentsByIdHouse(Collection<ApartmentEntity> apartmentsByIdHouse) {
+        this.apartmentsByIdHouse = apartmentsByIdHouse;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "street", referencedColumnName = "id_street", nullable = false,insertable = false, updatable = false)
+    public StreetEntity getStreetByStreet() {
+        return streetByStreet;
+    }
+
+    public void setStreetByStreet(StreetEntity streetByStreet) {
+        this.streetByStreet = streetByStreet;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "series", referencedColumnName = "id_series",insertable = false, updatable = false)
+    public SeriesHouseEntity getSeriesHouseBySeries() {
+        return seriesHouseBySeries;
+    }
+
+    public void setSeriesHouseBySeries(SeriesHouseEntity seriesHouseBySeries) {
+        this.seriesHouseBySeries = seriesHouseBySeries;
     }
 }

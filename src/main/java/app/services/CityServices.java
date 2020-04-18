@@ -1,15 +1,22 @@
 package app.services;
 
+import app.DAO.DAOinterfaces.CityDAO;
+import app.Util.DAOCreateFactoryUtil;
 import app.entities.CityEntity;
-import app.DAO.CityDAOImpl;
 
 import java.sql.SQLException;
+import java.util.Collection;
 
 public class CityServices {
-    private CityDAOImpl cityDAO = new CityDAOImpl();
 
-    public boolean AddCity(CityEntity city) throws SQLException {
-        cityDAO.AddCity(city);
-      return true;
+    public boolean addCity(String cityName) throws SQLException {
+        CityDAO cityDAO = DAOCreateFactoryUtil.getInstance().getCityDAO();
+      return cityDAO.addCity(new CityEntity(cityName));
+    }
+
+    public Collection getDistrictByCity(CityEntity city) throws SQLException {
+        CityDAO cityDAO = DAOCreateFactoryUtil.getInstance().getCityDAO();
+        cityDAO.getDistrictByCity(city);
+        return null;
     }
 }
