@@ -12,7 +12,7 @@
 
 <div>       <!-- content -->
     <div>    <!-- buttons holder -->
-        <button onclick="location.href='./list'">List users</button>
+        <button onclick="location.href='./addClient'">add users</button>
         <button onclick="location.href='./addCity'">Add city</button>
     </div>
 </div>

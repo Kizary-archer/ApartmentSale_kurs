@@ -22,7 +22,6 @@
         <mapping class="app.entities.ApartmentSaleEntity"/>
         <mapping class="app.entities.CityEntity"/>
         <mapping class="app.entities.ClientEntity"/>
-        <mapping class="app.entities.ClientRoleEntity"/>
         <mapping class="app.entities.DistrictEntity"/>
         <mapping class="app.entities.DocumentTypeEntity"/>
         <mapping class="app.entities.DocumentsClientEntity"/>

@@ -31,8 +31,19 @@
 <servlet-class>app.controllers.CityServlet</servlet-class>
 </servlet>
 
+    <servlet-mapping>
+        <servlet-name>addCity</servlet-name>
+        <url-pattern>/addCity</url-pattern>
+    </servlet-mapping>
+
+
 <servlet-mapping>
-<servlet-name>addCity</servlet-name>
-<url-pattern>/addCity</url-pattern>
+<servlet-name>addClient</servlet-name>
+<url-pattern>/addClient</url-pattern>
 </servlet-mapping>
+
+<servlet>
+    <servlet-name>addClient</servlet-name>
+    <servlet-class>app.controllers.ClientServlet</servlet-class>
+</servlet>
 </web-app>
