@@ -23,8 +23,8 @@ public class CityServlet extends HttpServlet {
         String cityName = request.getParameter("cityName");
         CityServices cityServices = new CityServices();
         try {
-            cityServices.addCity(cityName);
-            request.setAttribute("userName", cityName);
+            if(cityServices.addCity(cityName))request.setAttribute("cityName", cityName);
+            else request.setAttribute("cityName", "не");
         } catch (SQLException e) {
             e.printStackTrace();
         }

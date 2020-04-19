@@ -10,6 +10,7 @@ import java.util.Collection;
 public class CityServices {
 
     public boolean addCity(String cityName) throws SQLException {
+        if(cityName =="")return false;
         CityDAO cityDAO = DAOCreateFactoryUtil.getInstance().getCityDAO();
       return cityDAO.addCity(new CityEntity(cityName));
     }

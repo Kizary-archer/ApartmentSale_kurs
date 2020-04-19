@@ -11,7 +11,7 @@
             <h2>Add city </h2>
             <%
                 if (request.getAttribute("cityName") != null) {
-                    out.println("<p>User '" + request.getAttribute("cityName") + "' added!</p>");
+                    out.println("<p>город '" + request.getAttribute("cityName") + "' added!</p>");
                 }
             %>
         </div>

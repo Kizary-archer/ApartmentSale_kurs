@@ -13,14 +13,12 @@ public class ClientEntity {
     private String surname;
     private String patronymic;
     private Date dateOfBirth;
-    private int role;
     private String phoneNumber;
     private String email;
     private Boolean gender;
     private Collection<ApartmentEntity> apartmentsByIdClient;
     private Collection<ApartmentSaleEntity> apartmentSalesByIdClient;
     private Collection<ApartmentSaleEntity> apartmentSalesByIdClient_0;
-    private ClientRoleEntity clientRoleByRole;
     private Collection<DocumentsClientEntity> documentsClientsByIdClient;
     private Collection<SearchApartmentEntity> searchApartmentsByIdClient;
 
@@ -75,16 +73,6 @@ public class ClientEntity {
     }
 
     @Basic
-    @Column(name = "role", nullable = false)
-    public int getRole() {
-        return role;
-    }
-
-    public void setRole(int role) {
-        this.role = role;
-    }
-
-    @Basic
     @Column(name = "phone_number", nullable = false, length = 10)
     public String getPhoneNumber() {
         return phoneNumber;
@@ -120,7 +108,6 @@ public class ClientEntity {
         if (o == null || getClass() != o.getClass()) return false;
         ClientEntity that = (ClientEntity) o;
         return idClient == that.idClient &&
-                role == that.role &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(surname, that.surname) &&
                 Objects.equals(patronymic, that.patronymic) &&
@@ -132,7 +119,7 @@ public class ClientEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idClient, name, surname, patronymic, dateOfBirth, role, phoneNumber, email, gender);
+        return Objects.hash(idClient, name, surname, patronymic, dateOfBirth, phoneNumber, email, gender);
     }
 
     @OneToMany(mappedBy = "clientByApartmentOwner")
@@ -160,16 +147,6 @@ public class ClientEntity {
 
     public void setApartmentSalesByIdClient_0(Collection<ApartmentSaleEntity> apartmentSalesByIdClient_0) {
         this.apartmentSalesByIdClient_0 = apartmentSalesByIdClient_0;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "role", referencedColumnName = "id_role", nullable = false,insertable = false, updatable = false)
-    public ClientRoleEntity getClientRoleByRole() {
-        return clientRoleByRole;
-    }
-
-    public void setClientRoleByRole(ClientRoleEntity clientRoleByRole) {
-        this.clientRoleByRole = clientRoleByRole;
     }
 
     @OneToMany(mappedBy = "clientByClient")
