@@ -22,6 +22,7 @@ public class ApartmentSaleEntity {
     private SearchApartmentEntity searchApartmentBySearchApartment;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_sale", nullable = false)
     public int getIdSale() {
         return idSale;

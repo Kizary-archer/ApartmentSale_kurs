@@ -13,6 +13,7 @@ public class SeriesHouseEntity {
     private Collection<HouseEntity> housesByIdSeries;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_series", nullable = false)
     public int getIdSeries() {
         return idSeries;

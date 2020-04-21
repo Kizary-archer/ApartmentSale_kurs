@@ -23,6 +23,7 @@ public class SearchApartmentEntity {
     private ClientEntity clientByClient;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_apartment", nullable = false)
     public int getIdApartment() {
         return idApartment;

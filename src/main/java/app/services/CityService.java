@@ -7,7 +7,7 @@ import app.entities.CityEntity;
 import java.sql.SQLException;
 import java.util.Collection;
 
-public class CityServices {
+public class CityService {
 
     public boolean addCity(String cityName) throws SQLException {
         if(cityName =="")return false;

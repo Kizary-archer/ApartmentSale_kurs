@@ -15,6 +15,7 @@ public class DistrictEntity {
     private Collection<StreetEntity> streetsByIdDistrict;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_district", nullable = false)
     public int getIdDistrict() {
         return idDistrict;

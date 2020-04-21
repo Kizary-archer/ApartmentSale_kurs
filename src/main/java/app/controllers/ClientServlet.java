@@ -1,18 +1,13 @@
 package app.controllers;
 
-import app.services.CityServices;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.Iterator;
-import java.util.List;
 
 public class ClientServlet extends HttpServlet {
 
@@ -26,8 +21,11 @@ public class ClientServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         ArrayList<String> clientData = new ArrayList<String>();
         Iterator<String> header = request.getParameterNames().asIterator();
-        while(request.getParameterNames().asIterator().hasNext()){
-            clientData.add(header.next());
+        while(header.hasNext()){
+            if(request.getParameter(header.next()).equals("")) {
+                request.setAttribute("client", "не добавлен");
+                doGet(request, response);
+            }
         }
        /* for (String head :header){
             System.out.println(head);

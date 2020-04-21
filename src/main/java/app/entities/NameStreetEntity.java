@@ -12,6 +12,7 @@ public class NameStreetEntity {
     private Collection<StreetEntity> streetsByIdName;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_name", nullable = false)
     public int getIdName() {
         return idName;

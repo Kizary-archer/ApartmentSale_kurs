@@ -1,6 +1,6 @@
 package app.controllers;
 
-import app.services.CityServices;
+import app.services.CityService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,7 +21,7 @@ public class CityServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         String cityName = request.getParameter("cityName");
-        CityServices cityServices = new CityServices();
+        CityService cityServices = new CityService();
         try {
             if(cityServices.addCity(cityName))request.setAttribute("cityName", cityName);
             else request.setAttribute("cityName", "не");

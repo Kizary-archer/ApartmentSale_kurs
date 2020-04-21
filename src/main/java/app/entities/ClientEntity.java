@@ -22,7 +22,25 @@ public class ClientEntity {
     private Collection<DocumentsClientEntity> documentsClientsByIdClient;
     private Collection<SearchApartmentEntity> searchApartmentsByIdClient;
 
+    public ClientEntity(){}
+    public ClientEntity(String name,
+                        String surname,
+                        String patronymic,
+                        Date dateOfBirth,
+                        String phoneNumber,
+                        String email,
+                        Boolean gender){
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
+        this.dateOfBirth = dateOfBirth;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.gender = gender;
+    }
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_client", nullable = false)
     public int getIdClient() {
         return idClient;

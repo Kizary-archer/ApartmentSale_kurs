@@ -10,8 +10,8 @@
         <div>
             <h2>Add city </h2>
             <%
-                if (request.getAttribute("cityName") != null) {
-                    out.println("<p>город '" + request.getAttribute("cityName") + "' added!</p>");
+                if (request.getAttribute("client") != null) {
+                    out.println("<p>Клиент '" + request.getAttribute("client")+": заполните все поля</p>");
                 }
             %>
         </div>

@@ -12,6 +12,7 @@ public class DocumentTypeEntity {
     private Collection<DocumentsClientEntity> documentsClientsByIdType;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_type", nullable = false)
     public int getIdType() {
         return idType;

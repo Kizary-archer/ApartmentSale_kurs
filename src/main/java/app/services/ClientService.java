@@ -1,30 +1,30 @@
 package app.services;
 
 import app.DAO.DAOinterfaces.CityDAO;
+import app.DAO.DAOinterfaces.ClientDAO;
 import app.Util.DAOCreateFactoryUtil;
 import app.entities.CityEntity;
+import app.entities.ClientEntity;
 
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.Collection;
 
-public class ClientServices {
+public class ClientService {
 
-   /* public boolean addClient(String name,
+    public boolean addClient(String name,
                              String surname,
                              String patronymic,
                              Date dateOfBirth,
                              String phoneNumber,
                              String email,
                              Boolean gender) throws SQLException {
-        if(cityName =="")return false;
-        CityDAO cityDAO = DAOCreateFactoryUtil.getInstance().getCityDAO();
-      return cityDAO.addCity(new CityEntity(cityName));
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+      return clientDAO.addClient(new ClientEntity( name, surname, patronymic, dateOfBirth, phoneNumber, email, gender));
     }
-
-    public Collection getDistrictByCity(CityEntity city) throws SQLException {
-        CityDAO cityDAO = DAOCreateFactoryUtil.getInstance().getCityDAO();
-        cityDAO.getDistrictByCity(city);
+    public ClientEntity getClientById(int idClient){
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+        clientDAO.getClientById(idClient);
         return null;
-    }*/
+    }
 }

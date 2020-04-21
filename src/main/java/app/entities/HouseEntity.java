@@ -16,6 +16,7 @@ public class HouseEntity {
     private SeriesHouseEntity seriesHouseBySeries;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_house", nullable = false)
     public int getIdHouse() {
         return idHouse;

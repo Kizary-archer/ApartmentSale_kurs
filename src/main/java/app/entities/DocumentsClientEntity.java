@@ -18,6 +18,7 @@ public class DocumentsClientEntity {
     private ClientEntity clientByClient;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_passport", nullable = false)
     public int getIdPassport() {
         return idPassport;

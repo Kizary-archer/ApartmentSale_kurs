@@ -16,6 +16,7 @@ public class AgentEntity {
     private Collection<ApartmentSaleEntity> apartmentSalesByIdAgent;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_agent", nullable = false)
     public int getIdAgent() {
         return idAgent;
