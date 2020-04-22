@@ -143,7 +143,7 @@ public class SearchApartmentEntity {
         this.apartmentSalesByIdApartment = apartmentSalesByIdApartment;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "street", referencedColumnName = "id_street",insertable = false, updatable = false)
     public StreetEntity getStreetByStreet() {
         return streetByStreet;
@@ -153,7 +153,7 @@ public class SearchApartmentEntity {
         this.streetByStreet = streetByStreet;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "district", referencedColumnName = "id_district",insertable = false, updatable = false)
     public DistrictEntity getDistrictByDistrict() {
         return districtByDistrict;
@@ -163,7 +163,7 @@ public class SearchApartmentEntity {
         this.districtByDistrict = districtByDistrict;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "city", referencedColumnName = "id_city",insertable = false, updatable = false)
     public CityEntity getCityByCity() {
         return cityByCity;
@@ -173,7 +173,7 @@ public class SearchApartmentEntity {
         this.cityByCity = cityByCity;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "client", referencedColumnName = "id_client", nullable = false,insertable = false, updatable = false)
     public ClientEntity getClientByClient() {
         return clientByClient;

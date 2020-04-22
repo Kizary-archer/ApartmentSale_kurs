@@ -81,7 +81,7 @@ public class HouseEntity {
         this.apartmentsByIdHouse = apartmentsByIdHouse;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "street", referencedColumnName = "id_street", nullable = false,insertable = false, updatable = false)
     public StreetEntity getStreetByStreet() {
         return streetByStreet;
@@ -91,7 +91,7 @@ public class HouseEntity {
         this.streetByStreet = streetByStreet;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "series", referencedColumnName = "id_series",insertable = false, updatable = false)
     public SeriesHouseEntity getSeriesHouseBySeries() {
         return seriesHouseBySeries;

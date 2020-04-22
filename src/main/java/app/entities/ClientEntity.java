@@ -18,7 +18,6 @@ public class ClientEntity {
     private Boolean gender;
     private Collection<ApartmentEntity> apartmentsByIdClient;
     private Collection<ApartmentSaleEntity> apartmentSalesByIdClient;
-    private Collection<ApartmentSaleEntity> apartmentSalesByIdClient_0;
     private Collection<DocumentsClientEntity> documentsClientsByIdClient;
     private Collection<SearchApartmentEntity> searchApartmentsByIdClient;
 
@@ -156,15 +155,6 @@ public class ClientEntity {
 
     public void setApartmentSalesByIdClient(Collection<ApartmentSaleEntity> apartmentSalesByIdClient) {
         this.apartmentSalesByIdClient = apartmentSalesByIdClient;
-    }
-
-    @OneToMany(mappedBy = "clientByBuyer")
-    public Collection<ApartmentSaleEntity> getApartmentSalesByIdClient_0() {
-        return apartmentSalesByIdClient_0;
-    }
-
-    public void setApartmentSalesByIdClient_0(Collection<ApartmentSaleEntity> apartmentSalesByIdClient_0) {
-        this.apartmentSalesByIdClient_0 = apartmentSalesByIdClient_0;
     }
 
     @OneToMany(mappedBy = "clientByClient")

@@ -60,7 +60,7 @@ public class DistrictEntity {
         return Objects.hash(idDistrict, nameDistrict, city);
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "city", referencedColumnName = "id_city", nullable = false,insertable = false, updatable = false)
     public CityEntity getCityByCity() {
         return cityByCity;

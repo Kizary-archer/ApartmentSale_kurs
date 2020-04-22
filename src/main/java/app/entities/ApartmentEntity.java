@@ -108,7 +108,7 @@ public class ApartmentEntity {
         return Objects.hash(idApartment, numberApartment, countRoom, livingSpace, house, apartmentOwner, meterPrice);
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "house", referencedColumnName = "id_house", nullable = false,insertable = false, updatable = false)
     public HouseEntity getHouseByHouse() {
         return houseByHouse;
@@ -118,7 +118,7 @@ public class ApartmentEntity {
         this.houseByHouse = houseByHouse;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "apartment_owner", referencedColumnName = "id_client", nullable = false,insertable = false, updatable = false)
     public ClientEntity getClientByApartmentOwner() {
         return clientByApartmentOwner;

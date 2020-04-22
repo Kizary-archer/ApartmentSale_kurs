@@ -107,7 +107,7 @@ public class DocumentsClientEntity {
         return Objects.hash(idPassport, series, number, issued, dateOfIssue, typeDocument, client);
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "type_document", referencedColumnName = "id_type", nullable = false,insertable = false, updatable = false)
     public DocumentTypeEntity getDocumentTypeByTypeDocument() {
         return documentTypeByTypeDocument;
@@ -117,7 +117,7 @@ public class DocumentsClientEntity {
         this.documentTypeByTypeDocument = documentTypeByTypeDocument;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "client", referencedColumnName = "id_client", nullable = false,insertable = false, updatable = false)
     public ClientEntity getClientByClient() {
         return clientByClient;

@@ -7,27 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d22d5-a34e-4a94-a120-3d9028074d89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/ClientDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/ClientDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/ClientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/ClientDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Util/DAOCreateFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Util/DAOCreateFactoryUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controllers/CityServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/CityServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controllers/ClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/ClientServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/AgentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/AgentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/ApartmentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/ApartmentEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/ApartmentSaleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/ApartmentSaleEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/ClientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/ClientEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/DistrictEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/DistrictEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/DocumentTypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/DocumentTypeEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/DocumentsClientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/DocumentsClientEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/HouseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/HouseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/NameStreetEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/NameStreetEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/SearchApartmentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/SearchApartmentEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/SeriesHouseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/SeriesHouseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/StreetEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/StreetEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/services/CityServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/services/CityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/services/ClientServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/services/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view/addClient.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view/addClient.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/services/ClientService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,6 +269,7 @@
       <workItem from="1587394706165" duration="3626000" />
       <workItem from="1587464524470" duration="420000" />
       <workItem from="1587487220717" duration="10320000" />
+      <workItem from="1587556841742" duration="7202000" />
     </task>
     <servers />
   </component>
@@ -353,38 +344,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="359" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587298232047" />
-    <state width="1322" height="192" key="GridCell.Tab.0.bottom" timestamp="1587497670929">
+    <state width="1322" height="192" key="GridCell.Tab.0.bottom" timestamp="1587564929494">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587497670929" />
-    <state width="1322" height="192" key="GridCell.Tab.0.center" timestamp="1587497670929">
+    <state width="1322" height="192" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587564929494" />
+    <state width="1322" height="192" key="GridCell.Tab.0.center" timestamp="1587564929494">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587497670929" />
-    <state width="1322" height="192" key="GridCell.Tab.0.left" timestamp="1587497670929">
+    <state width="1322" height="192" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587564929494" />
+    <state width="1322" height="192" key="GridCell.Tab.0.left" timestamp="1587564929494">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587497670929" />
-    <state width="1322" height="192" key="GridCell.Tab.0.right" timestamp="1587497670929">
+    <state width="1322" height="192" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587564929494" />
+    <state width="1322" height="192" key="GridCell.Tab.0.right" timestamp="1587564929494">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587497670929" />
-    <state width="1322" height="192" key="GridCell.Tab.1.bottom" timestamp="1587497670929">
+    <state width="1322" height="192" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587564929494" />
+    <state width="1322" height="192" key="GridCell.Tab.1.bottom" timestamp="1587564931401">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587497670929" />
-    <state width="1322" height="192" key="GridCell.Tab.1.center" timestamp="1587497670929">
+    <state width="1322" height="192" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587564931401" />
+    <state width="1322" height="192" key="GridCell.Tab.1.center" timestamp="1587564931401">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587497670929" />
-    <state width="1322" height="192" key="GridCell.Tab.1.left" timestamp="1587497670929">
+    <state width="1322" height="192" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587564931401" />
+    <state width="1322" height="192" key="GridCell.Tab.1.left" timestamp="1587564931401">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587497670929" />
-    <state width="1322" height="192" key="GridCell.Tab.1.right" timestamp="1587497670929">
+    <state width="1322" height="192" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587564931401" />
+    <state width="1322" height="192" key="GridCell.Tab.1.right" timestamp="1587564931401">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="192" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587497670929" />
+    <state width="1322" height="192" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587564931401" />
     <state width="1090" height="197" key="GridCell.Tab.2.bottom" timestamp="1587464948791">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -454,9 +445,9 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/app/DAO/ClientDAOImpl.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/src/main/java/app/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

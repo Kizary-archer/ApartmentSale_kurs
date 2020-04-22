@@ -122,7 +122,7 @@ public class ApartmentSaleEntity {
         return Objects.hash(idSale, apartment, ownerApartment, buyer, agent, date, searchApartment, price);
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "apartment", referencedColumnName = "id_apartment", nullable = false,insertable = false, updatable = false)
     public ApartmentEntity getApartmentByApartment() {
         return apartmentByApartment;
@@ -132,7 +132,7 @@ public class ApartmentSaleEntity {
         this.apartmentByApartment = apartmentByApartment;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "owner_apartment", referencedColumnName = "id_client", nullable = false,insertable = false, updatable = false)
     public ClientEntity getClientByOwnerApartment() {
         return clientByOwnerApartment;
@@ -142,7 +142,7 @@ public class ApartmentSaleEntity {
         this.clientByOwnerApartment = clientByOwnerApartment;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "buyer", referencedColumnName = "id_client", nullable = false,insertable = false, updatable = false)
     public ClientEntity getClientByBuyer() {
         return clientByBuyer;
@@ -152,7 +152,7 @@ public class ApartmentSaleEntity {
         this.clientByBuyer = clientByBuyer;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "agent", referencedColumnName = "id_agent", nullable = false,insertable = false, updatable = false)
     public AgentEntity getAgentByAgent() {
         return agentByAgent;
@@ -162,7 +162,7 @@ public class ApartmentSaleEntity {
         this.agentByAgent = agentByAgent;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "search_apartment", referencedColumnName = "id_apartment",insertable = false, updatable = false)
     public SearchApartmentEntity getSearchApartmentBySearchApartment() {
         return searchApartmentBySearchApartment;

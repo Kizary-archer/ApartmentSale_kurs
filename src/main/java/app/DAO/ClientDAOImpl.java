@@ -49,8 +49,8 @@ public class ClientDAOImpl implements ClientDAO {
             Query query =  session.createQuery(hql);
             query.setParameter("id",id);
             session.getTransaction().commit();
-            List list = query.getResultList();
-            return null;
+           ClientEntity clientEntity = (ClientEntity) query.getSingleResult();
+            return clientEntity;
         } catch (Exception e) {
             System.out.println(e);
             return null;

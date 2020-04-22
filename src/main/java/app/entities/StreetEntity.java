@@ -79,7 +79,7 @@ public class StreetEntity {
         this.searchApartmentsByIdStreet = searchApartmentsByIdStreet;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "name_street", referencedColumnName = "id_name", nullable = false,insertable = false, updatable = false)
     public NameStreetEntity getNameStreetByNameStreet() {
         return nameStreetByNameStreet;
@@ -89,7 +89,7 @@ public class StreetEntity {
         this.nameStreetByNameStreet = nameStreetByNameStreet;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "district", referencedColumnName = "id_district", nullable = false,insertable = false, updatable = false)
     public DistrictEntity getDistrictByDistrict() {
         return districtByDistrict;
