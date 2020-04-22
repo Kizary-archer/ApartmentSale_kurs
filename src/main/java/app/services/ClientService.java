@@ -26,4 +26,9 @@ public class ClientService {
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
         return  clientDAO.getClientById(idClient);
     }
+
+    public Collection<ClientEntity> getClientDocuments(ClientEntity clientEntity){
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+        return  clientDAO.getClientDocument(clientEntity);
+    }
 }

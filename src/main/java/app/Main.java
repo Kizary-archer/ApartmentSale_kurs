@@ -11,7 +11,7 @@ public class Main {
     public static void main (String args[]) throws SQLException {
         ClientService clientService = new ClientService();
    // boolean test = clientService.addClient("aaa","aaa","aaa",new Date(1989-03-19),"2222222","aass",false);
-       ClientEntity clientEntity = clientService.getClientById(1);
-
+     //  ClientEntity clientEntity = clientService.getClientById(1);
+       List res = (List) clientService.getClientDocuments(clientService.getClientById(1));
     }
 }

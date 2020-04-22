@@ -5,9 +5,7 @@ import app.entities.ClientEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
 public class ClientDAOImpl implements ClientDAO {
     @Override
@@ -28,17 +26,31 @@ public class ClientDAOImpl implements ClientDAO {
         }
         return true;
     }
-
     @Override
-    public Collection<String> getAllClient() {
+    public Collection<ClientEntity> getAllClient() {
         return null;
     }
 
     @Override
-    public Collection<String> getClientDocument(ClientEntity clientEntity) {
-        return null;
+    public Collection<ClientEntity> getClientDocument(ClientEntity clientEntity) {
+        Session session = null;
+        try {
+            session = getSession();
+            session.beginTransaction();
+            String hql = "select distinct  c from ClientEntity c left join fetch c.documentsClientsByIdClient where c.idClient = :id";
+            Query query =  session.createQuery(hql);
+            query.setParameter("id",clientEntity.getIdClient());
+            session.getTransaction().commit();
+            return (Collection<ClientEntity>) query.getResultList();
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
     }
-
     @Override
     public ClientEntity getClientById(int id) {
         Session session = null;
@@ -49,8 +61,7 @@ public class ClientDAOImpl implements ClientDAO {
             Query query =  session.createQuery(hql);
             query.setParameter("id",id);
             session.getTransaction().commit();
-           ClientEntity clientEntity = (ClientEntity) query.getSingleResult();
-            return clientEntity;
+            return (ClientEntity) query.getSingleResult();
         } catch (Exception e) {
             System.out.println(e);
             return null;

@@ -107,7 +107,7 @@ public class DocumentsClientEntity {
         return Objects.hash(idPassport, series, number, issued, dateOfIssue, typeDocument, client);
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "type_document", referencedColumnName = "id_type", nullable = false,insertable = false, updatable = false)
     public DocumentTypeEntity getDocumentTypeByTypeDocument() {
         return documentTypeByTypeDocument;
