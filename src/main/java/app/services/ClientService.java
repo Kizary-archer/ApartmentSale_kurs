@@ -22,13 +22,43 @@ public class ClientService {
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
       return clientDAO.addClient(new ClientEntity( name, surname, patronymic, dateOfBirth, phoneNumber, email, gender));
     }
+    public boolean delClient(ClientEntity clientEntity){
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+        return  clientDAO.delClient(clientEntity);
+    }
     public ClientEntity getClientById(int idClient){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
         return  clientDAO.getClientById(idClient);
     }
-
-    public Collection<ClientEntity> getClientDocuments(ClientEntity clientEntity){
+    public Collection<ClientEntity> getClients(int limit,int offset){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-        return  clientDAO.getClientDocument(clientEntity);
+        return  clientDAO.getClients(limit,offset);
     }
+
+    public ClientEntity getClientDocuments(int idClient){
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+        return  clientDAO.getClientDocument(idClient);
+    }
+    public ClientEntity getClientapartmentSales(int idClient){
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+        return  clientDAO.getClientapartmentSales(idClient);
+    }
+    public ClientEntity getClientapartments(int idClient){
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+        return  clientDAO.getClientapartments(idClient);
+    }
+    public ClientEntity getClientsearchApartments(int idClient){
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+        return  clientDAO.getClientsearchApartments(idClient);
+    }
+    public Collection<ClientEntity> getAllClient(){
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+        return clientDAO.getAllClient();
+    }
+  /*  public ClientEntity getClientAllData(ClientEntity clientEntity){
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+        return  clientDAO.getClientDocument(clientDAO.getClientapartments(
+                                                clientDAO.getClientapartmentSales
+                                                    (clientDAO.getClientsearchApartments(clientEntity))));
+    }*/
 }
