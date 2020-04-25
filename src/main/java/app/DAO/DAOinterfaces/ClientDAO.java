@@ -8,6 +8,7 @@ public interface ClientDAO extends DAOMain {
 
     public boolean addClient(ClientEntity clientEntity);
     public boolean delClient(ClientEntity clientEntity);
+    public boolean updateClient(ClientEntity clientEntity);
     public Collection<ClientEntity> getAllClient();
     public Collection<ClientEntity> getClients(int limit,int offset);
     public ClientEntity getClientDocument(int idClient);

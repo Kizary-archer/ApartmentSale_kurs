@@ -16,6 +16,7 @@ public class ClientDAOImpl implements ClientDAO {
             session.beginTransaction();
             session.save(clientEntity);
             session.getTransaction().commit();
+            return true;
         } catch (Exception e) {
             System.out.println(e);
             return false;
@@ -24,7 +25,6 @@ public class ClientDAOImpl implements ClientDAO {
                 session.close();
             }
         }
-        return true;
     }
 
     @Override
@@ -35,6 +35,7 @@ public class ClientDAOImpl implements ClientDAO {
             session.beginTransaction();
             session.delete(clientEntity);
             session.getTransaction().commit();
+            return true;
         } catch (Exception e) {
             System.out.println(e);
             return false;
@@ -43,7 +44,25 @@ public class ClientDAOImpl implements ClientDAO {
                 session.close();
             }
         }
-        return true;
+    }
+
+    @Override
+    public boolean updateClient(ClientEntity clientEntity) {
+        Session session = null;
+        try {
+            session = getSession();
+            session.beginTransaction();
+            session.update(clientEntity);
+            session.getTransaction().commit();
+            return true;
+        } catch (Exception e) {
+            System.out.println(e);
+            return false;
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
     }
 
     @Override

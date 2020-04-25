@@ -3,8 +3,7 @@ package app.services;
 import app.DAO.DAOinterfaces.CityDAO;
 import app.DAO.DAOinterfaces.ClientDAO;
 import app.Util.DAOCreateFactoryUtil;
-import app.entities.CityEntity;
-import app.entities.ClientEntity;
+import app.entities.*;
 
 import java.sql.Date;
 import java.sql.SQLException;
@@ -26,6 +25,10 @@ public class ClientService {
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
         return  clientDAO.delClient(clientEntity);
     }
+    public static boolean updateClient(ClientEntity clientEntity){
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+        return  clientDAO.updateClient(clientEntity);
+    }
     public ClientEntity getClientById(int idClient){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
         return  clientDAO.getClientById(idClient);
@@ -35,21 +38,21 @@ public class ClientService {
         return  clientDAO.getClients(limit,offset);
     }
 
-    public ClientEntity getClientDocuments(int idClient){
+    public Collection<DocumentsClientEntity> getClientDocuments(int idClient){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-        return  clientDAO.getClientDocument(idClient);
+        return  clientDAO.getClientDocument(idClient).getDocumentsClientsByIdClient();
     }
-    public ClientEntity getClientapartmentSales(int idClient){
+    public Collection<ApartmentSaleEntity> getClientapartmentSales(int idClient){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-        return  clientDAO.getClientapartmentSales(idClient);
+        return  clientDAO.getClientapartmentSales(idClient).getApartmentSalesByIdClient();
     }
-    public ClientEntity getClientapartments(int idClient){
+    public Collection<ApartmentEntity> getClientapartments(int idClient){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-        return  clientDAO.getClientapartments(idClient);
+        return  clientDAO.getClientapartments(idClient).getApartmentsByIdClient();
     }
-    public ClientEntity getClientsearchApartments(int idClient){
+    public Collection<SearchApartmentEntity> getClientsearchApartments(int idClient){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-        return  clientDAO.getClientsearchApartments(idClient);
+        return  clientDAO.getClientsearchApartments(idClient).getSearchApartmentsByIdClient();
     }
     public Collection<ClientEntity> getAllClient(){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
