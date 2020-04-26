@@ -62,6 +62,7 @@ public class ClientEntity {
     @Basic
     @Column(name = "surname", nullable = false, length = 50)
     public String getSurname() {
+        int a = 1;
         return surname;
     }
 

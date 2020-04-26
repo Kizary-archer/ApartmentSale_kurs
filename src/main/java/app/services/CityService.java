@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.Collection;
 
 public class CityService {
-
+/*
     public boolean addCity(String cityName) throws SQLException {
         if(cityName =="")return false;
         CityDAO cityDAO = DAOCreateFactoryUtil.getInstance().getCityDAO();
@@ -19,5 +19,5 @@ public class CityService {
         CityDAO cityDAO = DAOCreateFactoryUtil.getInstance().getCityDAO();
         cityDAO.getDistrictByCity(city);
         return null;
-    }
+    }*/
 }

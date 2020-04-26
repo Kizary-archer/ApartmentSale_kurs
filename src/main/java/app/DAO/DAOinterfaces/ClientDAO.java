@@ -2,15 +2,13 @@ package app.DAO.DAOinterfaces;
 
 import app.entities.ClientEntity;
 
+import java.util.Date;
 import java.util.Collection;
 
-public interface ClientDAO extends DAOMain {
+public interface ClientDAO extends DAOMain<ClientEntity> {
 
-    public boolean addClient(ClientEntity clientEntity);
-    public boolean delClient(ClientEntity clientEntity);
-    public boolean updateClient(ClientEntity clientEntity);
     public Collection<ClientEntity> getAllClient();
-    public Collection<ClientEntity> getClients(int limit,int offset);
+    public Collection<ClientEntity> getClients(int limit, int offset, String name, String surname, String patronymic, Date date, String phone,String email,boolean gender);
     public ClientEntity getClientDocument(int idClient);
     public ClientEntity getClientapartmentSales(int idClient);
     public ClientEntity getClientapartments(int idClient);

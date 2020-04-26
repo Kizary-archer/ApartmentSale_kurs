@@ -11,7 +11,7 @@ import java.util.Collection;
 
 public class ClientService {
 
-    public boolean addClient(String name,
+  /*  public boolean addClient(String name,
                              String surname,
                              String patronymic,
                              Date dateOfBirth,

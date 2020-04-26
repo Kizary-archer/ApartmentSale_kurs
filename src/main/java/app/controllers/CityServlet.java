@@ -13,14 +13,14 @@ import java.sql.SQLException;
 public class CityServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/addCity.jsp");
         requestDispatcher.forward(request, response);
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-        String cityName = request.getParameter("cityName");
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      /*  String cityName = request.getParameter("cityName");
         CityService cityServices = new CityService();
         try {
             if(cityServices.addCity(cityName))request.setAttribute("cityName", cityName);
@@ -29,6 +29,7 @@ public class CityServlet extends HttpServlet {
             e.printStackTrace();
         }
         doGet(request, response);
+    */
     }
 }
 

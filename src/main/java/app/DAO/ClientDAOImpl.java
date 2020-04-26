@@ -6,64 +6,9 @@ import org.hibernate.Session;
 
 import javax.persistence.Query;
 import java.util.Collection;
+import java.util.Date;
 
 public class ClientDAOImpl implements ClientDAO {
-    @Override
-    public boolean addClient(ClientEntity clientEntity) {
-        Session session = null;
-        try {
-            session = getSession();
-            session.beginTransaction();
-            session.save(clientEntity);
-            session.getTransaction().commit();
-            return true;
-        } catch (Exception e) {
-            System.out.println(e);
-            return false;
-        } finally {
-            if (session != null && session.isOpen()) {
-                session.close();
-            }
-        }
-    }
-
-    @Override
-    public boolean delClient(ClientEntity clientEntity) {
-        Session session = null;
-        try {
-            session = getSession();
-            session.beginTransaction();
-            session.delete(clientEntity);
-            session.getTransaction().commit();
-            return true;
-        } catch (Exception e) {
-            System.out.println(e);
-            return false;
-        } finally {
-            if (session != null && session.isOpen()) {
-                session.close();
-            }
-        }
-    }
-
-    @Override
-    public boolean updateClient(ClientEntity clientEntity) {
-        Session session = null;
-        try {
-            session = getSession();
-            session.beginTransaction();
-            session.update(clientEntity);
-            session.getTransaction().commit();
-            return true;
-        } catch (Exception e) {
-            System.out.println(e);
-            return false;
-        } finally {
-            if (session != null && session.isOpen()) {
-                session.close();
-            }
-        }
-    }
 
     @Override
     public Collection<ClientEntity> getAllClient() {
@@ -86,7 +31,7 @@ public class ClientDAOImpl implements ClientDAO {
     }
 
     @Override
-    public Collection<ClientEntity> getClients(int limit, int offset) {
+    public Collection<ClientEntity> getClients(int limit, int offset, String name, String surname, String patronymic, Date date, String phone, String email, boolean gender) {
         Session session = null;
         try {
             session = getSession();
