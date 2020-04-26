@@ -7,15 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d22d5-a34e-4a94-a120-3d9028074d89" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/CityDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/CityDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/ClientDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/ClientDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/CityDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/CityDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/ClientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/ClientDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/DAOMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/DAOMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controllers/CityServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/CityServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/ClientEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/ClientEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/services/CityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/services/CityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/services/ClientService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,7 +281,7 @@
       <workItem from="1587806049104" duration="11364000" />
       <workItem from="1587849784673" duration="3132000" />
       <workItem from="1587854880568" duration="853000" />
-      <workItem from="1587894143294" duration="11744000" />
+      <workItem from="1587894143294" duration="18235000" />
     </task>
     <servers />
   </component>
@@ -362,38 +356,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="359" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587298232047" />
-    <state width="1322" height="198" key="GridCell.Tab.0.bottom" timestamp="1587906607404">
+    <state width="1322" height="198" key="GridCell.Tab.0.bottom" timestamp="1587920012295">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="198" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587906607404" />
-    <state width="1322" height="198" key="GridCell.Tab.0.center" timestamp="1587906607404">
+    <state width="1322" height="198" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587920012295" />
+    <state width="1322" height="198" key="GridCell.Tab.0.center" timestamp="1587920012295">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="198" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587906607404" />
-    <state width="1322" height="198" key="GridCell.Tab.0.left" timestamp="1587906607404">
+    <state width="1322" height="198" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587920012295" />
+    <state width="1322" height="198" key="GridCell.Tab.0.left" timestamp="1587920012295">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="198" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587906607404" />
-    <state width="1322" height="198" key="GridCell.Tab.0.right" timestamp="1587906607404">
+    <state width="1322" height="198" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587920012295" />
+    <state width="1322" height="198" key="GridCell.Tab.0.right" timestamp="1587920012295">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="198" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587906607404" />
-    <state width="1322" height="198" key="GridCell.Tab.1.bottom" timestamp="1587906614545">
+    <state width="1322" height="198" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587920012295" />
+    <state width="1322" height="198" key="GridCell.Tab.1.bottom" timestamp="1587920013377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="198" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587906614545" />
-    <state width="1322" height="198" key="GridCell.Tab.1.center" timestamp="1587906614545">
+    <state width="1322" height="198" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587920013377" />
+    <state width="1322" height="198" key="GridCell.Tab.1.center" timestamp="1587920013377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="198" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587906614545" />
-    <state width="1322" height="198" key="GridCell.Tab.1.left" timestamp="1587906614545">
+    <state width="1322" height="198" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1587920013377" />
+    <state width="1322" height="198" key="GridCell.Tab.1.left" timestamp="1587920013377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="198" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587906614545" />
-    <state width="1322" height="198" key="GridCell.Tab.1.right" timestamp="1587906614545">
+    <state width="1322" height="198" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1587920013377" />
+    <state width="1322" height="198" key="GridCell.Tab.1.right" timestamp="1587920013377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="198" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587906614545" />
+    <state width="1322" height="198" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587920013377" />
     <state width="1090" height="9" key="GridCell.Tab.2.bottom" timestamp="1587671406021">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -438,10 +432,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1587727940939" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1587902837704">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1587919141794">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1587902837704" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1587919141794" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -455,6 +449,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/app/servlets/AddServlet.java</url>
           <line>23</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/app/Main.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

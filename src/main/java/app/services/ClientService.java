@@ -1,6 +1,5 @@
 package app.services;
 
-import app.DAO.DAOinterfaces.CityDAO;
 import app.DAO.DAOinterfaces.ClientDAO;
 import app.Util.DAOCreateFactoryUtil;
 import app.entities.*;
@@ -11,7 +10,7 @@ import java.util.Collection;
 
 public class ClientService {
 
-  /*  public boolean addClient(String name,
+    public boolean addClient(String name,
                              String surname,
                              String patronymic,
                              Date dateOfBirth,
@@ -19,23 +18,23 @@ public class ClientService {
                              String email,
                              Boolean gender) throws SQLException {
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-      return clientDAO.addClient(new ClientEntity( name, surname, patronymic, dateOfBirth, phoneNumber, email, gender));
+      return clientDAO.add(new ClientEntity( name, surname, patronymic, dateOfBirth, phoneNumber, email, gender));
     }
     public boolean delClient(ClientEntity clientEntity){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-        return  clientDAO.delClient(clientEntity);
+        return  clientDAO.delete(clientEntity);
     }
     public static boolean updateClient(ClientEntity clientEntity){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-        return  clientDAO.updateClient(clientEntity);
+        return  clientDAO.update(clientEntity);
     }
     public ClientEntity getClientById(int idClient){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
         return  clientDAO.getClientById(idClient);
     }
-    public Collection<ClientEntity> getClients(int limit,int offset){
+    public Collection<ClientEntity> getClients(int limit,int offset,ClientEntity clientEntity){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-        return  clientDAO.getClients(limit,offset);
+        return  clientDAO.getClients(limit,offset,clientEntity);
     }
 
     public Collection<DocumentsClientEntity> getClientDocuments(int idClient){

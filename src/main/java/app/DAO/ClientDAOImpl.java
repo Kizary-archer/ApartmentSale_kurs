@@ -5,6 +5,9 @@ import app.entities.ClientEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.Collection;
 import java.util.Date;
 
@@ -31,15 +34,18 @@ public class ClientDAOImpl implements ClientDAO {
     }
 
     @Override
-    public Collection<ClientEntity> getClients(int limit, int offset, String name, String surname, String patronymic, Date date, String phone, String email, boolean gender) {
+    public Collection<ClientEntity> getClients(int limit, int offset, ClientEntity clientEntity) {
         Session session = null;
         try {
             session = getSession();
             session.beginTransaction();
-            String hql = "select distinct c from ClientEntity c ";
-            Query query =  session.createQuery(hql);
-            query.setMaxResults(limit);
-            query.setFirstResult(offset);
+            CriteriaBuilder cb = session.getCriteriaBuilder();
+            CriteriaQuery<ClientEntity> cr = cb.createQuery(ClientEntity.class);
+            Root<ClientEntity> root = cr.from(ClientEntity.class);
+            cr.select(root);
+            cr.where(cb.like(root.get("name"),"Philippa"),cb.like(root.get("surname"),"Jayne"));
+
+            Query query = session.createQuery(cr);
             session.getTransaction().commit();
             return (Collection<ClientEntity>) query.getResultList();
         } catch (Exception e) {
