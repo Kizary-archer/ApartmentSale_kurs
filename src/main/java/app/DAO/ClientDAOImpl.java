@@ -10,22 +10,21 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 public class ClientDAOImpl implements ClientDAO {
 
     @Override
-    public Collection<ClientEntity> getAllClient() {
+    public List getAllClient() {
         Session session = null;
         try {
             session = getSession();
             session.beginTransaction();
             String hql = "select distinct c from ClientEntity c ";
             Query query =  session.createQuery(hql);
+            List res = query.getResultList();
             session.getTransaction().commit();
-            return (Collection<ClientEntity>) query.getResultList();
+            return res;
         } catch (Exception e) {
             System.out.println(e);
             return null;
@@ -37,7 +36,7 @@ public class ClientDAOImpl implements ClientDAO {
     }
 
     @Override
-    public Collection<ClientEntity> getClients(int limit, int offset, ClientEntity clientEntity) {
+    public List getClients(int limit, int offset, ClientEntity clientEntity) {
         Session session = null;
         try {
             session = getSession();
@@ -46,12 +45,6 @@ public class ClientDAOImpl implements ClientDAO {
             CriteriaQuery<ClientEntity> criteriaBuilderQuery = criteriaBuilder.createQuery(ClientEntity.class);
             Root<ClientEntity> root = criteriaBuilderQuery.from(ClientEntity.class);
             criteriaBuilderQuery.select(root);
-          /*  cr.where(
-                    cb.or(
-                    cb.like(root.get("name"),"Philippa"),
-                    cb.like(root.get("surname"),"Jayne")
-                    )
-            );*/
             List<Predicate> p = new ArrayList<Predicate>();
 
             if(clientEntity.getName() != null){
@@ -81,8 +74,11 @@ public class ClientDAOImpl implements ClientDAO {
                 criteriaBuilderQuery.where((pr));
             }
             Query query = session.createQuery(criteriaBuilderQuery);
+           if(limit != 0) query.setMaxResults(limit);
+            query.setFirstResult(offset);
+            List res = query.getResultList();
             session.getTransaction().commit();
-            return (Collection<ClientEntity>) query.getResultList();
+            return res;
         } catch (Exception e) {
             System.out.println(e);
             return null;
@@ -105,8 +101,9 @@ public class ClientDAOImpl implements ClientDAO {
                     "where c.idClient = :id";
             Query query =  session.createQuery(hql);
             query.setParameter("id",idClient);
+            ClientEntity res = (ClientEntity) query.getSingleResult();
             session.getTransaction().commit();
-            return (ClientEntity) query.getSingleResult();
+            return res;
         } catch (Exception e) {
             System.out.println(e);
             return null;
@@ -129,8 +126,9 @@ public class ClientDAOImpl implements ClientDAO {
                     "where c.idClient = :id";
             Query query =  session.createQuery(hql);
             query.setParameter("id",idClient);
+            ClientEntity res = (ClientEntity) query.getSingleResult();
             session.getTransaction().commit();
-            return (ClientEntity) query.getSingleResult();
+            return res;
         } catch (Exception e) {
             System.out.println(e);
             return null;
@@ -153,8 +151,9 @@ public class ClientDAOImpl implements ClientDAO {
                     "where c.idClient = :id";
             Query query =  session.createQuery(hql);
             query.setParameter("id",idClient);
+            ClientEntity res = (ClientEntity) query.getSingleResult();
             session.getTransaction().commit();
-            return (ClientEntity) query.getSingleResult();
+            return res;
         } catch (Exception e) {
             System.out.println(e);
             return null;
@@ -177,8 +176,9 @@ public class ClientDAOImpl implements ClientDAO {
                     "where c.idClient = :id";
             Query query =  session.createQuery(hql);
             query.setParameter("id",idClient);
+            ClientEntity res = (ClientEntity) query.getSingleResult();
             session.getTransaction().commit();
-            return (ClientEntity) query.getSingleResult();
+            return res;
         } catch (Exception e) {
             System.out.println(e);
             return null;
@@ -198,8 +198,9 @@ public class ClientDAOImpl implements ClientDAO {
             String hql = "from ClientEntity where idClient = :id";
             Query query =  session.createQuery(hql);
             query.setParameter("id",id);
+            ClientEntity res = (ClientEntity) query.getSingleResult();
             session.getTransaction().commit();
-            return (ClientEntity) query.getSingleResult();
+            return res;
         } catch (Exception e) {
             System.out.println(e);
             return null;
