@@ -14,4 +14,5 @@ public interface ClientDAO extends DAOMain<ClientEntity> {
     public ClientEntity getClientapartments(int idClient);
     public ClientEntity getClientsearchApartments(int idClient);
     public ClientEntity getClientById(int idClient);
+    public ClientEntity getClientAllChild(int idClient);
 }

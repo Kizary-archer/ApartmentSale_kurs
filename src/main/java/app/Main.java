@@ -18,9 +18,9 @@ public class Main {
         CityDAO cityDAO = new CityDAOImpl();
         cityDAO.add(cityEntity);*/
         ClientService clientService = new ClientService();
-        ClientEntity clientEntity = new ClientEntity();
-        clientEntity.setPatronymic("in culpa qui officia deserunt ");
-       List<ClientEntity> clientEntities = (List<ClientEntity>) clientService.getClients(0,0,clientEntity);
+        ClientEntity clientEntity = clientService.getClientAllData(1);
+        /*clientEntity.setPatronymic("in culpa qui officia deserunt ");
+       List<ClientEntity> clientEntities = (List<ClientEntity>) clientService.getClients(0,0,clientEntity);*/
    // boolean test = clientService.addClient("aaa","aaa","aaa",new Date(1989-03-19),"2222222","aass",false);
      //  ClientEntity clientEntity = clientService.getClientById(1);
    //    clientEntity.setApartmentsByIdClient(clientService.getClientapartments(1));

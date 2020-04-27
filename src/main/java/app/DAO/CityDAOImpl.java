@@ -2,7 +2,6 @@ package app.DAO;
 
 import app.DAO.DAOinterfaces.CityDAO;
 import app.entities.CityEntity;
-import org.hibernate.Session;
 
 import java.sql.SQLException;
 import java.util.Collection;

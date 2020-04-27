@@ -5,28 +5,6 @@
          version="3.1">
 
 <servlet>
-<servlet-name>add</servlet-name>
-<servlet-class>app.controllers.AddServlet</servlet-class>
-</servlet>
-
-<servlet-mapping>
-<servlet-name>add</servlet-name>
-<url-pattern>/add</url-pattern>
-</servlet-mapping>
-
-        <!-- list servlet -->
-<servlet>
-<servlet-name>list</servlet-name>
-<servlet-class>app.controllers.ListServlet</servlet-class>
-</servlet>
-
-<servlet-mapping>
-<servlet-name>list</servlet-name>
-<url-pattern>/list</url-pattern>
-</servlet-mapping>
-
-
-<servlet>
 <servlet-name>addCity</servlet-name>
 <servlet-class>app.controllers.CityServlet</servlet-class>
 </servlet>

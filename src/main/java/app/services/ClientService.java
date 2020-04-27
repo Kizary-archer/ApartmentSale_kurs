@@ -5,7 +5,6 @@ import app.Util.DAOCreateFactoryUtil;
 import app.entities.*;
 
 import java.sql.Date;
-import java.sql.SQLException;
 import java.util.Collection;
 
 public class ClientService {
@@ -16,9 +15,13 @@ public class ClientService {
                              Date dateOfBirth,
                              String phoneNumber,
                              String email,
-                             Boolean gender) throws SQLException {
+                             Boolean gender) {
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
       return clientDAO.add(new ClientEntity( name, surname, patronymic, dateOfBirth, phoneNumber, email, gender));
+    }
+    public boolean addClient(ClientEntity clientEntity){
+        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
+        return  clientDAO.add(clientEntity);
     }
     public boolean delClient(ClientEntity clientEntity){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
@@ -57,10 +60,8 @@ public class ClientService {
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
         return clientDAO.getAllClient();
     }
-  /*  public ClientEntity getClientAllData(ClientEntity clientEntity){
+    public ClientEntity getClientAllData(int idClient){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-        return  clientDAO.getClientDocument(clientDAO.getClientapartments(
-                                                clientDAO.getClientapartmentSales
-                                                    (clientDAO.getClientsearchApartments(clientEntity))));
-    }*/
+        return clientDAO.getClientAllChild(idClient);
+    }
 }

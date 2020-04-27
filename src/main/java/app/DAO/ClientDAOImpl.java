@@ -57,13 +57,13 @@ public class ClientDAOImpl implements ClientDAO {
                 p.add(criteriaBuilder.like(root.get("patronymic"),clientEntity.getPatronymic()));
             }
             if(clientEntity.getDateOfBirth() != null){
-                p.add(criteriaBuilder.like(root.get("DateOfBirth"),clientEntity.getDateOfBirth().toString()));
+                p.add(criteriaBuilder.equal(root.get("DateOfBirth"),clientEntity.getDateOfBirth()));
             }
             if(clientEntity.getEmail() != null){
                 p.add(criteriaBuilder.like(root.get("Email"),clientEntity.getEmail()));
             }
             if(clientEntity.getGender() != null){
-                p.add(criteriaBuilder.like(root.get("gender"),clientEntity.getGender().toString()));
+                p.add(criteriaBuilder.equal(root.get("gender"),clientEntity.getGender()));
             }
             if(clientEntity.getPhoneNumber() != null){
                 p.add(criteriaBuilder.like(root.get("PhoneNumber"),clientEntity.getPhoneNumber()));
@@ -199,6 +199,56 @@ public class ClientDAOImpl implements ClientDAO {
             Query query =  session.createQuery(hql);
             query.setParameter("id",id);
             ClientEntity res = (ClientEntity) query.getSingleResult();
+            session.getTransaction().commit();
+            return res;
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
+    }
+
+    @Override
+    public ClientEntity getClientAllChild(int idClient) {
+        Session session = null;
+        ClientEntity res;
+        try {
+            session = getSession();
+            session.beginTransaction();
+            String hqlsearchApartment = "select distinct  c " +
+                    "from ClientEntity c " +
+                    "left join fetch c.searchApartmentsByIdClient " +
+                    "where c.idClient = :id";
+            Query query =  session.createQuery(hqlsearchApartment);
+            query.setParameter("id",idClient);
+            res = (ClientEntity) query.getSingleResult();
+
+            String hqlApartments = "select distinct  c " +
+                    "from ClientEntity c " +
+                    "left join fetch c.apartmentsByIdClient " +
+                    "where c.idClient = :id";
+            query =  session.createQuery(hqlApartments);
+            query.setParameter("id",idClient);
+            res = (ClientEntity) query.getSingleResult();
+
+            String hqlApartmentsSale = "select distinct  c " +
+                    "from ClientEntity c " +
+                    "left join fetch c.apartmentSalesByIdClient " +
+                    "where c.idClient = :id";
+            query =  session.createQuery(hqlApartmentsSale);
+            query.setParameter("id",idClient);
+            res = (ClientEntity) query.getSingleResult();
+
+            String hqlDocuments = "select distinct  c " +
+                    "from ClientEntity c " +
+                    "left join fetch c.documentsClientsByIdClient " +
+                    "where c.idClient = :id";
+            query =  session.createQuery(hqlDocuments);
+            query.setParameter("id",idClient);
+            res = (ClientEntity) query.getSingleResult();
             session.getTransaction().commit();
             return res;
         } catch (Exception e) {
