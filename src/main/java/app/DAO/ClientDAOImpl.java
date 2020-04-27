@@ -7,9 +7,12 @@ import org.hibernate.Session;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 public class ClientDAOImpl implements ClientDAO {
 
@@ -39,13 +42,45 @@ public class ClientDAOImpl implements ClientDAO {
         try {
             session = getSession();
             session.beginTransaction();
-            CriteriaBuilder cb = session.getCriteriaBuilder();
-            CriteriaQuery<ClientEntity> cr = cb.createQuery(ClientEntity.class);
-            Root<ClientEntity> root = cr.from(ClientEntity.class);
-            cr.select(root);
-            cr.where(cb.like(root.get("name"),"Philippa"),cb.like(root.get("surname"),"Jayne"));
+            CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
+            CriteriaQuery<ClientEntity> criteriaBuilderQuery = criteriaBuilder.createQuery(ClientEntity.class);
+            Root<ClientEntity> root = criteriaBuilderQuery.from(ClientEntity.class);
+            criteriaBuilderQuery.select(root);
+          /*  cr.where(
+                    cb.or(
+                    cb.like(root.get("name"),"Philippa"),
+                    cb.like(root.get("surname"),"Jayne")
+                    )
+            );*/
+            List<Predicate> p = new ArrayList<Predicate>();
 
-            Query query = session.createQuery(cr);
+            if(clientEntity.getName() != null){
+                p.add(criteriaBuilder.like(root.get("name"),clientEntity.getName()));
+            }
+            if(clientEntity.getSurname() != null){
+                p.add(criteriaBuilder.like(root.get("surname"),clientEntity.getSurname()));
+            }
+            if(clientEntity.getPatronymic() != null){
+                p.add(criteriaBuilder.like(root.get("patronymic"),clientEntity.getPatronymic()));
+            }
+            if(clientEntity.getDateOfBirth() != null){
+                p.add(criteriaBuilder.like(root.get("DateOfBirth"),clientEntity.getDateOfBirth().toString()));
+            }
+            if(clientEntity.getEmail() != null){
+                p.add(criteriaBuilder.like(root.get("Email"),clientEntity.getEmail()));
+            }
+            if(clientEntity.getGender() != null){
+                p.add(criteriaBuilder.like(root.get("gender"),clientEntity.getGender().toString()));
+            }
+            if(clientEntity.getPhoneNumber() != null){
+                p.add(criteriaBuilder.like(root.get("PhoneNumber"),clientEntity.getPhoneNumber()));
+            }
+            if(!p.isEmpty()) {
+                Predicate[] pr = new Predicate[p.size()];
+                p.toArray(pr);
+                criteriaBuilderQuery.where((pr));
+            }
+            Query query = session.createQuery(criteriaBuilderQuery);
             session.getTransaction().commit();
             return (Collection<ClientEntity>) query.getResultList();
         } catch (Exception e) {
