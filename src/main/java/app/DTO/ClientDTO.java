@@ -6,11 +6,12 @@ import app.entities.DocumentsClientEntity;
 import app.entities.SearchApartmentEntity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Date;
 import java.util.Collection;
 import java.util.Objects;
 
-public class ClientDTO {
+public class ClientDTO implements Serializable {
     private int idClient;
     private String name;
     private String surname;

@@ -19,20 +19,20 @@
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>2520</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|34236|34238|1
+      <Relations>sequence|table|34794|34796|1
+sequence|table|34198|34200|1
+sequence|table|34180|34182|1
+sequence|table|34166|34168|1
+sequence|table|34236|34238|1
 sequence|table|34245|34247|1
 sequence|table|34222|34224|1
 sequence|table|34227|34229|1
 sequence|table|34254|34256|1
-sequence|table|34297|34299|1
-sequence|table|34180|34182|1
-sequence|table|34143|34145|1
-sequence|table|34166|34168|1
-sequence|table|34152|34154|1
-sequence|table|34198|34200|1
-sequence|table|34794|34796|1
 sequence|table|34309|34306|1
+sequence|table|34143|34145|1
+sequence|table|34152|34154|1
 sequence|table|34347|34349|1
+sequence|table|34297|34299|1
 </Relations>
     </database>
     <database id="5" parent="1" name="zzz">

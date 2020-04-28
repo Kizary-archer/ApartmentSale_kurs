@@ -1,6 +1,6 @@
-package app.DAO.DAOinterfaces;
+package app.DAO;
 
-import app.entities.ClientEntity;
+import app.DAO.DAOinterfaces.SearchApartmentDAO;
 import app.entities.SearchApartmentEntity;
 import org.hibernate.Session;
 
@@ -48,25 +48,28 @@ public class SearchApartmentDAOImpl implements SearchApartmentDAO {
             List<Predicate> p = new ArrayList<Predicate>();
 
             if(searchApartmentEntity.getCountRoom() != null){
-                p.add(criteriaBuilder.like(root.get("name"),searchApartmentEntity.getName()));
+                p.add(criteriaBuilder.equal(root.get("countRoom"),searchApartmentEntity.getCountRoom()));
             }
             if(searchApartmentEntity.getLivingSpace() != null){
-                p.add(criteriaBuilder.like(root.get("surname"),searchApartmentEntity.getSurname()));
+                p.add(criteriaBuilder.equal(root.get("livingSpace"),searchApartmentEntity.getLivingSpace()));
+            }
+            if(searchApartmentEntity.getMeterPrice() != null){
+                p.add(criteriaBuilder.equal(root.get("meterPrice"),searchApartmentEntity.getMeterPrice()));
+            }
+            if(searchApartmentEntity.getPrice() != null){
+                p.add(criteriaBuilder.equal(root.get("price"),searchApartmentEntity.getPrice()));
             }
             if(searchApartmentEntity.getStreet() != null){
-                p.add(criteriaBuilder.like(root.get("patronymic"),searchApartmentEntity.getPatronymic()));
+                p.add(criteriaBuilder.equal(root.get("street"),searchApartmentEntity.getStreet()));
             }
             if(searchApartmentEntity.getDistrict() != null){
-                p.add(criteriaBuilder.like(root.get("DateOfBirth"),searchApartmentEntity.getDateOfBirth().toString()));
+                p.add(criteriaBuilder.equal(root.get("district"),searchApartmentEntity.getDistrict()));
             }
             if(searchApartmentEntity.getCity() != null){
-                p.add(criteriaBuilder.like(root.get("Email"),searchApartmentEntity.getEmail()));
+                p.add(criteriaBuilder.equal(root.get("city"),searchApartmentEntity.getCity()));
             }
-            if(searchApartmentEntity.getClient() != 0){
-                p.add(criteriaBuilder.like(root.get("gender"),searchApartmentEntity.getGender().toString()));
-            }
-            if(searchApartmentEntity.getPhoneNumber() != null){
-                p.add(criteriaBuilder.like(root.get("PhoneNumber"),searchApartmentEntity.getPhoneNumber()));
+            if(searchApartmentEntity.getClient() != null){
+                p.add(criteriaBuilder.equal(root.get("client"),searchApartmentEntity.getClient()));
             }
             if(!p.isEmpty()) {
                 Predicate[] pr = new Predicate[p.size()];
@@ -91,11 +94,48 @@ public class SearchApartmentDAOImpl implements SearchApartmentDAO {
 
     @Override
     public SearchApartmentEntity getApartmentSales(int idApart) {
-        return null;
+        Session session = null;
+        try {
+            session = getSession();
+            session.beginTransaction();
+            String hql = "select distinct  c " +
+                    "from SearchApartmentEntity c " +
+                    "left join fetch c.apartmentSalesByIdApartment " +
+                    "where c.idApartment = :id";
+            Query query =  session.createQuery(hql);
+            query.setParameter("id",idApart);
+            SearchApartmentEntity res = (SearchApartmentEntity) query.getSingleResult();
+            session.getTransaction().commit();
+            return res;
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
     }
 
     @Override
     public SearchApartmentEntity getSearchApartmentById(int idApart) {
-        return null;
+        Session session = null;
+        try {
+            session = getSession();
+            session.beginTransaction();
+            String hql = "from SearchApartmentEntity where idApartment = :id";
+            Query query =  session.createQuery(hql);
+            query.setParameter("id",idApart);
+            SearchApartmentEntity res = (SearchApartmentEntity) query.getSingleResult();
+            session.getTransaction().commit();
+            return res;
+        } catch (Exception e) {
+            System.out.println(e);
+            return null;
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
     }
 }

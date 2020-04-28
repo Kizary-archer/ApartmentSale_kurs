@@ -8,12 +8,12 @@ import java.util.Objects;
 @Table(name = "search_apartment", schema = "public", catalog = "sale_of_apartments")
 public class SearchApartmentEntity {
     private int idApartment;
-    private Float countRoom;
+    private Integer countRoom;
     private Integer livingSpace;
     private Integer street;
     private Integer district;
     private Integer city;
-    private int client;
+    private Integer client;
     private Integer meterPrice;
     private Integer price;
     private Collection<ApartmentSaleEntity> apartmentSalesByIdApartment;
@@ -35,11 +35,11 @@ public class SearchApartmentEntity {
 
     @Basic
     @Column(name = "count_room", nullable = true, precision = 0)
-    public Float getCountRoom() {
+    public Integer getCountRoom() {
         return countRoom;
     }
 
-    public void setCountRoom(Float countRoom) {
+    public void setCountRoom(Integer countRoom) {
         this.countRoom = countRoom;
     }
 
@@ -85,11 +85,11 @@ public class SearchApartmentEntity {
 
     @Basic
     @Column(name = "client", nullable = false)
-    public int getClient() {
+    public Integer getClient() {
         return client;
     }
 
-    public void setClient(int client) {
+    public void setClient(Integer client) {
         this.client = client;
     }
 

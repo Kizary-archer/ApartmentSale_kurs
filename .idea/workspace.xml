@@ -7,22 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d22d5-a34e-4a94-a120-3d9028074d89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/SearchApartmentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/SearchApartmentDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/CityDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/CityDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/ClientDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/ClientDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/ClientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/ClientDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controllers/AddServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controllers/ListServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Model.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/services/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/WEB-INF/classes/app/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ApartmentSale-1.0-SNAPSHOT/WEB-INF/classes/app/model/Model.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/entities/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/model/Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/DAO/DAOinterfaces/SearchApartmentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DAO/SearchApartmentDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/DTO/ClientDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/DTO/ClientDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/controllers/ClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controllers/ClientServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/entities/SearchApartmentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/entities/SearchApartmentEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +284,9 @@
       <workItem from="1587854880568" duration="853000" />
       <workItem from="1587894143294" duration="20398000" />
       <workItem from="1587990706509" duration="13039000" />
-      <workItem from="1588005529994" duration="858000" />
+      <workItem from="1588005529994" duration="1292000" />
+      <workItem from="1588069668811" duration="5811000" />
+      <workItem from="1588083319888" duration="5418000" />
     </task>
     <servers />
   </component>
