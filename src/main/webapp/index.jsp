@@ -14,6 +14,7 @@
     <div>    <!-- buttons holder -->
         <button onclick="location.href='./addClient'">add users</button>
         <button onclick="location.href='./addCity'">Add city</button>
+        <button onclick="location.href='./viewClient'">view</button>
     </div>
 </div>
 </body>
