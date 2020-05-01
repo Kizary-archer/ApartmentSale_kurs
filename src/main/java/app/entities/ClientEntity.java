@@ -8,7 +8,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "client", schema = "public", catalog = "sale_of_apartments")
 public class ClientEntity {
-    private int idClient;
+    private Integer idClient;
     private String name;
     private String surname;
     private String patronymic;
@@ -41,11 +41,11 @@ public class ClientEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_client", nullable = false)
-    public int getIdClient() {
+    public Integer getIdClient() {
         return idClient;
     }
 
-    public void setIdClient(int idClient) {
+    public void setIdClient(Integer idClient) {
         this.idClient = idClient;
     }
 
