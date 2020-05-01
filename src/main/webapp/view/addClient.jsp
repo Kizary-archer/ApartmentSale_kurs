@@ -1,9 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<style>
-    <%@include file='./../css/style.css' %>
-</style>
-<jsp:include page="./patt/header.html"/>
+<jsp:include page="patt/header.jsp"/>
 <div>
     <div class="w-50 p-3" >
         <h2>Добавить клиента</h2>

@@ -1,12 +1,9 @@
 package app.controllers;
 
-import app.DAO.DAOinterfaces.ClientDAO;
-import app.DTO.ClientDTO;
 import app.entities.ClientEntity;
 import app.services.ClientService;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,10 +17,10 @@ public class ClientServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         ClientService clientService = new ClientService();
-        ClientEntity client = clientService.getClientAllData(333);
+        ClientEntity client = clientService.getClientAllData(1);
         // client.setName(clientService.getClientById(1).getName());
         request.setAttribute("client",client);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/addClient.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/viewClient.jsp");
         requestDispatcher.forward(request, response);
     }
 
