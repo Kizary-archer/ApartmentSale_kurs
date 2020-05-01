@@ -23,7 +23,7 @@ public class ClientServlet extends HttpServlet {
         ClientEntity client = clientService.getClientAllData(333);
         // client.setName(clientService.getClientById(1).getName());
         request.setAttribute("client",client);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/viewClient.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/addClient.jsp");
         requestDispatcher.forward(request, response);
     }
 
