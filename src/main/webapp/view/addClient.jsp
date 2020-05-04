@@ -22,8 +22,9 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="gender">Пол</label>
-                    <select id="gender" class="form-control">
-                        <option value="true" selected>мужчина</option>
+                    <select id="gender" class="form-control" name="gender" >
+                        <option value="" selected>Выберите пол</option>
+                        <option value="true" >мужчина</option>
                         <option value="false">женщина</option>
                     </select>
                 </div>
@@ -45,9 +46,6 @@
             <button type="submit" class="btn btn-primary">Добавить</button>
         </form>
     </div>
-</div>
-<div>
-    <button  type="submit" class="btn btn-primary m-3"  onclick="location.href='./'" >На главную</button>
 </div>
 </body>
 </html>

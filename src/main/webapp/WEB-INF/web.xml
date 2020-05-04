@@ -14,23 +14,4 @@
     <url-pattern>/addCity</url-pattern>
 </servlet-mapping>
 
-
-<servlet-mapping>
-<servlet-name>addClient</servlet-name>
-<url-pattern>/addClient</url-pattern>
-</servlet-mapping>
-
-<servlet>
-    <servlet-name>addClient</servlet-name>
-    <servlet-class>app.controllers.ClientServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-    <servlet-name>listClientServlet</servlet-name>
-    <url-pattern>/listClients</url-pattern>
-</servlet-mapping>
-
-<servlet>
-    <servlet-name>listClientServlet</servlet-name>
-    <servlet-class>app.controllers.listClientServlet</servlet-class>
-</servlet>
 </web-app>

@@ -15,7 +15,8 @@
     </thead>
     <tbody>
     <c:forEach var="client" items="${clients}">
-        <tr>
+    <a href="./client?idClient=${client.idClient}">
+        <tr onclick="document.location = './client?idClient=${client.idClient}'">
             <td> <c:out value="${client.idClient}"/></td>
             <td> <c:out value="${client.name}"/></td>
             <td> <c:out value="${client.surname}"/></td>
@@ -25,6 +26,7 @@
             <td> <c:out value="${client.email}"/></td>
             <td> <c:out value="${client.gender}"/></td>
         </tr>
+    </a>
     </c:forEach>
     </tbody>
 </table>

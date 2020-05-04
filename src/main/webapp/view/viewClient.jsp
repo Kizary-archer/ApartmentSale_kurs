@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="idClient">id</label>
-                    <input type="text" class="form-control" id="idClient" placeholder=${client.idClient}>
+                    <input type="text" class="form-control" id="idClient" placeholder=${client.idClient} disabled>
                 </div>
             </div>
             <div class="form-group">

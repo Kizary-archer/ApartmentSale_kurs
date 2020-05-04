@@ -22,3 +22,7 @@
 .btn{
     color: #f4f4f4;
 }
+table tr td:hover{
+    background-color: #7c7a7a;
+    cursor: pointer;
+}
