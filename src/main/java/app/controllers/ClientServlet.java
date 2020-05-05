@@ -10,8 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
 
 @WebServlet(urlPatterns = {"/client","/addClient","/delClient","/updClient"})
 public class ClientServlet extends HttpServlet {
@@ -32,25 +37,40 @@ public class ClientServlet extends HttpServlet {
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-     /*   ArrayList<String> clientData = new ArrayList<String>();
-        Iterator<String> header = request.getParameterNames().asIterator();
+       /* Iterator<String> header = request.getParameterNames().asIterator();
         while(header.hasNext()){
             if(request.getParameter(header.next()).equals("")) {
                 request.setAttribute("client", "не добавлен");
-                doGet(request, response);
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/addClient.jsp");
+                requestDispatcher.forward(request, response);
             }
         }*/
-       /* for (String head :header){
-            System.out.println(head);
+        ClientService clientService = new ClientService();
+        ClientEntity clientEntity = new ClientEntity();
+        if(!request.getParameter("name").isEmpty())
+            clientEntity.setName(request.getParameter("name"));
+        if(!request.getParameter("surname").isEmpty())
+            clientEntity.setSurname(request.getParameter("surname"));
+        if(!request.getParameter("patronymic").isEmpty())
+            clientEntity.setPatronymic(request.getParameter("patronymic"));
+        if(!request.getParameter("gender").isEmpty())
+            clientEntity.setGender(Boolean.valueOf(request.getParameter("gender")));
+        if(!request.getParameter("dateOfBirth").isEmpty())
+            clientEntity.setDateOfBirth(Date.valueOf(request.getParameter("dateOfBirth")));
+        if(!request.getParameter("phoneNumber").isEmpty())
+            clientEntity.setPhoneNumber((request.getParameter("phoneNumber")));
+        if(!request.getParameter("email").isEmpty())
+            clientEntity.setEmail((request.getParameter("email")));
+
+        if(clientService.addClient(clientEntity)) {
+            System.out.println("успех");
+            request.setAttribute("idClient", clientEntity.getIdClient());
+            request.setAttribute("isClientAdded", "true");
         }
-        CityServices cityServices = new CityServices();
-        try {
-            if(cityServices.addCity())request.setAttribute("cityName", cityName);
-            else request.setAttribute("cityName", "не");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }*/
-        doGet(request, response);
+        else request.setAttribute("isClientAdded", "false");
+
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/addClient.jsp");
+        requestDispatcher.forward(request, response);
     }
 }
 

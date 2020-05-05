@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:include page="patt/header.jsp"/>
+<jsp:include page="template/header.jsp"/>
 <div>
     <div class="w-50 m-3" >
         <form method="post">
@@ -62,7 +62,7 @@
 
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">
-                    <jsp:include page="patt/DTClients.jsp"/>
+                    <jsp:include page="template/ClientTempl/DTClients.jsp"/>
                     </div>
             </div>
         </div>
