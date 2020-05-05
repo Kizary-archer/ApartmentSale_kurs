@@ -39,17 +39,18 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="idClient">id</label>
-                    <input type="text" class="form-control" id="idClient" name="idClient" placeholder=${client.idClient} disabled>
+                    <input type="text" class="form-control" id="idClient" name="idClient" placeholder=${client.idClient}>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder=${client.email}>
-            </div>
-            <button type="submit" class="btn btn-primary">Обновить</button>
-            <button type="button" class="btn btn-primary m-3">Удалить</button>
-            <button type="button" class="btn btn-primary">Добавить</button>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" placeholder=${client.email}>
+                </div>
 
+            <button type="submit" class="btn btn-primary m-2" formaction="./updClient">Обновить</button>
+            <button type="submit" class="btn btn-danger m-2" formaction="./delClient">Удалить</button>
+            <button type="button" class="btn btn-success m-2" onclick="document.location = './addClient'">Добавить</button>
+            <button type="reset" class="btn btn-warning m-2">Очистить</button>
         </form>
     </div>
     <div class="accordion" id="accordion">
@@ -59,7 +60,7 @@
                     <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         Документы клиента
                     </button>
-                    <button class="btn mx-3" type="button">
+                    <button class="btn mx-3" type="button" onclick="document.location = './client?idClient=${client.idClient}'">
                        Добавить документы клиента
                     </button>
                 </h5>

@@ -32,16 +32,17 @@ public class listClientServlet extends HttpServlet {
         if(!request.getParameter("name").isEmpty())
         clientEntity.setName(request.getParameter("name"));
         if(!request.getParameter("surname").isEmpty())
-        clientEntity.setSurname(request.getParameter("surname"));
+            clientEntity.setSurname(request.getParameter("surname"));
         if(!request.getParameter("patronymic").isEmpty())
-        clientEntity.setPatronymic(request.getParameter("patronymic"));
+            clientEntity.setPatronymic(request.getParameter("patronymic"));
         if(!request.getParameter("gender").isEmpty())
-        clientEntity.setGender(Boolean.valueOf(request.getParameter("gender")));
-       // clientEntity.setDateOfBirth(new Date.valueOf(request.getParameter("dateOfBirth")));
+            clientEntity.setGender(Boolean.valueOf(request.getParameter("gender")));
+        if(!request.getParameter("dateOfBirth").isEmpty())
+            clientEntity.setDateOfBirth(Date.valueOf(request.getParameter("dateOfBirth")));
         if(!request.getParameter("phoneNumber").isEmpty())
-        clientEntity.setPhoneNumber((request.getParameter("phoneNumber")));
+            clientEntity.setPhoneNumber((request.getParameter("phoneNumber")));
         if(!request.getParameter("email").isEmpty())
-        clientEntity.setEmail((request.getParameter("email")));
+            clientEntity.setEmail((request.getParameter("email")));
         List<ClientEntity> clientData = new ArrayList<ClientEntity>(clientService.getClients(1000, 0,clientEntity));
         request.setAttribute("clients",clientData);
         doGet(request, response);

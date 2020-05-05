@@ -36,8 +36,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="idClient">id</label>
-                    <input type="text" class="form-control" id="idClient" name="idClient">
+                    <label for="idClient">id клиента</label>
+                    <input type="text" class="form-control" id="idClient" name="idClient" value="1" disabled>
                 </div>
             </div>
             <button id="b1" type="submit" class="btn btn-primary">Добавить</button>
