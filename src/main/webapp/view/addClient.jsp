@@ -44,7 +44,7 @@
                 <label for="email">Email</label>
                 <input type="text" class="form-control" id="email" name="email" placeholder="example@.com">
             </div>
-            <button type="submit" class="btn btn-primary">Добавить</button>
+            <button type="submit" class="btn btn-primary" formaction="./addClient">Добавить</button>
         </form>
     </div>
     <c:if test="${isClientAdded == true}">
