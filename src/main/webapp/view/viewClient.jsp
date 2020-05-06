@@ -8,43 +8,47 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="name">Имя</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder=${client.name}>
+                    <input type="text" class="form-control" id="name" name="name" value=${client.name}>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="surname">Фамилия</label>
-                    <input type="text" class="form-control" id="surname" name="surname" placeholder=${client.surname}>
+                    <input type="text" class="form-control" id="surname" name="surname" value=${client.surname}>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="patronymic">Отчество</label>
-                    <input type="text" class="form-control" id="patronymic" name="patronymic" placeholder=${client.patronymic}>
+                    <input type="text" class="form-control" id="patronymic" name="patronymic" value=${client.patronymic}>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="gender">Пол</label>
-                    <select id="gender" class="form-control" onselect="{client.gender}">
-                        <option value="true" >мужчина</option>
-                        <option value="false">женщина</option>
+                    <select id="gender" class="form-control" name="gender">
+                        <option <c:if test="${client.gender == true}">selected</c:if> value="true" >
+                            мужчина
+                        </option>
+                        <option <c:if test="${client.gender == false}">selected</c:if> value="false">
+                            женщина
+                        </option>
                     </select>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="dateOfBirth">Дата Рождения</label>
-                    <input type="text" class="form-control" id="dateOfBirth" name="dateOfBirth" placeholder=${client.dateOfBirth}>
+                    <input type="text" class="form-control" id="dateOfBirth" name="dateOfBirth" value=${client.dateOfBirth}>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="phoneNumber">Телефон</label>
-                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder=${client.phoneNumber}>
+                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" value=${client.phoneNumber}>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="idClient">id</label>
-                    <input type="text" class="form-control" id="idClient" name="idClient" placeholder=${client.idClient}>
+                    <input type="text" class="form-control" id="idClient" name="idClient" value = ${client.idClient} readonly>
                 </div>
             </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="text" class="form-control" id="email" name="email" placeholder=${client.email}>
+                    <input type="text" class="form-control" id="email" name="email" value=${client.email}>
                 </div>
 
             <button type="submit" class="btn btn-primary m-2" formaction="./updClient">Обновить</button>

@@ -27,7 +27,7 @@ public class ClientService {
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
         return  clientDAO.delete(clientEntity);
     }
-    public static boolean updateClient(ClientEntity clientEntity){
+    public boolean updClient(ClientEntity clientEntity){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
         return  clientDAO.update(clientEntity);
     }
