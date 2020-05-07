@@ -7,7 +7,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "documents_client", schema = "public", catalog = "sale_of_apartments")
 public class DocumentsClientEntity {
-    private int idPassport;
+    private int idDocument;
     private int series;
     private int number;
     private String issued;
@@ -19,13 +19,13 @@ public class DocumentsClientEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_passport", nullable = false)
-    public int getIdPassport() {
-        return idPassport;
+    @Column(name = "id_document", nullable = false)
+    public int getIdDocument() {
+        return idDocument;
     }
 
-    public void setIdPassport(int idPassport) {
-        this.idPassport = idPassport;
+    public void setIdDocument(int idPassport) {
+        this.idDocument = idPassport;
     }
 
     @Basic
@@ -93,7 +93,7 @@ public class DocumentsClientEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         DocumentsClientEntity that = (DocumentsClientEntity) o;
-        return idPassport == that.idPassport &&
+        return idDocument == that.idDocument &&
                 series == that.series &&
                 number == that.number &&
                 typeDocument == that.typeDocument &&
@@ -104,7 +104,7 @@ public class DocumentsClientEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idPassport, series, number, issued, dateOfIssue, typeDocument, client);
+        return Objects.hash(idDocument, series, number, issued, dateOfIssue, typeDocument, client);
     }
 
     @ManyToOne(fetch = FetchType.EAGER)

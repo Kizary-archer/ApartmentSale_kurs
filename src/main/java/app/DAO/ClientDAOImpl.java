@@ -2,6 +2,7 @@ package app.DAO;
 
 import app.DAO.DAOinterfaces.ClientDAO;
 import app.entities.ClientEntity;
+import app.entities.DocumentTypeEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
@@ -15,28 +16,7 @@ import java.util.List;
 public class ClientDAOImpl implements ClientDAO {
 
     @Override
-    public List getAllClient() {
-        Session session = null;
-        try {
-            session = getSession();
-            session.beginTransaction();
-            String hql = "select distinct c from ClientEntity c ";
-            Query query =  session.createQuery(hql);
-            List res = query.getResultList();
-            session.getTransaction().commit();
-            return res;
-        } catch (Exception e) {
-            System.out.println(e);
-            return null;
-        } finally {
-            if (session != null && session.isOpen()) {
-                session.close();
-            }
-        }
-    }
-
-    @Override
-    public List getClients(int limit, int offset, ClientEntity clientEntity) {
+    public List<ClientEntity> getClients(int limit, int offset, ClientEntity clientEntity) {
         Session session = null;
         try {
             session = getSession();

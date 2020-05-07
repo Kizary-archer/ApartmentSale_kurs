@@ -90,7 +90,7 @@
                     <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         Документы клиента
                     </button>
-                    <button class="btn mx-3" type="button" onclick="document.location = './client?idClient=${client.idClient}'">
+                    <button class="btn mx-3" type="button" onclick="document.location = './addDocument?idClient=${client.idClient}'">
                        Добавить документы клиента
                     </button>
                 </h5>

@@ -7,7 +7,6 @@ import java.util.Collection;
 
 public interface ClientDAO extends DAOMain<ClientEntity> {
 
-    public Collection<ClientEntity> getAllClient();
     public Collection<ClientEntity> getClients(int limit, int offset, ClientEntity clientEntity);
     public ClientEntity getClientDocument(int idClient);
     public ClientEntity getClientapartmentSales(int idClient);

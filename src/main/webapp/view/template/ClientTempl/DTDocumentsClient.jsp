@@ -15,7 +15,7 @@
     <tbody>
     <c:forEach var="DocumentsClientEntity" items="${client.documentsClientsByIdClient}">
         <tr>
-            <td> <c:out value="${DocumentsClientEntity.idPassport}"/></td>
+            <td> <c:out value="${DocumentsClientEntity.idDocument}"/></td>
             <td> <c:out value="${DocumentsClientEntity.series}"/></td>
             <td> <c:out value="${DocumentsClientEntity.number}"/></td>
             <td> <c:out value="${DocumentsClientEntity.issued}"/></td>
