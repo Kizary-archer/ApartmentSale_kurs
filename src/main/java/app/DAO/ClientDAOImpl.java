@@ -27,6 +27,9 @@ public class ClientDAOImpl implements ClientDAO {
             criteriaBuilderQuery.select(root);
             List<Predicate> p = new ArrayList<Predicate>();
 
+            if(clientEntity.getIdClient() != null){
+                p.add(criteriaBuilder.equal(root.get("idClient"),clientEntity.getIdClient()));
+            }
             if(clientEntity.getName() != null){
                 p.add(criteriaBuilder.like(root.get("name"),clientEntity.getName()));
             }
@@ -37,16 +40,16 @@ public class ClientDAOImpl implements ClientDAO {
                 p.add(criteriaBuilder.like(root.get("patronymic"),clientEntity.getPatronymic()));
             }
             if(clientEntity.getDateOfBirth() != null){
-                p.add(criteriaBuilder.equal(root.get("DateOfBirth"),clientEntity.getDateOfBirth()));
+                p.add(criteriaBuilder.equal(root.get("dateOfBirth"),clientEntity.getDateOfBirth()));
             }
             if(clientEntity.getEmail() != null){
-                p.add(criteriaBuilder.like(root.get("Email"),clientEntity.getEmail()));
+                p.add(criteriaBuilder.like(root.get("email"),clientEntity.getEmail()));
             }
             if(clientEntity.getGender() != null){
                 p.add(criteriaBuilder.equal(root.get("gender"),clientEntity.getGender()));
             }
             if(clientEntity.getPhoneNumber() != null){
-                p.add(criteriaBuilder.like(root.get("PhoneNumber"),clientEntity.getPhoneNumber()));
+                p.add(criteriaBuilder.like(root.get("phoneNumber"),clientEntity.getPhoneNumber()));
             }
             if(!p.isEmpty()) {
                 Predicate[] pr = new Predicate[p.size()];
