@@ -14,7 +14,7 @@
     </thead>
     <tbody>
     <c:forEach var="DocumentsClientEntity" items="${client.documentsClientsByIdClient}">
-        <tr>
+        <tr onclick="document.location = './viewDocument?idDocument=${DocumentsClientEntity.idDocument}'">
             <td><c:out value="${DocumentsClientEntity.idDocument}"/></td>
             <td><c:out value="${DocumentsClientEntity.series}"/></td>
             <td><c:out value="${DocumentsClientEntity.number}"/></td>

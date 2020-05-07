@@ -34,12 +34,11 @@ public class DocumentServlet extends HttpServlet {
         if(request.getServletPath().equals("/delDocument")) {
             requestDispatcher = request.getRequestDispatcher("view/viewDocument.jsp");
         }
-        if(request.getServletPath().equals("/updDocument")) {
-            requestDispatcher = request.getRequestDispatcher("view/viewDocument.jsp");
-        }
-        if(request.getServletPath().equals("/viewDocument")) {
+        if(request.getServletPath().equals("/viewDocument")|request.getServletPath().equals("/updDocument")) {
             DocumentsClientEntity documentsClientEntity = documentService.getDocumentById(Integer.parseInt(request.getParameter("idDocument")));//получение определённого документа из бд
-            request.setAttribute("documentsClient", documentsClientEntity);
+            request.setAttribute("documentClient", documentsClientEntity);
+            List<DocumentTypeEntity> documentTypeEntityList = (List<DocumentTypeEntity>) documentService.getDocumentType(0,0);
+            request.setAttribute("documentTypeEntityList", documentTypeEntityList);
             requestDispatcher = request.getRequestDispatcher("view/viewDocument.jsp");
         }
         assert requestDispatcher != null;
@@ -63,18 +62,16 @@ public class DocumentServlet extends HttpServlet {
             doGet(request, response);
         }
 
-       /* if(request.getServletPath().equals("/updClient")) {
-            if (clientService.updClient(clientEntity)) {
-                request.setAttribute("isClientUpd", "true");
+        if(request.getServletPath().equals("/updDocument")) {
+            if (documentService.updDocument(documentsClientEntity)) {
+                request.setAttribute("isDocumentUpd", "true");
             }
             else {
-                request.setAttribute("isClientUpd", "false");
+                request.setAttribute("isDocumentUpd", "false");
             }
-            clientEntity = clientService.getClientAllData(Integer.parseInt(request.getParameter("idClient")));//получение определённого клиента из бд
-            request.setAttribute("client", clientEntity);
             doGet(request,response);
         }
-        if(request.getServletPath().equals("/delClient")) {
+       /* if(request.getServletPath().equals("/delClient")) {
             if (clientService.delClient(clientEntity)) {
                 request.setAttribute("isClientdel", "true");
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/listClients.jsp");

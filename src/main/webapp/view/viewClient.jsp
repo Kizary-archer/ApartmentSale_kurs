@@ -50,7 +50,6 @@
                     <label for="email">Email</label>
                     <input type="text" class="form-control" id="email" name="email" value=${client.email}>
                 </div>
-
             <button type="submit" class="btn btn-primary m-2" formaction="./updClient">Обновить</button>
             <button type="submit" class="btn btn-danger m-2" formaction="./delClient">Удалить</button>
             <button type="button" class="btn btn-success m-2" onclick="document.location = './addClient'">Добавить</button>
