@@ -27,8 +27,8 @@
                     <input type="date" class="form-control" id="dateOfIssue" name="dateOfIssue">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="idClient">id клиента</label>
-                    <input type="text" class="form-control" id="idClient" name="idClient" readonly value=${requestScope.idClient}>
+                    <label for="client">id клиента</label>
+                    <input type="text" class="form-control" id="client" name="client" readonly value=${requestScope.idClient}>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="typeDocument">id типа документа</label>

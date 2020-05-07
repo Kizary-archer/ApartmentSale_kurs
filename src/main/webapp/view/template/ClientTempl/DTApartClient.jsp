@@ -15,13 +15,13 @@
     <tbody>
     <c:forEach var="ApartmentEntity" items="${client.apartmentsByIdClient}">
         <tr>
-            <td> <c:out value="${ApartmentEntity.idApartment}"/></td>
-            <td> <c:out value="${ApartmentEntity.numberApartment}"/></td>
-            <td> <c:out value="${ApartmentEntity.countRoom}"/></td>
-            <td> <c:out value="${ApartmentEntity.livingSpace}"/></td>
-            <td> <c:out value="${ApartmentEntity.house}"/></td>
-            <td> <c:out value="${ApartmentEntity.apartmentOwner}"/></td>
-            <td> <c:out value="${ApartmentEntity.meterPrice}"/></td>
+            <td><c:out value="${ApartmentEntity.idApartment}"/></td>
+            <td><c:out value="${ApartmentEntity.numberApartment}"/></td>
+            <td><c:out value="${ApartmentEntity.countRoom}"/></td>
+            <td><c:out value="${ApartmentEntity.livingSpace}"/></td>
+            <td><c:out value="${ApartmentEntity.house}"/></td>
+            <td><c:out value="${ApartmentEntity.apartmentOwner}"/></td>
+            <td><c:out value="${ApartmentEntity.meterPrice}"/></td>
         </tr>
     </c:forEach>
     </tbody>

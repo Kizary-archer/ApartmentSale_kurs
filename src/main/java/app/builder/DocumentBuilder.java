@@ -1,40 +1,39 @@
 package app.builder;
 
 import app.entities.ClientEntity;
+import app.entities.DocumentsClientEntity;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;
 
-public final class DocumentBuilder {
-    ClientEntity clientEntity = new ClientEntity();
+public final class DocumentBuilder  {
+    DocumentsClientEntity documentsClientEntity = new DocumentsClientEntity();
 
-    public DocumentBuilder(HttpServletRequest request) {
-        if (request.getParameter("idClient") != null)
-            if(!request.getParameter("idClient").equals(""))
-                clientEntity.setIdClient(Integer.parseInt(request.getParameter("idClient")));
-        if (request.getParameter("name") != null)
-            if (!request.getParameter("name").equals(""))
-                clientEntity.setName(request.getParameter("name"));
-        if (request.getParameter("surname") != null)
-            if (!request.getParameter("surname").equals(""))
-                clientEntity.setSurname(request.getParameter("surname"));
-        if (request.getParameter("patronymic") != null)
-            if (!request.getParameter("patronymic").equals(""))
-                clientEntity.setPatronymic(request.getParameter("patronymic"));
-        if (request.getParameter("gender") != null)
-            if (!request.getParameter("gender").equals(""))
-                clientEntity.setGender(Boolean.valueOf(request.getParameter("gender")));
-        if (request.getParameter("dateOfBirth") != null)
-            if (!request.getParameter("dateOfBirth").equals(""))
-                clientEntity.setDateOfBirth(Date.valueOf(request.getParameter("dateOfBirth")));
-        if (request.getParameter("phoneNumber") != null)
-            if (!request.getParameter("phoneNumber").equals(""))
-                clientEntity.setPhoneNumber((request.getParameter("phoneNumber")));
-        if (request.getParameter("email") != null)
-            if (!request.getParameter("email").equals(""))
-                clientEntity.setEmail((request.getParameter("email")));
+    public DocumentBuilder(HttpServletRequest request) throws Exception{
+        if (request.getParameter("idDocument") != null)
+            if(!request.getParameter("idDocument").equals(""))
+                documentsClientEntity.setIdDocument(Integer.parseInt(request.getParameter("idDocument")));
+        if (request.getParameter("series") != null)
+            if(!request.getParameter("series").equals(""))
+                documentsClientEntity.setSeries(Integer.parseInt(request.getParameter("series")));
+        if (request.getParameter("number") != null)
+            if(!request.getParameter("number").equals(""))
+                documentsClientEntity.setNumber(Integer.parseInt(request.getParameter("number")));
+        if (request.getParameter("issued") != null)
+            if (!request.getParameter("issued").equals(""))
+                documentsClientEntity.setIssued(request.getParameter("issued"));
+        if (request.getParameter("dateOfIssue") != null)
+            if (!request.getParameter("dateOfIssue").equals(""))
+                documentsClientEntity.setDateOfIssue(Date.valueOf(request.getParameter("dateOfIssue")));
+        if (request.getParameter("typeDocument") != null)
+            if(!request.getParameter("typeDocument").equals(""))
+                documentsClientEntity.setTypeDocument(Integer.parseInt(request.getParameter("typeDocument")));
+        if (request.getParameter("client") != null)
+            if(!request.getParameter("client").equals(""))
+                documentsClientEntity.setClient(Integer.parseInt(request.getParameter("client")));
+
     }
-    public ClientEntity build() {
-        return clientEntity;
+    public DocumentsClientEntity build() {
+        return documentsClientEntity;
     }
 }

@@ -15,13 +15,13 @@
     <tbody>
     <c:forEach var="DocumentsClientEntity" items="${client.documentsClientsByIdClient}">
         <tr>
-            <td> <c:out value="${DocumentsClientEntity.idDocument}"/></td>
-            <td> <c:out value="${DocumentsClientEntity.series}"/></td>
-            <td> <c:out value="${DocumentsClientEntity.number}"/></td>
-            <td> <c:out value="${DocumentsClientEntity.issued}"/></td>
-            <td> <c:out value="${DocumentsClientEntity.dateOfIssue}"/></td>
-            <td> <c:out value="${DocumentsClientEntity.typeDocument}"/></td>
-            <td> <c:out value="${DocumentsClientEntity.client}"/></td>
+            <td><c:out value="${DocumentsClientEntity.idDocument}"/></td>
+            <td><c:out value="${DocumentsClientEntity.series}"/></td>
+            <td><c:out value="${DocumentsClientEntity.number}"/></td>
+            <td><c:out value="${DocumentsClientEntity.issued}"/></td>
+            <td><c:out value="${DocumentsClientEntity.dateOfIssue}"/></td>
+            <td><c:out value="${DocumentsClientEntity.typeDocument}"/></td>
+            <td><c:out value="${DocumentsClientEntity.client}"/></td>
         </tr>
     </c:forEach>
     </tbody>

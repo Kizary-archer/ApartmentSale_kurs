@@ -27,8 +27,12 @@
                     <input type="date" class="form-control" id="dateOfIssue" name="dateOfIssue" value=${documentEntity.dateOfIssue}>
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="idClient">id клиента</label>
-                    <input type="text" class="form-control" id="idClient" name="idClient" readonly value=${documentEntity.client}>
+                    <label for="client">id клиента</label>
+                    <input type="text" class="form-control" id="client" name="client" readonly value=${documentEntity.client}>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="typeDocument">id типа документа</label>
+                    <input type="text" class="form-control" id="typeDocument" name="typeDocument" readonly value=${documentEntity.typeDocument}>
                 </div>
             </div>
             <button id="b1" type="submit" class="btn btn-primary" >Добавить</button>

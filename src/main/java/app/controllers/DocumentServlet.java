@@ -1,6 +1,7 @@
 package app.controllers;
 
 import app.builder.ClientBuilder;
+import app.builder.DocumentBuilder;
 import app.entities.ClientEntity;
 import app.entities.DocumentTypeEntity;
 import app.entities.DocumentsClientEntity;
@@ -47,10 +48,15 @@ public class DocumentServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         DocumentService documentService = new DocumentService();
-        ClientEntity clientEntity = new ClientBuilder(request).build();
+        DocumentsClientEntity documentsClientEntity = null;
+        try {
+            documentsClientEntity = new DocumentBuilder(request).build();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         if(request.getServletPath().equals("/addDocument")) {
-            if (clientService.addClient(clientEntity)) {
+            if (documentService.addDocument(documentsClientEntity)) {
                 request.setAttribute("isDocumentAdded", "true");
             }
             else request.setAttribute("isDocumentAdded", "false");

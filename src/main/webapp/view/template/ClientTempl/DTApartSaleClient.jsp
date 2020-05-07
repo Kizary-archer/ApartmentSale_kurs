@@ -15,13 +15,13 @@
     <tbody>
     <c:forEach var="ApartmentSaleEntity" items="${client.apartmentSalesByIdClient}">
         <tr>
-            <td> <c:out value="${ApartmentSaleEntity.idSale}"/></td>
-            <td> <c:out value="${ApartmentSaleEntity.apartment}"/></td>
-            <td> <c:out value="${ApartmentSaleEntity.ownerApartment}"/></td>
-            <td> <c:out value="${ApartmentSaleEntity.buyer}"/></td>
-            <td> <c:out value="${ApartmentSaleEntity.agent}"/></td>
-            <td> <c:out value="${ApartmentSaleEntity.date}"/></td>
-            <td> <c:out value="${ApartmentSaleEntity.price}"/></td>
+            <td><c:out value="${ApartmentSaleEntity.idSale}"/></td>
+            <td><c:out value="${ApartmentSaleEntity.apartment}"/></td>
+            <td><c:out value="${ApartmentSaleEntity.ownerApartment}"/></td>
+            <td><c:out value="${ApartmentSaleEntity.buyer}"/></td>
+            <td><c:out value="${ApartmentSaleEntity.agent}"/></td>
+            <td><c:out value="${ApartmentSaleEntity.date}"/></td>
+            <td><c:out value="${ApartmentSaleEntity.price}"/></td>
         </tr>
     </c:forEach>
     </tbody>

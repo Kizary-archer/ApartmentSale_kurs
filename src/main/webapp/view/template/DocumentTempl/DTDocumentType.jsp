@@ -12,8 +12,8 @@
     <tbody>
     <c:forEach var="DocumentType" items="${documentTypeEntityList}">
         <tr>
-            <td> <c:out value="${DocumentType.idType}"/></td>
-            <td> <c:out value="${DocumentType.nameType}"/></td>
+            <td><c:out value="${DocumentType.idType}"/></td>
+            <td><c:out value="${DocumentType.nameType}"/></td>
         </tr>
     </c:forEach>
     </tbody>
