@@ -41,7 +41,6 @@
             </div>
             <button type="submit" class="btn btn-primary m-2" formaction="./updDocument">Обновить</button>
             <button type="submit" class="btn btn-danger m-2" formaction="./delDocument">Удалить</button>
-            <button type="button" class="btn btn-success m-2" onclick="document.location = './addDocument'">Добавить</button>
             <button type="reset" class="btn btn-warning m-2">Отменить</button>
         </form>
     </div>
@@ -56,6 +55,14 @@
     <c:if test="${isDocumentUpd == false}">
         <div class="alert alert-danger alert-dismissible fade show col-md-4" role="alert">
             <strong>Документ не обновлён</strong> Проверьте вводимые значения
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </c:if>
+    <c:if test="${isDocumentdel == false}">
+        <div class="alert alert-danger alert-dismissible fade show col-md-4" role="alert">
+            <strong>Документ не удалён</strong> Проверьте вводимые значения
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>

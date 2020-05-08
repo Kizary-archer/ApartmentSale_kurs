@@ -81,7 +81,14 @@
             </button>
         </div>
     </c:if>
-
+    <c:if test="${isDocumentdel == true}">
+        <div class="alert alert-success alert-dismissible fade show col-md-4" role="alert">
+            <strong>Документ удалён</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </c:if>
     <div class="accordion" id="accordion">
         <div class="card">
             <div class="card-header bg-info" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">

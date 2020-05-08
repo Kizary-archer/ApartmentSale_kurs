@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/listDocument","/addDocument","/delDocument","/updDocument","/viewDocument"})
+@WebServlet(urlPatterns = {"/addDocument","/delDocument","/updDocument","/viewDocument"})
 public class DocumentServlet extends HttpServlet {
 
     @Override
@@ -30,11 +30,7 @@ public class DocumentServlet extends HttpServlet {
             List<DocumentTypeEntity> documentTypeEntityList = (List<DocumentTypeEntity>) documentService.getDocumentType(0,0);
             request.setAttribute("documentTypeEntityList", documentTypeEntityList);
             requestDispatcher = request.getRequestDispatcher("view/addDocument.jsp");
-        }
-        if(request.getServletPath().equals("/delDocument")) {
-            requestDispatcher = request.getRequestDispatcher("view/viewDocument.jsp");
-        }
-        if(request.getServletPath().equals("/viewDocument")|request.getServletPath().equals("/updDocument")) {
+        }else { //вывод отпеделённого док. или его обновление
             DocumentsClientEntity documentsClientEntity = documentService.getDocumentById(Integer.parseInt(request.getParameter("idDocument")));//получение определённого документа из бд
             request.setAttribute("documentClient", documentsClientEntity);
             List<DocumentTypeEntity> documentTypeEntityList = (List<DocumentTypeEntity>) documentService.getDocumentType(0,0);
@@ -70,6 +66,18 @@ public class DocumentServlet extends HttpServlet {
                 request.setAttribute("isDocumentUpd", "false");
             }
             doGet(request,response);
+        }
+        if(request.getServletPath().equals("/delDocument")) {
+            if (documentService.delDocument(documentsClientEntity)) {
+                request.setAttribute("isDocumentdel", "true");
+                request.setAttribute("idClient",request.getParameter("client"));
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/viewClient.jsp");
+                requestDispatcher.forward(request, response);
+            }
+            else {
+                request.setAttribute("isDocumentdel", "false");
+                doGet(request, response);
+            }
         }
        /* if(request.getServletPath().equals("/delClient")) {
             if (clientService.delClient(clientEntity)) {

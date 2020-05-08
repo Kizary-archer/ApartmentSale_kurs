@@ -80,6 +80,8 @@ public class ClientServlet extends HttpServlet {
             }
             else {
                 request.setAttribute("isClientdel", "false");
+                clientEntity = clientService.getClientAllData(Integer.parseInt(request.getParameter("idClient")));//получение определённого клиента из бд
+                request.setAttribute("client", clientEntity);
                 doGet(request, response);
             }
         }
