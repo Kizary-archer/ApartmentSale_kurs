@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/addApartment","/delDocument","/updDocument","/viewDocument"})
+@WebServlet(urlPatterns = {"/addApartment"})
 public class ApartmentServlet extends HttpServlet {
 
     @Override

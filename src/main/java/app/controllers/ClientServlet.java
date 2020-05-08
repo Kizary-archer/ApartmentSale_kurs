@@ -75,7 +75,7 @@ public class ClientServlet extends HttpServlet {
         if(request.getServletPath().equals("/delClient")) {
             if (clientService.delClient(clientEntity)) {
                 request.setAttribute("isClientdel", "true");
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/listClients.jsp");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
                 requestDispatcher.forward(request, response);
             }
             else {

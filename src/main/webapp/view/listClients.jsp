@@ -3,14 +3,6 @@
 <jsp:include page="template/header.jsp"/>
 <div>
     <div class="w-50 m-3" >
-        <c:if test="${isClientdel == true}">
-            <div class="alert alert-success alert-dismissible fade show col-md-4" role="alert">
-                <strong>Клиент удалён</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        </c:if>
         <form method="post">
             <h2>Найти клиента</h2>
             <div class="form-row">

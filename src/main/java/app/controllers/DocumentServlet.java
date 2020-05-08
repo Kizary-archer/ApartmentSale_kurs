@@ -26,7 +26,9 @@ public class DocumentServlet extends HttpServlet {
         RequestDispatcher requestDispatcher = null;
         DocumentService documentService = new DocumentService();
         if(request.getServletPath().equals("/addDocument")) {
-            request.setAttribute("idClient", request.getParameter("idClient"));
+            if(request.getParameter("client") == null) {//get/post заполнение id
+                request.setAttribute("client", request.getParameter("idClient"));
+            }
             List<DocumentTypeEntity> documentTypeEntityList = (List<DocumentTypeEntity>) documentService.getDocumentType(0,0);
             request.setAttribute("documentTypeEntityList", documentTypeEntityList);
             requestDispatcher = request.getRequestDispatcher("view/addDocument.jsp");
@@ -53,6 +55,7 @@ public class DocumentServlet extends HttpServlet {
         if(request.getServletPath().equals("/addDocument")) {
             if (documentService.addDocument(documentsClientEntity)) {
                 request.setAttribute("isDocumentAdded", "true");
+                request.setAttribute("client", request.getParameter("client"));
             }
             else request.setAttribute("isDocumentAdded", "false");
             doGet(request, response);
@@ -70,8 +73,7 @@ public class DocumentServlet extends HttpServlet {
         if(request.getServletPath().equals("/delDocument")) {
             if (documentService.delDocument(documentsClientEntity)) {
                 request.setAttribute("isDocumentdel", "true");
-                request.setAttribute("idClient",request.getParameter("client"));
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/viewClient.jsp");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
                 requestDispatcher.forward(request, response);
             }
             else {
