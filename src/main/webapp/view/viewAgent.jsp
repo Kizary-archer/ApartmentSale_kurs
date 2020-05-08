@@ -42,7 +42,7 @@
 
     <c:if test="${isAgentUpd == true}">
         <div class="alert alert-success alert-dismissible fade show col-md-4" role="alert">
-            <strong>Данные клиента обновлены</strong>
+            <strong>Данные агента обновлены</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -50,7 +50,7 @@
     </c:if>
     <c:if test="${isAgentUpd == false}">
         <div class="alert alert-danger alert-dismissible fade show col-md-4" role="alert">
-            <strong>Данные клиента не обновлены</strong> Проверьте вводимые значения
+            <strong>Данные агента не обновлены</strong> Проверьте вводимые значения
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -58,7 +58,7 @@
     </c:if>
     <c:if test="${isAgentdel == false}">
         <div class="alert alert-danger alert-dismissible fade show col-md-4" role="alert">
-            <strong>Клиент не удалён</strong> Проверьте вводимые значения
+            <strong>Агент не удалён</strong> Проверьте вводимые значения
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>

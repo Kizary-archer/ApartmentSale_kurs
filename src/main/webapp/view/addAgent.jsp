@@ -29,13 +29,9 @@
                     <label for="phoneNumber">Телефон</label>
                     <input type="text" class="form-control" id="phoneNumber" name="phoneNumber">
                 </div>
-                <div class="form-group col-md-2">
-                    <label for="idAgent">id</label>
-                    <input type="text" class="form-control" id="idAgent" name="idAgent">
-                </div>
             </div>
 
-            <button type="submit" class="btn btn-primary m-2" formaction="./addAgent">найти</button>
+            <button type="submit" class="btn btn-primary m-2" formaction="./addAgent">Добавить</button>
         </form>
     </div>
     <c:if test="${isAgentAdded == true}">

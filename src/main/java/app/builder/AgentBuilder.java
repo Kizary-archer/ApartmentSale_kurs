@@ -23,7 +23,7 @@ public final class AgentBuilder {
                 agentEntity.setPatronymic(request.getParameter("patronymic"));
         if (request.getParameter("phoneNumber") != null)
             if (!request.getParameter("phoneNumber").equals(""))
-                agentEntity.setPhoneNumber(Integer.parseInt(request.getParameter("percent")));
+                agentEntity.setPhoneNumber(Integer.parseInt(request.getParameter("phoneNumber")));
         if (request.getParameter("percent") != null)
             if (!request.getParameter("percent").equals(""))
                 agentEntity.setPercent(Integer.parseInt(request.getParameter("percent")));
