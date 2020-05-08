@@ -4,7 +4,7 @@
     <thead>
     <tr>
         <th>id</th>
-        <th>Номер дома</th>
+        <th>Номер квартиры</th>
         <th>Кол.комнат</th>
         <th>Жилплощадь</th>
         <th>Дом</th>
@@ -14,7 +14,7 @@
     </thead>
     <tbody>
     <c:forEach var="ApartmentEntity" items="${client.apartmentsByIdClient}">
-        <tr>
+        <tr onclick="document.location = './viewDocument?idDocument=${DocumentsClientEntity.idDocument}'">
             <td><c:out value="${ApartmentEntity.idApartment}"/></td>
             <td><c:out value="${ApartmentEntity.numberApartment}"/></td>
             <td><c:out value="${ApartmentEntity.countRoom}"/></td>

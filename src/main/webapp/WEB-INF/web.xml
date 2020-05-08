@@ -9,15 +9,6 @@
         <page-encoding>UTF-8</page-encoding>
     </jsp-property-group>
 </jsp-config>
-<servlet>
-<servlet-name>addCity</servlet-name>
-<servlet-class>app.controllers.CityServlet</servlet-class>
-</servlet>
-
-<servlet-mapping>
-    <servlet-name>addCity</servlet-name>
-    <url-pattern>/addCity</url-pattern>
-</servlet-mapping>
 
 <filter>
     <filter-name>CharsetFilter</filter-name>

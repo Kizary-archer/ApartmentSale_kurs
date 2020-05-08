@@ -66,14 +66,14 @@
             </div>
             <div id="collapseOne" class="collapse multi-collapse" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">
-                    <jsp:include page="template/DocumentTempl/DTDocumentType.jsp"/>
+                    <jsp:include page="template/ApartmentTemp/DTSearchHouse.jsp"/>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <script type="text/javascript" charset="utf8">
-    <%@include file='./../js/documentTypeSelect.js' %>
+    <%@include file='./../js/houseSelect.js' %>
 </script>
 </body>
 </html>
