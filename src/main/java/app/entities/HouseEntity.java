@@ -7,9 +7,9 @@ import java.util.Objects;
 @Entity
 @Table(name = "house", schema = "public", catalog = "sale_of_apartments")
 public class HouseEntity {
-    private int idHouse;
+    private Integer idHouse;
     private String numberHouse;
-    private int street;
+    private Integer street;
     private Integer series;
     private Collection<ApartmentEntity> apartmentsByIdHouse;
     private StreetEntity streetByStreet;
@@ -18,11 +18,11 @@ public class HouseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_house", nullable = false)
-    public int getIdHouse() {
+    public Integer getIdHouse() {
         return idHouse;
     }
 
-    public void setIdHouse(int idHouse) {
+    public void setIdHouse(Integer idHouse) {
         this.idHouse = idHouse;
     }
 
@@ -38,11 +38,11 @@ public class HouseEntity {
 
     @Basic
     @Column(name = "street", nullable = false)
-    public int getStreet() {
+    public Integer getStreet() {
         return street;
     }
 
-    public void setStreet(int street) {
+    public void setStreet(Integer street) {
         this.street = street;
     }
 
