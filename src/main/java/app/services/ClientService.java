@@ -52,10 +52,6 @@ public class ClientService {
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
         return  clientDAO.getClientapartments(idClient).getApartmentsByIdClient();
     }
-    public Collection<SearchApartmentEntity> getClientsearchApartments(int idClient){
-        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-        return  clientDAO.getClientsearchApartments(idClient).getSearchApartmentsByIdClient();
-    }
     public ClientEntity getClientAllData(int idClient){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
         return clientDAO.getClientAllChild(idClient);

@@ -11,7 +11,6 @@ public class StreetEntity {
     private int nameStreet;
     private int district;
     private Collection<HouseEntity> housesByIdStreet;
-    private Collection<SearchApartmentEntity> searchApartmentsByIdStreet;
     private NameStreetEntity nameStreetByNameStreet;
     private DistrictEntity districtByDistrict;
 
@@ -68,15 +67,6 @@ public class StreetEntity {
 
     public void setHousesByIdStreet(Collection<HouseEntity> housesByIdStreet) {
         this.housesByIdStreet = housesByIdStreet;
-    }
-
-    @OneToMany(mappedBy = "streetByStreet")
-    public Collection<SearchApartmentEntity> getSearchApartmentsByIdStreet() {
-        return searchApartmentsByIdStreet;
-    }
-
-    public void setSearchApartmentsByIdStreet(Collection<SearchApartmentEntity> searchApartmentsByIdStreet) {
-        this.searchApartmentsByIdStreet = searchApartmentsByIdStreet;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)

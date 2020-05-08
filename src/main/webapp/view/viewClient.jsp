@@ -131,25 +131,11 @@
                 </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-header bg-success" id="headingFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                <h5 class="mb-0">
-                    <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Поиск квартир
-                    </button>
-                </h5>
-            </div>
-            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                <div class="card-body">
-                    <jsp:include page="template/ClientTempl/DTApartSearchClient.jsp"/>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
     <script type="text/javascript">
     $(document).ready( function () {
-    $('#tableApart,#tableDocum,#tableApartSale,#tableApartSearch').DataTable();
+    $('#tableApart,#tableDocum,#tableApartSale').DataTable();
     } );
     </script>
 </body>

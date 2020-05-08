@@ -19,7 +19,6 @@ public class ClientEntity {
     private Collection<ApartmentEntity> apartmentsByIdClient;
     private Collection<ApartmentSaleEntity> apartmentSalesByIdClient;
     private Collection<DocumentsClientEntity> documentsClientsByIdClient;
-    private Collection<SearchApartmentEntity> searchApartmentsByIdClient;
 
     public ClientEntity(){}
     public ClientEntity(String name,
@@ -165,14 +164,5 @@ public class ClientEntity {
 
     public void setDocumentsClientsByIdClient(Collection<DocumentsClientEntity> documentsClientsByIdClient) {
         this.documentsClientsByIdClient = documentsClientsByIdClient;
-    }
-
-    @OneToMany(mappedBy = "clientByClient")
-    public Collection<SearchApartmentEntity> getSearchApartmentsByIdClient() {
-        return searchApartmentsByIdClient;
-    }
-
-    public void setSearchApartmentsByIdClient(Collection<SearchApartmentEntity> searchApartmentsByIdClient) {
-        this.searchApartmentsByIdClient = searchApartmentsByIdClient;
     }
 }

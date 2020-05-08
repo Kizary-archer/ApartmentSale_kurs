@@ -11,7 +11,6 @@ public class DistrictEntity {
     private String nameDistrict;
     private int city;
     private CityEntity cityByCity;
-    private Collection<SearchApartmentEntity> searchApartmentsByIdDistrict;
     private Collection<StreetEntity> streetsByIdDistrict;
 
     @Id
@@ -68,15 +67,6 @@ public class DistrictEntity {
 
     public void setCityByCity(CityEntity cityByCity) {
         this.cityByCity = cityByCity;
-    }
-
-    @OneToMany(mappedBy = "districtByDistrict")
-    public Collection<SearchApartmentEntity> getSearchApartmentsByIdDistrict() {
-        return searchApartmentsByIdDistrict;
-    }
-
-    public void setSearchApartmentsByIdDistrict(Collection<SearchApartmentEntity> searchApartmentsByIdDistrict) {
-        this.searchApartmentsByIdDistrict = searchApartmentsByIdDistrict;
     }
 
     @OneToMany(mappedBy = "districtByDistrict")

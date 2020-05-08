@@ -26,7 +26,6 @@
         <mapping class="app.entities.DocumentTypeEntity"/>
         <mapping class="app.entities.DocumentsClientEntity"/>
         <mapping class="app.entities.HouseEntity"/>
-        <mapping class="app.entities.SearchApartmentEntity"/>
         <mapping class="app.entities.SeriesHouseEntity"/>
         <mapping class="app.entities.StreetEntity"/>
         <mapping class="app.entities.NameStreetEntity"/>

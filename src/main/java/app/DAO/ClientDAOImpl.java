@@ -148,31 +148,6 @@ public class ClientDAOImpl implements ClientDAO {
     }
 
     @Override
-    public ClientEntity getClientsearchApartments(int idClient) {
-        Session session = null;
-        try {
-            session = getSession();
-            session.beginTransaction();
-            String hql = "select distinct  c " +
-                    "from ClientEntity c " +
-                    "left join fetch c.searchApartmentsByIdClient " +
-                    "where c.idClient = :id";
-            Query query =  session.createQuery(hql);
-            query.setParameter("id",idClient);
-            ClientEntity res = (ClientEntity) query.getSingleResult();
-            session.getTransaction().commit();
-            return res;
-        } catch (Exception e) {
-            System.out.println(e);
-            return null;
-        } finally {
-            if (session != null && session.isOpen()) {
-                session.close();
-            }
-        }
-    }
-
-    @Override
     public ClientEntity getClientById(int id) {
         Session session = null;
         try {
@@ -201,19 +176,12 @@ public class ClientDAOImpl implements ClientDAO {
         try {
             session = getSession();
             session.beginTransaction();
-            String hqlsearchApartment = "select distinct  c " +
-                    "from ClientEntity c " +
-                    "left join fetch c.searchApartmentsByIdClient " +
-                    "where c.idClient = :id";
-            Query query =  session.createQuery(hqlsearchApartment);
-            query.setParameter("id",idClient);
-            res = (ClientEntity) query.getSingleResult();
 
             String hqlApartments = "select distinct  c " +
                     "from ClientEntity c " +
                     "left join fetch c.apartmentsByIdClient " +
                     "where c.idClient = :id";
-            query =  session.createQuery(hqlApartments);
+            Query query =  session.createQuery(hqlApartments);
             query.setParameter("id",idClient);
             res = (ClientEntity) query.getSingleResult();
 

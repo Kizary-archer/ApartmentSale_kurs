@@ -19,7 +19,6 @@ public class ApartmentSaleEntity {
     private ClientEntity clientByOwnerApartment;
     private ClientEntity clientByBuyer;
     private AgentEntity agentByAgent;
-    private SearchApartmentEntity searchApartmentBySearchApartment;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -80,16 +79,6 @@ public class ApartmentSaleEntity {
 
     public void setDate(Date date) {
         this.date = date;
-    }
-
-    @Basic
-    @Column(name = "search_apartment", nullable = true)
-    public Integer getSearchApartment() {
-        return searchApartment;
-    }
-
-    public void setSearchApartment(Integer searchApartment) {
-        this.searchApartment = searchApartment;
     }
 
     @Basic
@@ -162,13 +151,4 @@ public class ApartmentSaleEntity {
         this.agentByAgent = agentByAgent;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "search_apartment", referencedColumnName = "id_apartment",insertable = false, updatable = false)
-    public SearchApartmentEntity getSearchApartmentBySearchApartment() {
-        return searchApartmentBySearchApartment;
-    }
-
-    public void setSearchApartmentBySearchApartment(SearchApartmentEntity searchApartmentBySearchApartment) {
-        this.searchApartmentBySearchApartment = searchApartmentBySearchApartment;
-    }
 }

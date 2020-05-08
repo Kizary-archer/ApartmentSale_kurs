@@ -10,7 +10,6 @@ public class CityEntity {
     private int idCity;
     private String nameCity;
     private Collection<DistrictEntity> districtsByIdCity;
-    private Collection<SearchApartmentEntity> searchApartmentsByIdCity;
 
     public CityEntity(){}
     public CityEntity(String nameCity){this.nameCity = nameCity;}
@@ -59,12 +58,4 @@ public class CityEntity {
         this.districtsByIdCity = districtsByIdCity;
     }
 
-    @OneToMany(mappedBy = "cityByCity")
-    public Collection<SearchApartmentEntity> getSearchApartmentsByIdCity() {
-        return searchApartmentsByIdCity;
-    }
-
-    public void setSearchApartmentsByIdCity(Collection<SearchApartmentEntity> searchApartmentsByIdCity) {
-        this.searchApartmentsByIdCity = searchApartmentsByIdCity;
-    }
 }
