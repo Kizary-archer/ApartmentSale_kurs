@@ -7,22 +7,22 @@ import java.util.Objects;
 @Entity
 @Table(name = "agent", schema = "public", catalog = "sale_of_apartments")
 public class AgentEntity {
-    private int idAgent;
+    private Integer idAgent;
     private String name;
     private String surname;
     private String patronymic;
-    private int percent;
-    private int phoneNumber;
+    private Integer percent;
+    private Integer phoneNumber;
     private Collection<ApartmentSaleEntity> apartmentSalesByIdAgent;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_agent", nullable = false)
-    public int getIdAgent() {
+    public Integer getIdAgent() {
         return idAgent;
     }
 
-    public void setIdAgent(int idAgent) {
+    public void setIdAgent(Integer idAgent) {
         this.idAgent = idAgent;
     }
 
@@ -58,21 +58,21 @@ public class AgentEntity {
 
     @Basic
     @Column(name = "percent", nullable = false)
-    public int getPercent() {
+    public Integer getPercent() {
         return percent;
     }
 
-    public void setPercent(int percent) {
+    public void setPercent(Integer percent) {
         this.percent = percent;
     }
 
     @Basic
     @Column(name = "phone_number", nullable = false)
-    public int getPhoneNumber() {
+    public Integer getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(Integer phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

@@ -1,13 +1,7 @@
 package app.Util;
 
-import app.DAO.ApartmentDAOImpl;
-import app.DAO.CityDAOImpl;
-import app.DAO.ClientDAOImpl;
-import app.DAO.DAOinterfaces.ApartmentDAO;
-import app.DAO.DAOinterfaces.CityDAO;
-import app.DAO.DAOinterfaces.ClientDAO;
-import app.DAO.DAOinterfaces.DocumentDAO;
-import app.DAO.DocumentDAOImpl;
+import app.DAO.*;
+import app.DAO.DAOinterfaces.*;
 
 public class DAOCreateFactoryUtil {
 
@@ -16,6 +10,7 @@ public class DAOCreateFactoryUtil {
     private static ClientDAO clientDAO = null;
     private static DocumentDAO documentDAO = null;
     private static ApartmentDAO apartmentDAO = null;
+    private static AgentDAO agentDAO = null;
 
     public static DAOCreateFactoryUtil getInstance() {
         if (instance == null) {
@@ -50,5 +45,12 @@ public class DAOCreateFactoryUtil {
             };
         }
         return apartmentDAO;
+    }
+    public AgentDAO getAgentDAO() {
+        if (agentDAO == null) {
+            agentDAO = new AgentDAOImpl() {
+            };
+        }
+        return agentDAO;
     }
 }

@@ -25,7 +25,6 @@
         </button>
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-4">
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Клиенты
@@ -35,14 +34,27 @@
                         <a class="dropdown-item" href="./addClient">Добавить клиента</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#">Квартиры</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Квартиры
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="./listAgents">Найти агента</a>
+                        <a class="dropdown-item" href="./addAgent">Добавить агента</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="#">Продажа квартир</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#">Агенты</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Агенты
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="./listAgents">Найти агента</a>
+                        <a class="dropdown-item" href="./addAgent">Добавить агента</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="#">Справочники</a>

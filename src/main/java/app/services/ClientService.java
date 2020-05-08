@@ -9,16 +9,6 @@ import java.util.Collection;
 
 public class ClientService {
 
-    public boolean addClient(String name,
-                             String surname,
-                             String patronymic,
-                             Date dateOfBirth,
-                             String phoneNumber,
-                             String email,
-                             Boolean gender) {
-        ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
-      return clientDAO.add(new ClientEntity( name, surname, patronymic, dateOfBirth, phoneNumber, email, gender));
-    }
     public boolean addClient(ClientEntity clientEntity){
         ClientDAO clientDAO = DAOCreateFactoryUtil.getInstance().getClientDAO();
         return  clientDAO.add(clientEntity);

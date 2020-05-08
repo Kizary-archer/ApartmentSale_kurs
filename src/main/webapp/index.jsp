@@ -26,6 +26,14 @@
             </button>
         </div>
     </c:if>
+    <c:if test="${isAgentdel == true}">
+        <div class="alert alert-success alert-dismissible fade show col-md-4" role="alert">
+            <strong>Агент удалён</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </c:if>
 </div>
 </body>
 </html>
