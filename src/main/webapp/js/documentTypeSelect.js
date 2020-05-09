@@ -1,9 +1,16 @@
 $(document).ready( function () {
-    $('#tableDocumentType').DataTable();
-    $('tr').bind('click', function(){
-        var id = $(this).find($("td:first-child")).text();
-        $("#typeDocument").val(id.toString());
-    });
+    var table = $('#tableDocumentType').DataTable();
 
-    $('td').bind('click', function(){$("#btnAccord1").click();});
+    $('#tableDocumentType tbody').on('click', 'tr', function () {
+        var data = table.row( this ).data();
+        $("#typeDocument").val(data[0].toString());
+
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    });
 });
