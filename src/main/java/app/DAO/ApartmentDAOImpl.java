@@ -1,11 +1,8 @@
 package app.DAO;
 
 import app.DAO.DAOinterfaces.ApartmentDAO;
-import app.DAO.DAOinterfaces.ClientDAO;
 import app.entities.ApartmentEntity;
-import app.entities.ClientEntity;
-import app.entities.HouseEntity;
-import app.entities.houseView;
+import app.entities.HouseView;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
@@ -19,14 +16,14 @@ import java.util.List;
 public class ApartmentDAOImpl implements ApartmentDAO {
 
     @Override
-    public List<houseView> getHousesView(int limit, int offset, houseView houseView) {
+    public List<HouseView> getHousesView(int limit, int offset, HouseView houseView) {
         Session session = null;
         try {
             session = getSession();
             session.beginTransaction();
             CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-            CriteriaQuery<houseView> criteriaBuilderQuery = criteriaBuilder.createQuery(houseView.class);
-            Root<houseView> root = criteriaBuilderQuery.from(houseView.class);
+            CriteriaQuery<HouseView> criteriaBuilderQuery = criteriaBuilder.createQuery(HouseView.class);
+            Root<HouseView> root = criteriaBuilderQuery.from(HouseView.class);
             criteriaBuilderQuery.select(root);
             List<Predicate> p = new ArrayList<Predicate>();
 
@@ -56,7 +53,7 @@ public class ApartmentDAOImpl implements ApartmentDAO {
             Query query = session.createQuery(criteriaBuilderQuery);
            if(limit != 0) query.setMaxResults(limit);
             query.setFirstResult(offset);
-            List<houseView> res = query.getResultList();
+            List<HouseView> res = query.getResultList();
             session.getTransaction().commit();
             return res;
         } catch (Exception e) {

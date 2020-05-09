@@ -15,17 +15,27 @@
                     <input type="text" class="form-control" id="numberHouse" name="numberHouse" placeholder="Номер дома">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="seriesName">стр.серия</label>
-                    <input type="text" class="form-control" id="seriesName" name="seriesName" placeholder="стр.серия">
+                    <label for="nameSeries">стр.серия</label>
+                    <input type="text" class="form-control" id="nameSeries" name="nameSeries" placeholder="стр.серия">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="streetName">Название улицы</label>
-                    <input type="text" class="form-control" id="streetName" name="streetName" placeholder="Название улицы">
+                    <label for="nameStreet">Название улицы</label>
+                    <input type="text" class="form-control" id="nameStreet" name="nameStreet" placeholder="Название улицы">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="nameDistrict">Название района</label>
+                    <input type="text" class="form-control" id="nameDistrict" name="nameDistrict" placeholder="Название района">
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary" formaction="./addClient">Найти</button>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nameCity">Название города</label>
+                    <input type="text" class="form-control" id="nameCity" name="nameCity" placeholder="Название города">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" formaction="./searchHouse">Найти</button>
         </form>
     </div>
 </div>

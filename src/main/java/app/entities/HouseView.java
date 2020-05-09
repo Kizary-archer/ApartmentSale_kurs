@@ -8,7 +8,7 @@ import java.util.Objects;
 @Entity
 @Immutable
 @Table(name = "houseview")
-public class houseView {
+public class HouseView {
 
     private Integer idHouse;
     private String numberHouse;

@@ -1,9 +1,9 @@
 package app.controllers;
 
-import app.builder.DocumentBuilder;
+import app.builder.ApartmentBuilder;
+import app.builder.HouseViewBuilder;
 import app.entities.*;
 import app.services.ApartmentService;
-import app.services.DocumentService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/addApartment"})
+@WebServlet(urlPatterns = {"/addApartment","/searchHouse"})
 public class ApartmentServlet extends HttpServlet {
 
     @Override
@@ -23,8 +23,6 @@ public class ApartmentServlet extends HttpServlet {
         ApartmentService apartmentService = new ApartmentService();
         if(request.getServletPath().equals("/addApartment")) {
             request.setAttribute("apartmentOwner", request.getParameter("idClient"));
-            List<houseView> houseEntityList = (List<houseView>) apartmentService.getHouses(100,0,new houseView());
-            request.setAttribute("houseEntityList", houseEntityList);
             requestDispatcher = request.getRequestDispatcher("view/addApartment.jsp");
         }/*else { //вывод отпеделённого док. или его обновление
             DocumentsClientEntity documentsClientEntity = documentService.getDocumentById(Integer.parseInt(request.getParameter("idDocument")));//получение определённого документа из бд
@@ -38,22 +36,35 @@ public class ApartmentServlet extends HttpServlet {
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-        DocumentService documentService = new DocumentService();
-        DocumentsClientEntity documentsClientEntity = null;
+        ApartmentService apartmentService = new ApartmentService();
+        ApartmentEntity apartmentEntity = null;
         try {
-            documentsClientEntity = new DocumentBuilder(request).build();
+            apartmentEntity = new ApartmentBuilder(request).build();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-     /*   if(request.getServletPath().equals("/addDocument")) {
-            if (documentService.addDocument(documentsClientEntity)) {
-                request.setAttribute("isDocumentAdded", "true");
-            }
-            else request.setAttribute("isDocumentAdded", "false");
-            doGet(request, response);
+       if(request.getServletPath().equals("/addApartment")) {
+           if (apartmentService.addApartment(apartmentEntity)) {
+               request.setAttribute("isApartmentAdded", "true");
+           }
+           else request.setAttribute("isApartmentAdded", "false");
+           doGet(request, response);
         }
 
+        if(request.getServletPath().equals("/searchHouse")) {
+            HouseView houseView = null;
+            try {
+                houseView = new HouseViewBuilder(request).build();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            List<HouseView> houseEntityList = (List<HouseView>) apartmentService.getHouses(1000,0,houseView);
+            request.setAttribute("houseEntityList", houseEntityList);
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/addApartment.jsp");
+            requestDispatcher.forward(request, response);
+        }
+/*
         if(request.getServletPath().equals("/updDocument")) {
             if (documentService.updDocument(documentsClientEntity)) {
                 request.setAttribute("isDocumentUpd", "true");

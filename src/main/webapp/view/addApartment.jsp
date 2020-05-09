@@ -36,20 +36,20 @@
                         <input type="text" class="form-control" id="house" name="house" readonly>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary" formaction="./addClient">Добавить</button>
+                <button type="submit" class="btn btn-primary" formaction="./addApartment">Добавить</button>
             </form>
         </div>
-        <c:if test="${isDocumentAdded == true}">
+        <c:if test="${isApartmentAdded == true}">
         <div class="alert alert-success alert-dismissible fade show col-md-4" role="alert">
-            <strong>Документ добавлен</strong>
+            <strong>Кварттира добавлен</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
     </c:if>
-    <c:if test="${isDocumentAdded == false}">
+    <c:if test="${isApartmentAdded == false}">
         <div class="alert alert-danger alert-dismissible fade show col-md-4" role="alert">
-            <strong>Документ не добавлен</strong> Проверьте вводимые значения
+            <strong>Квартира не добавлена</strong> Проверьте вводимые значения
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>

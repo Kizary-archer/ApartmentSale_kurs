@@ -7,13 +7,13 @@ import java.util.Objects;
 @Entity
 @Table(name = "apartment", schema = "public", catalog = "sale_of_apartments")
 public class ApartmentEntity {
-    private int idApartment;
-    private int numberApartment;
-    private int countRoom;
-    private float livingSpace;
-    private int house;
-    private int apartmentOwner;
-    private int meterPrice;
+    private Integer idApartment;
+    private Integer numberApartment;
+    private Integer countRoom;
+    private Float livingSpace;
+    private Integer house;
+    private Integer apartmentOwner;
+    private Integer meterPrice;
     private HouseEntity houseByHouse;
     private ClientEntity clientByApartmentOwner;
     private Collection<ApartmentSaleEntity> apartmentSalesByIdApartment;
@@ -21,71 +21,71 @@ public class ApartmentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_apartment", nullable = false)
-    public int getIdApartment() {
+    public Integer getIdApartment() {
         return idApartment;
     }
 
-    public void setIdApartment(int idApartment) {
+    public void setIdApartment(Integer idApartment) {
         this.idApartment = idApartment;
     }
 
     @Basic
     @Column(name = "number_apartment", nullable = false)
-    public int getNumberApartment() {
+    public Integer getNumberApartment() {
         return numberApartment;
     }
 
-    public void setNumberApartment(int numberApartment) {
+    public void setNumberApartment(Integer numberApartment) {
         this.numberApartment = numberApartment;
     }
 
     @Basic
     @Column(name = "count_room", nullable = false)
-    public int getCountRoom() {
+    public Integer getCountRoom() {
         return countRoom;
     }
 
-    public void setCountRoom(int countRoom) {
+    public void setCountRoom(Integer countRoom) {
         this.countRoom = countRoom;
     }
 
     @Basic
     @Column(name = "living_space", nullable = false, precision = 0)
-    public float getLivingSpace() {
+    public Float getLivingSpace() {
         return livingSpace;
     }
 
-    public void setLivingSpace(float livingSpace) {
+    public void setLivingSpace(Float livingSpace) {
         this.livingSpace = livingSpace;
     }
 
     @Basic
     @Column(name = "house", nullable = false)
-    public int getHouse() {
+    public Integer getHouse() {
         return house;
     }
 
-    public void setHouse(int house) {
+    public void setHouse(Integer house) {
         this.house = house;
     }
 
     @Basic
     @Column(name = "apartment_owner", nullable = false)
-    public int getApartmentOwner() {
+    public Integer getApartmentOwner() {
         return apartmentOwner;
     }
 
-    public void setApartmentOwner(int apartmentOwner) {
+    public void setApartmentOwner(Integer apartmentOwner) {
         this.apartmentOwner = apartmentOwner;
     }
 
     @Basic
     @Column(name = "meter_price", nullable = false)
-    public int getMeterPrice() {
+    public Integer getMeterPrice() {
         return meterPrice;
     }
 
-    public void setMeterPrice(int meterPrice) {
+    public void setMeterPrice(Integer meterPrice) {
         this.meterPrice = meterPrice;
     }
 

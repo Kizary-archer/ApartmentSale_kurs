@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="template/header.jsp"/>
-<div>
+<div class="p-3">
     <div class="w-50 p-3">
         <h2>Добавить документ клиента</h2>
         <form method="post">
