@@ -1,6 +1,7 @@
 package app.DAO;
 
 import app.DAO.DAOinterfaces.ClientDAO;
+import app.entities.AgentEntity;
 import app.entities.ClientEntity;
 import app.entities.DocumentTypeEntity;
 import org.hibernate.Session;

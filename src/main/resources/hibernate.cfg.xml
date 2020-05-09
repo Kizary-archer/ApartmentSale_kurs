@@ -29,6 +29,7 @@
         <mapping class="app.entities.SeriesHouseEntity"/>
         <mapping class="app.entities.StreetEntity"/>
         <mapping class="app.entities.NameStreetEntity"/>
+        <mapping class="app.entities.houseView"/>
 
     </session-factory>
 </hibernate-configuration>

@@ -1,10 +1,7 @@
 package app.controllers;
 
 import app.builder.DocumentBuilder;
-import app.entities.ApartmentEntity;
-import app.entities.DocumentTypeEntity;
-import app.entities.DocumentsClientEntity;
-import app.entities.HouseEntity;
+import app.entities.*;
 import app.services.ApartmentService;
 import app.services.DocumentService;
 
@@ -26,7 +23,7 @@ public class ApartmentServlet extends HttpServlet {
         ApartmentService apartmentService = new ApartmentService();
         if(request.getServletPath().equals("/addApartment")) {
             request.setAttribute("apartmentOwner", request.getParameter("idClient"));
-            List<HouseEntity> houseEntityList = (List<HouseEntity>) apartmentService.getHouses(100,0,new HouseEntity());
+            List<houseView> houseEntityList = (List<houseView>) apartmentService.getHouses(100,0,new houseView());
             request.setAttribute("houseEntityList", houseEntityList);
             requestDispatcher = request.getRequestDispatcher("view/addApartment.jsp");
         }/*else { //вывод отпеделённого док. или его обновление

@@ -4,6 +4,7 @@ import app.DAO.DAOinterfaces.ApartmentDAO;
 import app.Util.DAOCreateFactoryUtil;
 import app.entities.ApartmentEntity;
 import app.entities.HouseEntity;
+import app.entities.houseView;
 
 import java.util.Collection;
 
@@ -25,9 +26,9 @@ public class ApartmentService {
         ApartmentDAO apartmentDAO = DAOCreateFactoryUtil.getInstance().getApartmentDAO();
         return  apartmentDAO.getApartmentById(idClient);
     }
-    public Collection<HouseEntity> getHouses(int limit,int offset,HouseEntity houseEntity){
+    public Collection<houseView> getHouses(int limit, int offset, houseView houseView){
         ApartmentDAO apartmentDAO = DAOCreateFactoryUtil.getInstance().getApartmentDAO();
-        return  apartmentDAO.getHouses(limit,offset,houseEntity);
+        return  apartmentDAO.getHousesView(limit,offset,houseView);
     }
     public ApartmentEntity getApartmentAllChild(int idClient){
         ApartmentDAO apartmentDAO = DAOCreateFactoryUtil.getInstance().getApartmentDAO();

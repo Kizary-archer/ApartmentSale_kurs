@@ -5,6 +5,7 @@ import app.DAO.DAOinterfaces.ClientDAO;
 import app.entities.ApartmentEntity;
 import app.entities.ClientEntity;
 import app.entities.HouseEntity;
+import app.entities.houseView;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
@@ -18,28 +19,34 @@ import java.util.List;
 public class ApartmentDAOImpl implements ApartmentDAO {
 
     @Override
-    public List<HouseEntity> getHouses(int limit, int offset, HouseEntity houseEntity) {
+    public List<houseView> getHousesView(int limit, int offset, houseView houseView) {
         Session session = null;
         try {
             session = getSession();
             session.beginTransaction();
             CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-            CriteriaQuery<HouseEntity> criteriaBuilderQuery = criteriaBuilder.createQuery(HouseEntity.class);
-            Root<HouseEntity> root = criteriaBuilderQuery.from(HouseEntity.class);
+            CriteriaQuery<houseView> criteriaBuilderQuery = criteriaBuilder.createQuery(houseView.class);
+            Root<houseView> root = criteriaBuilderQuery.from(houseView.class);
             criteriaBuilderQuery.select(root);
             List<Predicate> p = new ArrayList<Predicate>();
 
-            if(houseEntity.getIdHouse() != null){
-                p.add(criteriaBuilder.equal(root.get("idHouse"),houseEntity.getIdHouse()));
+            if(houseView.getIdHouse() != null){
+                p.add(criteriaBuilder.equal(root.get("idHouse"),houseView.getIdHouse()));
             }
-            if(houseEntity.getNumberHouse() != null){
-                p.add(criteriaBuilder.like(root.get("numberHouse"),houseEntity.getNumberHouse()));
+            if(houseView.getNumberHouse() != null){
+                p.add(criteriaBuilder.like(root.get("numberHouse"),houseView.getNumberHouse()));
             }
-            if(houseEntity.getStreet() != null){
-                p.add(criteriaBuilder.equal(root.get("street"),houseEntity.getStreet()));
+            if(houseView.getNameSeries() != null){
+                p.add(criteriaBuilder.like(root.get("nameSeries"),houseView.getNameSeries()));
             }
-            if(houseEntity.getSeries() != null){
-                p.add(criteriaBuilder.equal(root.get("series"),houseEntity.getSeries()));
+            if(houseView.getNameStreet() != null){
+                p.add(criteriaBuilder.like(root.get("nameStreet"),houseView.getNameStreet()));
+            }
+            if(houseView.getNameDistrict() != null){
+                p.add(criteriaBuilder.like(root.get("nameDistrict"),houseView.getNameDistrict()));
+            }
+            if(houseView.getNameCity() != null){
+                p.add(criteriaBuilder.like(root.get("nameCity"),houseView.getNameCity()));
             }
             if(!p.isEmpty()) {
                 Predicate[] pr = new Predicate[p.size()];
@@ -49,7 +56,7 @@ public class ApartmentDAOImpl implements ApartmentDAO {
             Query query = session.createQuery(criteriaBuilderQuery);
            if(limit != 0) query.setMaxResults(limit);
             query.setFirstResult(offset);
-            List<HouseEntity> res = query.getResultList();
+            List<houseView> res = query.getResultList();
             session.getTransaction().commit();
             return res;
         } catch (Exception e) {

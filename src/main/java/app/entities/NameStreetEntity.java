@@ -7,18 +7,18 @@ import java.util.Objects;
 @Entity
 @Table(name = "name_street", schema = "public", catalog = "sale_of_apartments")
 public class NameStreetEntity {
-    private int idName;
+    private Integer idName;
     private String nameStreet;
     private Collection<StreetEntity> streetsByIdName;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_name", nullable = false)
-    public int getIdName() {
+    public Integer getIdName() {
         return idName;
     }
 
-    public void setIdName(int idName) {
+    public void setIdName(Integer idName) {
         this.idName = idName;
     }
 
