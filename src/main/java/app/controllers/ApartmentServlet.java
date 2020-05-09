@@ -59,6 +59,7 @@ public class ApartmentServlet extends HttpServlet {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            request.setAttribute("apartment",apartmentEntity);
             List<HouseView> houseEntityList = (List<HouseView>) apartmentService.getHouses(1000,0,houseView);
             request.setAttribute("houseEntityList", houseEntityList);
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/addApartment.jsp");

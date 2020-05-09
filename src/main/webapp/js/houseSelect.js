@@ -13,4 +13,9 @@ $(document).ready( function () {
             $(this).addClass('selected');
         }
     });
+    $("#formSearchHouse").submit(function(event) {
+        event.preventDefault();
+        var formData = $("#formSearchHouse").serialize() + '&' + $("#formApartAdd").serialize();
+        $.post('./searchHouse',formData);
+    });
 });

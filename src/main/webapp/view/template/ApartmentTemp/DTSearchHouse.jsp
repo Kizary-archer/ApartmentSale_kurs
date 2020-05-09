@@ -4,7 +4,7 @@
 <div class="p-3">
     <h2>Найти дом</h2>
     <div class="w-50 p-3" >
-        <form method="post">
+        <form method="post" id = "formSearchHouse">
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="idHouse">id Дома</label>

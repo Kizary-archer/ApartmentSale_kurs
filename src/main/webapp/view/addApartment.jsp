@@ -5,35 +5,35 @@
     <div class="p-3">
         <h2>Добавить квартиру</h2>
         <div class="w-50 p-3" >
-            <form method="post">
+            <form method="post" id = "formApartAdd">
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="numberApartment">Номер квартиры</label>
-                        <input type="text" class="form-control" id="numberApartment" name="numberApartment" placeholder="Номер квартиры">
+                        <input type="text" class="form-control" id="numberApartment" name="numberApartment" placeholder="Номер квартиры" value=${apartment.numberApartment}>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="countRoom">Количество комнат</label>
-                        <input type="text" class="form-control" id="countRoom" name="countRoom" placeholder="Количество комнат">
+                        <input type="text" class="form-control" id="countRoom" name="countRoom" placeholder="Количество комнат" value=${apartment.countRoom}>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="livingSpace">Жилплощадь</label>
-                        <input type="text" class="form-control" id="livingSpace" name="livingSpace" placeholder="Жилплощадь">
+                        <input type="text" class="form-control" id="livingSpace" name="livingSpace" placeholder="Жилплощадь" value=${apartment.livingSpace}>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="meterPrice">цена за кв.метр</label>
-                        <input type="text" class="form-control" id="meterPrice" name="meterPrice" placeholder="цена за кв.метр">
+                        <input type="text" class="form-control" id="meterPrice" name="meterPrice" placeholder="цена за кв.метр" value=${apartment.meterPrice}>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-3">
                         <label for="apartmentOwner">id владельца</label>
-                        <input type="text" class="form-control" id="apartmentOwner" name="apartmentOwner" readonly value=${requestScope.apartmentOwner}>
+                        <input type="text" class="form-control" id="apartmentOwner" name="apartmentOwner" readonly value=${apartment.apartmentOwner}>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="house">id дома</label>
-                        <input type="text" class="form-control" id="house" name="house" readonly>
+                        <input type="text" class="form-control" id="house" name="house" readonly value=${apartment.house}>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary" formaction="./addApartment">Добавить</button>
