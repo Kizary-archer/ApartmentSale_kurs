@@ -11,6 +11,7 @@ public class DAOCreateFactoryUtil {
     private static DocumentDAO documentDAO = null;
     private static ApartmentDAO apartmentDAO = null;
     private static AgentDAO agentDAO = null;
+    private static ApartmentSaleDAO apartmentSaleDAO = null;
 
     public static DAOCreateFactoryUtil getInstance() {
         if (instance == null) {
@@ -52,5 +53,12 @@ public class DAOCreateFactoryUtil {
             };
         }
         return agentDAO;
+    }
+    public ApartmentSaleDAO getApartmentSaleDAO() {
+        if (apartmentSaleDAO == null) {
+            apartmentSaleDAO = new ApartmentSaleDAOImpl() {
+            };
+        }
+        return apartmentSaleDAO;
     }
 }

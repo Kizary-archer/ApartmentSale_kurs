@@ -2,7 +2,8 @@ package app.controllers;
 
 import app.builder.ApartmentBuilder;
 import app.builder.HouseViewBuilder;
-import app.entities.*;
+import app.entities.ApartmentEntity;
+import app.entities.HouseView;
 import app.services.ApartmentService;
 import com.google.gson.Gson;
 
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(urlPatterns = {"/addApartment","/searchHouse","/updApartment","/viewApartment","/delApartment","/listApartments"})
-public class ApartmentServlet extends HttpServlet {
+public class ApartmentSaleServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {

@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="idAgent">id</label>
-                    <input type="text" class="form-control" readonly id="idAgent" name="idAgent">
+                    <input type="text" class="form-control"  id="idAgent" name="idAgent">
                 </div>
             </div>
 

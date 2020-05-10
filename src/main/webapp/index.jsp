@@ -34,7 +34,7 @@
             </button>
         </div>
     </c:if>
-    <c:if test="${isApartmentDel == true}">
+    <c:if test="${isApartmentdel == true}">
         <div class="alert alert-danger alert-dismissible fade show col-md-4" role="alert">
             <strong>Квартира удалена</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">

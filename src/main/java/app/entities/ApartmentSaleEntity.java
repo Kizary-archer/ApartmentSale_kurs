@@ -7,14 +7,13 @@ import java.util.Objects;
 @Entity
 @Table(name = "apartment_sale", schema = "public", catalog = "sale_of_apartments")
 public class ApartmentSaleEntity {
-    private int idSale;
-    private int apartment;
-    private int ownerApartment;
-    private int buyer;
-    private int agent;
+    private Integer idSale;
+    private Integer apartment;
+    private Integer ownerApartment;
+    private Integer buyer;
+    private Integer agent;
     private Date date;
-    private Integer searchApartment;
-    private int price;
+    private Integer price;
     private ApartmentEntity apartmentByApartment;
     private ClientEntity clientByOwnerApartment;
     private ClientEntity clientByBuyer;
@@ -23,51 +22,51 @@ public class ApartmentSaleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_sale", nullable = false)
-    public int getIdSale() {
+    public Integer getIdSale() {
         return idSale;
     }
 
-    public void setIdSale(int idSale) {
+    public void setIdSale(Integer idSale) {
         this.idSale = idSale;
     }
 
     @Basic
     @Column(name = "apartment", nullable = false)
-    public int getApartment() {
+    public Integer getApartment() {
         return apartment;
     }
 
-    public void setApartment(int apartment) {
+    public void setApartment(Integer apartment) {
         this.apartment = apartment;
     }
 
     @Basic
     @Column(name = "owner_apartment", nullable = false)
-    public int getOwnerApartment() {
+    public Integer getOwnerApartment() {
         return ownerApartment;
     }
 
-    public void setOwnerApartment(int ownerApartment) {
+    public void setOwnerApartment(Integer ownerApartment) {
         this.ownerApartment = ownerApartment;
     }
 
     @Basic
     @Column(name = "buyer", nullable = false)
-    public int getBuyer() {
+    public Integer getBuyer() {
         return buyer;
     }
 
-    public void setBuyer(int buyer) {
+    public void setBuyer(Integer buyer) {
         this.buyer = buyer;
     }
 
     @Basic
     @Column(name = "agent", nullable = false)
-    public int getAgent() {
+    public Integer getAgent() {
         return agent;
     }
 
-    public void setAgent(int agent) {
+    public void setAgent(Integer agent) {
         this.agent = agent;
     }
 
@@ -83,11 +82,11 @@ public class ApartmentSaleEntity {
 
     @Basic
     @Column(name = "price", nullable = false)
-    public int getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
@@ -102,13 +101,12 @@ public class ApartmentSaleEntity {
                 buyer == that.buyer &&
                 agent == that.agent &&
                 price == that.price &&
-                Objects.equals(date, that.date) &&
-                Objects.equals(searchApartment, that.searchApartment);
+                Objects.equals(date, that.date);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idSale, apartment, ownerApartment, buyer, agent, date, searchApartment, price);
+        return Objects.hash(idSale, apartment, ownerApartment, buyer, agent, date,  price);
     }
 
     @ManyToOne(fetch = FetchType.LAZY)

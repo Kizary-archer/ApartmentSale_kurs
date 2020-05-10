@@ -6,6 +6,7 @@ import app.entities.ApartmentEntity;
 import app.entities.HouseView;
 
 import java.util.Collection;
+import java.util.List;
 
 public class ApartmentService {
 
@@ -28,6 +29,10 @@ public class ApartmentService {
     public Collection<HouseView> getHouses(int limit, int offset, HouseView houseView){
         ApartmentDAO apartmentDAO = DAOCreateFactoryUtil.getInstance().getApartmentDAO();
         return  apartmentDAO.getHousesView(limit,offset,houseView);
+    }
+    public Collection<ApartmentEntity> getApartmentsList(int limit, int offset, ApartmentEntity apartmentEntity){
+        ApartmentDAO apartmentDAO = DAOCreateFactoryUtil.getInstance().getApartmentDAO();
+        return  apartmentDAO.getApartmentsList(limit,offset,apartmentEntity);
     }
     public ApartmentEntity getApartmentAllChild(int idClient){
         ApartmentDAO apartmentDAO = DAOCreateFactoryUtil.getInstance().getApartmentDAO();

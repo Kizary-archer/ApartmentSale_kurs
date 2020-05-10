@@ -38,7 +38,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#">Квартиры</a>
+                    <a class="nav-link "href="./listApartments">Квартиры</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="#">Продажа квартир</a>
