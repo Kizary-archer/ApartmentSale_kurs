@@ -1,5 +1,38 @@
 $(document).ready( function () {
-    var table = $('#tablehouses').DataTable();
+
+
+
+
+    $("#formSearchHouse").submit(function(event) {
+        event.preventDefault();
+        var res;
+        var formData = $("#formSearchHouse").serialize();
+       /*  $.post('./searchHouse',formData,function(data) {
+            res = jQuery.parseJSON(data);
+
+        });*/
+
+
+        $('#tablehouses').DataTable( {
+            'processing': true,
+            'serverSide': true,
+            'ajax': {
+                'type': 'POST',
+                'url': './searchHouse',
+                "dataSrc": ""
+
+            },
+            "columns": [
+                { "data": "idHouse" },
+                { "data": "numberHouse" },
+                { "data": "nameSeries" },
+                { "data": "nameStreet" },
+                { "data": "nameDistrict" },
+                { "data": "nameCity" }
+            ]
+        });
+    });
+   /* var table = $('#tablehouses').DataTable();
 
     $('#tablehouses tbody').on('click', 'tr', function () {
         var data = table.row( this ).data();
@@ -12,10 +45,5 @@ $(document).ready( function () {
             table.$('tr.selected').removeClass('selected');
             $(this).addClass('selected');
         }
-    });
-    $("#formSearchHouse").submit(function(event) {
-        event.preventDefault();
-        var formData = $("#formSearchHouse").serialize() + '&' + $("#formApartAdd").serialize();
-        $.post('./searchHouse',formData);
-    });
+    });*/
 });

@@ -4,6 +4,7 @@ import app.builder.ApartmentBuilder;
 import app.builder.HouseViewBuilder;
 import app.entities.*;
 import app.services.ApartmentService;
+import com.google.gson.Gson;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -59,11 +60,9 @@ public class ApartmentServlet extends HttpServlet {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            request.setAttribute("apartment",apartmentEntity);
-            List<HouseView> houseEntityList = (List<HouseView>) apartmentService.getHouses(1000,0,houseView);
-            request.setAttribute("houseEntityList", houseEntityList);
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/addApartment.jsp");
-            requestDispatcher.forward(request, response);
+            List<HouseView> houseEntityList = (List<HouseView>) apartmentService.getHouses(10,0,houseView);
+            String json = new Gson().toJson(houseEntityList);
+            response.getWriter().write(json);
         }
 /*
         if(request.getServletPath().equals("/updDocument")) {

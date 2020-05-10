@@ -50,16 +50,4 @@
         <th>Название города</th>
     </tr>
     </thead>
-    <tbody>
-    <c:forEach var="house" items="${houseEntityList}">
-        <tr>
-            <td><c:out value="${house.idHouse}"/></td>
-            <td><c:out value="${house.numberHouse}"/></td>
-            <td><c:out value="${house.nameSeries}"/></td>
-            <td><c:out value="${house.nameStreet}"/></td>
-            <td><c:out value="${house.nameDistrict}"/></td>
-            <td><c:out value="${house.nameCity}"/></td>
-        </tr>
-    </c:forEach>
-    </tbody>
 </table>
