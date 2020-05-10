@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="idAgent">id</label>
-                    <input type="text" class="form-control" id="idAgent" name="idAgent" value=${agent.idAgent}>
+                    <input type="text" class="form-control" id="idAgent" name="idAgent" readonly value=${agent.idAgent}>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary m-2" formaction="./updAgent">Обновить</button>
