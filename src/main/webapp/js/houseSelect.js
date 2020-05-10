@@ -1,29 +1,22 @@
 $(document).ready( function () {
-
-/*    var table = $('#tablehouses').DataTable();
-    $('#tablehouses tbody').on('click', 'tr', function () {
-        var data = table.row( this ).data();
-        $("#house").val(data[0].toString());
-
-        if ( $(this).hasClass('selected') ) {
-            $(this).removeClass('selected');
-        }
-        else {
-            table.$('tr.selected').removeClass('selected');
-            $(this).addClass('selected');
-        }
-    });*/
+    var table;
 
 
     $("#formSearchHouse").submit(function(event) {
         event.preventDefault();
-        var res;
+        //window.location.reload();
+       /* var res;
         var formData = $("#formSearchHouse").serialize();
-       /*  $.post('./searchHouse',formData,function(data) {
+        $.post('./searchHouse',formData,function(data) {
             res = jQuery.parseJSON(data);
-
         });*/
-        var table = $('#tablehouses').DataTable( {
+
+
+       /* if ( $.fn.dataTable.isDataTable( '#tablehouses' ) ) {
+            $('#tablehouses').DataTable().destroy();
+        }*/
+        table = $('#tablehouses').DataTable( {
+            destroy: true,
            /* 'retrieve': true,
             'paging': false,
             'processing': true,
@@ -31,7 +24,15 @@ $(document).ready( function () {
             'ajax': {
                 'type': 'POST',
                 'url': './searchHouse',
-                "dataSrc": ""
+                "dataSrc": "",
+                "data": function ( d ) {
+                    d.idHouse = $('#idHouse').val();
+                    d.numberHouse = $('#numberHouse').val();
+                    d.nameSeries = $('#nameSeries').val();
+                    d.nameStreet = $('#nameStreet').val();
+                    d.nameDistrict = $('#nameDistrict').val();
+                    d.nameCity = $('#nameCity').val();
+                }
 
             },
             "columns": [
@@ -43,7 +44,6 @@ $(document).ready( function () {
                 { "data": "nameCity" }
             ]
         });
-       //var table = $('#tablehouses').DataTable();
         $('#tablehouses tbody').on('click', 'tr', function () {
             var data = table.row( this ).data();
             $("#house").val(data.idHouse.toString());

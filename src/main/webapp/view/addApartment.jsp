@@ -9,27 +9,27 @@
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="numberApartment">Номер квартиры</label>
-                        <input type="text" class="form-control" id="numberApartment" name="numberApartment" placeholder="Номер квартиры" value=${apartment.numberApartment}>
+                        <input type="text" class="form-control" id="numberApartment" name="numberApartment" placeholder="Номер квартиры">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="countRoom">Количество комнат</label>
-                        <input type="text" class="form-control" id="countRoom" name="countRoom" placeholder="Количество комнат" value=${apartment.countRoom}>
+                        <input type="text" class="form-control" id="countRoom" name="countRoom" placeholder="Количество комнат" >
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="livingSpace">Жилплощадь</label>
-                        <input type="text" class="form-control" id="livingSpace" name="livingSpace" placeholder="Жилплощадь" value=${apartment.livingSpace}>
+                        <input type="text" class="form-control" id="livingSpace" name="livingSpace" placeholder="Жилплощадь">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="meterPrice">цена за кв.метр</label>
-                        <input type="text" class="form-control" id="meterPrice" name="meterPrice" placeholder="цена за кв.метр" value=${apartment.meterPrice}>
+                        <input type="text" class="form-control" id="meterPrice" name="meterPrice" placeholder="цена за кв.метр" >
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-3">
                         <label for="apartmentOwner">id владельца</label>
-                        <input type="text" class="form-control" id="apartmentOwner" name="apartmentOwner" readonly value=${apartment.apartmentOwner}>
+                        <input type="text" class="form-control" id="apartmentOwner" name="apartmentOwner" readonly value=${requestScope.apartmentOwner}>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="house">id дома</label>

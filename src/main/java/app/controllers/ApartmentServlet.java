@@ -60,7 +60,7 @@ public class ApartmentServlet extends HttpServlet {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            List<HouseView> houseEntityList = (List<HouseView>) apartmentService.getHouses(10,0,houseView);
+            List<HouseView> houseEntityList = (List<HouseView>) apartmentService.getHouses(1000,0,houseView);
             String json = new Gson().toJson(houseEntityList);
             response.getWriter().write(json);
         }
