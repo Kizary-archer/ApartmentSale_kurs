@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/addApartment","/searchHouse"})
+@WebServlet(urlPatterns = {"/addApartment","/searchHouse","/updApartment","/viewApartment"})
 public class ApartmentServlet extends HttpServlet {
 
     @Override
@@ -25,13 +25,11 @@ public class ApartmentServlet extends HttpServlet {
         if(request.getServletPath().equals("/addApartment")) {
             request.setAttribute("apartmentOwner", request.getParameter("idClient"));
             requestDispatcher = request.getRequestDispatcher("view/addApartment.jsp");
-        }/*else { //вывод отпеделённого док. или его обновление
-            DocumentsClientEntity documentsClientEntity = documentService.getDocumentById(Integer.parseInt(request.getParameter("idDocument")));//получение определённого документа из бд
-            request.setAttribute("documentClient", documentsClientEntity);
-            List<DocumentTypeEntity> documentTypeEntityList = (List<DocumentTypeEntity>) documentService.getDocumentType(0,0);
-            request.setAttribute("documentTypeEntityList", documentTypeEntityList);
-            requestDispatcher = request.getRequestDispatcher("view/viewDocument.jsp");
-        }*/
+        }else { //вывод отпеделёной кв. или её обновление
+            ApartmentEntity apartmentEntity = apartmentService.getApartmentAllChild(Integer.parseInt(request.getParameter("idApartment")));//получение определённой квартиры из бд
+            request.setAttribute("apartment", apartmentEntity);
+            requestDispatcher = request.getRequestDispatcher("view/viewApartment.jsp");
+        }
         assert requestDispatcher != null;
         requestDispatcher.forward(request, response);
     }
@@ -64,25 +62,24 @@ public class ApartmentServlet extends HttpServlet {
             String json = new Gson().toJson(houseEntityList);
             response.getWriter().write(json);
         }
-/*
-        if(request.getServletPath().equals("/updDocument")) {
-            if (documentService.updDocument(documentsClientEntity)) {
-                request.setAttribute("isDocumentUpd", "true");
+
+        if(request.getServletPath().equals("/updApartment")) {
+            if (apartmentService.updApartment(apartmentEntity)) {
+                request.setAttribute("isApartmentUpd", "true");
             }
             else {
-                request.setAttribute("isDocumentUpd", "false");
+                request.setAttribute("isApartmentUpd", "false");
             }
             doGet(request,response);
         }
-        if(request.getServletPath().equals("/delDocument")) {
-            if (documentService.delDocument(documentsClientEntity)) {
-                request.setAttribute("isDocumentdel", "true");
-                request.setAttribute("idClient",request.getParameter("client"));
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/viewClient.jsp");
+        if(request.getServletPath().equals("/delApartment")) {
+            if (apartmentService.delApartment(apartmentEntity)) {
+                request.setAttribute("isApartmentdel", "true");
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
                 requestDispatcher.forward(request, response);
             }
             else {
-                request.setAttribute("isDocumentdel", "false");
+                request.setAttribute("isApartmentdel", "false");
                 doGet(request, response);
             }
         }

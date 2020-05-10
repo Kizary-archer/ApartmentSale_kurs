@@ -13,15 +13,15 @@ public class ApartmentService {
         ApartmentDAO apartmentDAO = DAOCreateFactoryUtil.getInstance().getApartmentDAO();
         return  apartmentDAO.add(apartmentEntity);
     }
-    public boolean delpartment(ApartmentEntity apartmentEntity){
+    public boolean delApartment(ApartmentEntity apartmentEntity){
         ApartmentDAO apartmentDAO = DAOCreateFactoryUtil.getInstance().getApartmentDAO();
         return  apartmentDAO.delete(apartmentEntity);
     }
-    public boolean updpartment(ApartmentEntity apartmentEntity){
+    public boolean updApartment(ApartmentEntity apartmentEntity){
         ApartmentDAO apartmentDAO = DAOCreateFactoryUtil.getInstance().getApartmentDAO();
         return  apartmentDAO.update(apartmentEntity);
     }
-    public ApartmentEntity getpartmentById(int idClient){
+    public ApartmentEntity getApartmentById(int idClient){
         ApartmentDAO apartmentDAO = DAOCreateFactoryUtil.getInstance().getApartmentDAO();
         return  apartmentDAO.getApartmentById(idClient);
     }

@@ -121,7 +121,7 @@
             <div class="card-header bg-info" id="headingThree"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 <h5 class="mb-0">
                     <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Проданные квартиры клиента
+                        Сделки по продаже квартир
                     </button>
                 </h5>
             </div>
