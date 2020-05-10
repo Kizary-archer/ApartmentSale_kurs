@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-group col-md-3">
                         <label for="house">id дома</label>
-                        <input type="text" class="form-control" id="house" name="house" readonly value=${apartment.house}>
+                        <input type="text" class="form-control" id="house" name="house" readonly >
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary" formaction="./addApartment">Добавить</button>

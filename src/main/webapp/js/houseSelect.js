@@ -1,6 +1,18 @@
 $(document).ready( function () {
 
+/*    var table = $('#tablehouses').DataTable();
+    $('#tablehouses tbody').on('click', 'tr', function () {
+        var data = table.row( this ).data();
+        $("#house").val(data[0].toString());
 
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            table.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    });*/
 
 
     $("#formSearchHouse").submit(function(event) {
@@ -11,11 +23,11 @@ $(document).ready( function () {
             res = jQuery.parseJSON(data);
 
         });*/
-
-
-        $('#tablehouses').DataTable( {
+        var table = $('#tablehouses').DataTable( {
+           /* 'retrieve': true,
+            'paging': false,
             'processing': true,
-            'serverSide': true,
+            'serverSide': true,*/
             'ajax': {
                 'type': 'POST',
                 'url': './searchHouse',
@@ -31,19 +43,18 @@ $(document).ready( function () {
                 { "data": "nameCity" }
             ]
         });
+       //var table = $('#tablehouses').DataTable();
+        $('#tablehouses tbody').on('click', 'tr', function () {
+            var data = table.row( this ).data();
+            $("#house").val(data.idHouse.toString());
+
+            if ( $(this).hasClass('selected') ) {
+                $(this).removeClass('selected');
+            }
+            else {
+                table.$('tr.selected').removeClass('selected');
+                $(this).addClass('selected');
+            }
+        });
     });
-   /* var table = $('#tablehouses').DataTable();
-
-    $('#tablehouses tbody').on('click', 'tr', function () {
-        var data = table.row( this ).data();
-        $("#house").val(data[0].toString());
-
-        if ( $(this).hasClass('selected') ) {
-            $(this).removeClass('selected');
-        }
-        else {
-            table.$('tr.selected').removeClass('selected');
-            $(this).addClass('selected');
-        }
-    });*/
 });
