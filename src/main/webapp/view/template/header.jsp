@@ -40,10 +40,15 @@
                 <li class="nav-item">
                     <a class="nav-link "href="./listApartments">Квартиры</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#">Продажа квартир</a>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Продажа квартир
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="./listApartmentSales">Найти сделку</a>
+                    <a class="dropdown-item" href="./addApartmentSale">Добавить клиента</a>
+                </div>
                 </li>
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Агенты

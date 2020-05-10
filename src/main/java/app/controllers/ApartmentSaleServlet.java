@@ -1,9 +1,12 @@
 package app.controllers;
 
 import app.builder.ApartmentBuilder;
+import app.builder.ApartmentSaleBuilder;
 import app.builder.HouseViewBuilder;
 import app.entities.ApartmentEntity;
+import app.entities.ApartmentSaleEntity;
 import app.entities.HouseView;
+import app.services.ApartmentSaleService;
 import app.services.ApartmentService;
 import com.google.gson.Gson;
 
@@ -17,18 +20,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/addApartment","/searchHouse","/updApartment","/viewApartment","/delApartment","/listApartments"})
+@WebServlet(urlPatterns = {"/addApartmentSale","/updApartmentSale","/viewApartmentSale","/delApartmentSale","/listApartmentSales"})
 public class ApartmentSaleServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         RequestDispatcher requestDispatcher = null;
-        ApartmentService apartmentService = new ApartmentService();
-       if(request.getServletPath().equals("/listApartments")) {
-           requestDispatcher = request.getRequestDispatcher("view/listApartments.jsp");
+        ApartmentSaleService apartmentSaleService = new ApartmentSaleService();
+       if(request.getServletPath().equals("/listApartmentSales")) {
+           requestDispatcher = request.getRequestDispatcher("view/listApartmentSales.jsp");
            requestDispatcher.forward(request, response);
        }
-        if(request.getServletPath().equals("/addApartment")) {
+       /* if(request.getServletPath().equals("/addApartment")) {
             request.setAttribute("apartmentOwner", request.getParameter("idClient"));
             requestDispatcher = request.getRequestDispatcher("view/addApartment.jsp");
         }else { //вывод отпеделёной кв. или её обновление
@@ -37,19 +40,19 @@ public class ApartmentSaleServlet extends HttpServlet {
             requestDispatcher = request.getRequestDispatcher("view/viewApartment.jsp");
         }
         assert requestDispatcher != null;
-        requestDispatcher.forward(request, response);
+        requestDispatcher.forward(request, response);*/
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-        ApartmentService apartmentService = new ApartmentService();
-        ApartmentEntity apartmentEntity = null;
+        ApartmentSaleService apartmentSaleService = new ApartmentSaleService();
+        ApartmentSaleEntity apartmentSaleEntity = null;
         try {
-            apartmentEntity = new ApartmentBuilder(request).build();
+            apartmentSaleEntity = new ApartmentSaleBuilder(request).build();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-       if(request.getServletPath().equals("/addApartment")) {
+      /* if(request.getServletPath().equals("/addApartment")) {
            if (apartmentService.addApartment(apartmentEntity)) {
                request.setAttribute("isApartmentAdded", "true");
            }
@@ -88,10 +91,11 @@ public class ApartmentSaleServlet extends HttpServlet {
                 request.setAttribute("isApartmentdel", "false");
                 doGet(request, response);
             }
-        }
-        if(request.getServletPath().equals("/listApartments")) {
-            List<ApartmentEntity> apartmentEntityList = new ArrayList<ApartmentEntity>(apartmentService.getApartmentsList(1000, 0,apartmentEntity));
-            request.setAttribute("apartments",apartmentEntityList);
+        }*/
+        if(request.getServletPath().equals("/listApartmentSales")) {
+            List<ApartmentSaleEntity> apartmentSaleEntityList = new ArrayList<ApartmentSaleEntity>(
+                    apartmentSaleService.getApartmentSales(1000, 0,apartmentSaleEntity));
+            request.setAttribute("apartmentSales",apartmentSaleEntityList);
             doGet(request, response);
         }
     }

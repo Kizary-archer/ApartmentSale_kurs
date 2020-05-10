@@ -1,5 +1,6 @@
-package app.DAO.DAOinterfaces;
+package app.DAO;
 
+import app.DAO.DAOinterfaces.ApartmentSaleDAO;
 import app.entities.ApartmentEntity;
 import app.entities.ApartmentSaleEntity;
 import app.entities.HouseView;
