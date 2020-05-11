@@ -1,5 +1,7 @@
 package app.entities;
 
+import com.google.gson.annotations.Expose;
+
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
@@ -7,15 +9,26 @@ import java.util.Objects;
 @Entity
 @Table(name = "apartment", schema = "public", catalog = "sale_of_apartments")
 public class ApartmentEntity {
+    @Expose()//gson
     private Integer idApartment;
+    @Expose()
     private Integer numberApartment;
+    @Expose()
     private Integer countRoom;
+    @Expose()
     private Float livingSpace;
+    @Expose()
     private Integer house;
+    @Expose()
     private Integer apartmentOwner;
+    @Expose()
     private Integer meterPrice;
+
+    @Expose(serialize = false, deserialize = false)
     private HouseEntity houseByHouse;
+    @Expose (serialize = false, deserialize = false)
     private ClientEntity clientByApartmentOwner;
+    @Expose (serialize = false, deserialize = false)
     private Collection<ApartmentSaleEntity> apartmentSalesByIdApartment;
 
     @Id

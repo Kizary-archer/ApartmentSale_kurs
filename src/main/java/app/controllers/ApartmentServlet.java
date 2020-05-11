@@ -5,6 +5,7 @@ import app.builder.HouseViewBuilder;
 import app.entities.*;
 import app.services.ApartmentService;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -70,7 +71,10 @@ public class ApartmentServlet extends HttpServlet {
 
         if(request.getServletPath().equals("/DTApart")) {
             List<ApartmentEntity> apartmentEntityList = (List<ApartmentEntity>) apartmentService.getApartmentsList(1000,0,apartmentEntity);
-            String json = new Gson().toJson(apartmentEntityList);
+            Gson gson = new GsonBuilder()
+                                        .excludeFieldsWithoutExposeAnnotation()
+                                        .create();
+            String json = gson.toJson(apartmentEntityList);
             response.getWriter().write(json);
         }
 

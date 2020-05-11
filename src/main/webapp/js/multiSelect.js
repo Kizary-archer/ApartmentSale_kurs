@@ -27,9 +27,10 @@ $(document).ready( function () {
                 { "data": "meterPrice" }
             ]
         });
-        $('#tableApart tbody').on('click', 'tr', function () {
+        $('#DTApart tbody').on('click', 'tr', function () {
             var data = table.row( this ).data();
-            $("#apartment").val(data.idHouse.toString());
+            $("#apartment").val(data.idApartment.toString());
+            $("#ownerApartment").val(data.apartmentOwner.toString());
 
             if ( $(this).hasClass('selected') ) {
                 $(this).removeClass('selected');
