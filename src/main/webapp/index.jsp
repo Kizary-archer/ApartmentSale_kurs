@@ -1,15 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="/view/template/header.jsp"/>
-<div>
-    <h1>Super app!</h1>
-</div>
 
-<div>       <!-- content -->
-    <div>    <!-- buttons holder -->
-        <button onclick="location.href='./addClient'">add users</button>
-        <button onclick="location.href='./addDocument?idClient=3'">view</button>
-    </div>
+<div>
     <c:if test="${isDocumentdel == true}">
         <div class="alert alert-success alert-dismissible fade show col-md-4" role="alert">
             <strong>Документ удалён</strong>
@@ -50,6 +43,11 @@
             </button>
         </div>
     </c:if>
+</div>
+<div class="mx-auto" style="width: 800px;">
+    <button type="button" class="btn btn-primary btn-lg" onclick="document.location = './addClient'">Добавить клиента</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="document.location = './addApartmentSale'">Добавить квартиру</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="document.location = './addApartmentSale'">Продать квартиру</button>
 </div>
 </body>
 </html>

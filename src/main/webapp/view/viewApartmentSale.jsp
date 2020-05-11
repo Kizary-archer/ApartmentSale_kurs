@@ -244,7 +244,7 @@
                                         <input type="text" class="form-control" id="idAgent" name="idAgent">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary m-2" >Добавить</button>
+                                <button type="submit" class="btn btn-primary m-2" >Найти</button>
                             </form>
                         </div>
                         <table id="DTAgent" class="display">
