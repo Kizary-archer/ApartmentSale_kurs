@@ -1,5 +1,7 @@
 package app.entities;
 
+import com.google.gson.annotations.Expose;
+
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Collection;
@@ -8,34 +10,29 @@ import java.util.Objects;
 @Entity
 @Table(name = "client", schema = "public", catalog = "sale_of_apartments")
 public class ClientEntity {
+    @Expose()
     private Integer idClient;
+    @Expose()
     private String name;
+    @Expose()
     private String surname;
+    @Expose()
     private String patronymic;
+    @Expose()
     private Date dateOfBirth;
+    @Expose()
     private String phoneNumber;
+    @Expose()
     private String email;
+    @Expose()
     private Boolean gender;
-    private Collection<ApartmentEntity> apartmentsByIdClient;
-    private Collection<ApartmentSaleEntity> apartmentSalesByIdClient;
-    private Collection<DocumentsClientEntity> documentsClientsByIdClient;
 
-    public ClientEntity(){}
-    public ClientEntity(String name,
-                        String surname,
-                        String patronymic,
-                        Date dateOfBirth,
-                        String phoneNumber,
-                        String email,
-                        Boolean gender){
-        this.name = name;
-        this.surname = surname;
-        this.patronymic = patronymic;
-        this.dateOfBirth = dateOfBirth;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.gender = gender;
-    }
+    @Expose(serialize = false, deserialize = false)
+    private Collection<ApartmentEntity> apartmentsByIdClient;
+    @Expose(serialize = false, deserialize = false)
+    private Collection<ApartmentSaleEntity> apartmentSalesByIdClient;
+    @Expose(serialize = false, deserialize = false)
+    private Collection<DocumentsClientEntity> documentsClientsByIdClient;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -60,10 +57,7 @@ public class ClientEntity {
 
     @Basic
     @Column(name = "surname", nullable = false, length = 50)
-    public String getSurname() {
-        int a = 1;
-        return surname;
-    }
+    public String getSurname() {return surname;}
 
     public void setSurname(String surname) {
         this.surname = surname;

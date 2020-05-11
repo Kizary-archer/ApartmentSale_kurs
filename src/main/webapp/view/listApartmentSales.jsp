@@ -3,7 +3,7 @@
 <jsp:include page="template/header.jsp"/>
 <div>
     <div class="p-3">
-        <h2>Поиск сделок</h2>
+        <h2>Поиск продаж</h2>
         <div class="w-50 p-3" >
             <form method="post" id = "formApartAdd">
                 <div class="form-row">
@@ -33,7 +33,7 @@
                         <label for="price">Цена продажи</label>
                         <input type="text" class="form-control" id="price" name="price">
                     </div>
-                    <div class="form-group col-md-3">
+                    <div class="form-group col-md-2">
                         <label for="idSale">id продажи</label>
                         <input type="text" class="form-control" id="idSale" name="idSale">
                     </div>

@@ -1,8 +1,12 @@
 package app.controllers;
 
 import app.builder.ClientBuilder;
+import app.entities.ApartmentEntity;
+import app.entities.ApartmentSaleEntity;
 import app.entities.ClientEntity;
 import app.services.ClientService;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/listClients","/addClient","/delClient","/updClient","/viewClient"})
+@WebServlet(urlPatterns = {"/listClients","/addClient","/delClient","/updClient","/viewClient","/DTClient"})
 public class ClientServlet extends HttpServlet {
 
     @Override
@@ -45,15 +49,22 @@ public class ClientServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         ClientService clientService = new ClientService();
-        ClientEntity clientEntity = new ClientBuilder(request).build();
-       // Iterator<String> header = request.getParameterNames().asIterator();
-       /* while(header.hasNext()){
-            if(request.getParameter(header.next()).equals("")) {
-                request.setAttribute("client", "не добавлен");
-                RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/addClient.jsp");
-                requestDispatcher.forward(request, response);
-            }
-        }*/
+        ClientEntity clientEntity = null;
+        try {
+        clientEntity = new ClientBuilder(request).build();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        if(request.getServletPath().equals("/DTClient")) {
+            List<ClientEntity> clientEntityList = (List<ClientEntity>) clientService.getClients(1000,0,clientEntity);
+            Gson gson = new GsonBuilder()
+                    .excludeFieldsWithoutExposeAnnotation()
+                    .create();
+            String json = gson.toJson(clientEntityList);
+            response.getWriter().write(json);
+        }
+
         if(request.getServletPath().equals("/addClient")) {
             if (clientService.addClient(clientEntity)) {
                 request.setAttribute("isClientAdded", "true");

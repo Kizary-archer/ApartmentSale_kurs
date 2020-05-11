@@ -45,7 +45,7 @@
                     Продажа квартир
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="./listApartmentSales">Найти сделку</a>
+                    <a class="dropdown-item" href="./listApartmentSales">Найти продажу</a>
                     <a class="dropdown-item" href="./addApartmentSale">Продать квартиру</a>
                 </div>
                 </li>

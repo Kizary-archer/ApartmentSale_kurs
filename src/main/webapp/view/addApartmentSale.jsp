@@ -3,7 +3,7 @@
 <jsp:include page="template/header.jsp"/>
 <div>
     <div class="p-3">
-        <h2>Новая сделка</h2>
+        <h2>Новая продажа</h2>
         <div class="w-50 p-3" >
             <form method="post" id = "formApartSale">
                 <div class="form-row">
@@ -13,17 +13,17 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="ownerApartment">Владелец </label>
-                        <input type="text" class="form-control" id="ownerApartment" name="ownerApartment" >
+                        <input type="text" class="form-control" id="ownerApartment" name="ownerApartment" readonly>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="buyer">Покупатель</label>
-                        <input type="text" class="form-control" id="buyer" name="buyer" >
+                        <input type="text" class="form-control" id="buyer" name="buyer" readonly>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-3">
                         <label for="agent">Агент</label>
-                        <input type="text" class="form-control" id="agent" name="agent" >
+                        <input type="text" class="form-control" id="agent" name="agent" readonly>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="date">Дата продажи</label>
@@ -39,7 +39,7 @@
         </div>
         <c:if test="${isApartmentSaleAdded == true}">
             <div class="alert alert-success alert-dismissible fade show col-md-4" role="alert">
-                <strong>Сделка добавлена</strong>
+                <strong>продажа добавлена</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -47,7 +47,7 @@
         </c:if>
         <c:if test="${isApartmentSaleAdded == false}">
             <div class="alert alert-danger alert-dismissible fade show col-md-4" role="alert">
-                <strong>Сделка не добавлена</strong> Проверьте вводимые значения
+                <strong>продажа не добавлена</strong> Проверьте вводимые значения
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -123,7 +123,68 @@
                 </div>
                 <div id="collapseTwo" class="collapse multi-collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
-                        <jsp:include page="template/ClientTempl/DTApartClient.jsp"/>
+                        <div class="w-50 p-3" >
+                            <h2>Добавить клиента</h2>
+                            <form method="post" id = "formClient">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="name">Имя</label>
+                                        <input type="text" class="form-control" id="name" name="name">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="surname">Фамилия</label>
+                                        <input type="text" class="form-control" id="surname" name="surname" >
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="patronymic">Отчество</label>
+                                        <input type="text" class="form-control" id="patronymic" name="patronymic" >
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="gender">Пол</label>
+                                        <select id="gender" class="form-control" name="gender" >
+                                            <option value="" selected>Выберите пол</option>
+                                            <option value="true" >мужчина</option>
+                                            <option value="false">женщина</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="dateOfBirth">Дата Рождения</label>
+                                        <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="phoneNumber">Телефон</label>
+                                        <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" >
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="idClient">id Клиента</label>
+                                        <input type="text" class="form-control" id="idClient" name="idClient">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="example@.com">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Найти</button>
+                            </form>
+                        </div>
+                        <table id="DTClient" class="display">
+                            <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Имя</th>
+                                <th>Фамилия</th>
+                                <th>Отчество</th>
+                                <th>Дата рождения</th>
+                                <th>Телефон</th>
+                                <th>Email</th>
+                                <th>Пол</th>
+                            </tr>
+                            </thead>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -137,7 +198,52 @@
                 </div>
                 <div id="collapseThree" class="collapse multi-collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <div class="card-body">
-                        <jsp:include page="template/ClientTempl/DTApartSaleClient.jsp"/>
+                        <div class="w-50 m-3" >
+                            <form method="post" id = "formAgent">
+                                <h2>Агент</h2>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="Aname">Имя</label>
+                                        <input type="text" class="form-control" id="Aname" name="Aname">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="Asurname">Фамилия</label>
+                                        <input type="text" class="form-control" id="Asurname" name="Asurname">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="Apatronymic">Отчество</label>
+                                        <input type="text" class="form-control" id="Apatronymic" name="Apatronymic">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="Apercent">Процент с продаж</label>
+                                        <input type="text" class="form-control" id="Apercent" name="Apercent">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="AphoneNumber">Телефон</label>
+                                        <input type="text" class="form-control" id="AphoneNumber" name="AphoneNumber">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="idAgent">id Агента</label>
+                                        <input type="text" class="form-control" id="idAgent" name="idAgent">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary m-2" >Добавить</button>
+                            </form>
+                        </div>
+                        <table id="DTAgent" class="display">
+                            <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Имя</th>
+                                <th>Фамилия</th>
+                                <th>Отчество</th>
+                                <th>Процент</th>
+                                <th>Телефон</th>
+                            </tr>
+                            </thead>
+                        </table>
                     </div>
                 </div>
             </div>

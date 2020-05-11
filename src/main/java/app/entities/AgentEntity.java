@@ -1,5 +1,7 @@
 package app.entities;
 
+import com.google.gson.annotations.Expose;
+
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
@@ -7,12 +9,20 @@ import java.util.Objects;
 @Entity
 @Table(name = "agent", schema = "public", catalog = "sale_of_apartments")
 public class AgentEntity {
+    @Expose()
     private Integer idAgent;
+    @Expose()
     private String name;
+    @Expose()
     private String surname;
+    @Expose()
     private String patronymic;
+    @Expose()
     private Integer percent;
+    @Expose()
     private Integer phoneNumber;
+
+    @Expose(serialize = false, deserialize = false)
     private Collection<ApartmentSaleEntity> apartmentSalesByIdAgent;
 
     @Id

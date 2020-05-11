@@ -42,7 +42,7 @@
                     </button>
                 </h5>
             </div>
-            <div id="collapseOne" class="collapse multi-collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div id="collapseOne" class="collapse multi-collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body" >
                     <div id = "HouseViewCard"></div>
                     <jsp:include page="template/ApartmentTemp/DTApartments.jsp"/>
