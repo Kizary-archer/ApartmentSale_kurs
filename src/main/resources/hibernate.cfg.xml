@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/sale_of_apartments</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">147q5w963</property>
+
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.connection.release_mode">auto</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.connection.autoReconnect">true</property>
+
+
+        <mapping class="app.entities.AgentEntity"/>
+        <mapping class="app.entities.ApartmentEntity"/>
+        <mapping class="app.entities.ApartmentSaleEntity"/>
+        <mapping class="app.entities.CityEntity"/>
+        <mapping class="app.entities.ClientEntity"/>
+        <mapping class="app.entities.DistrictEntity"/>
+        <mapping class="app.entities.DocumentTypeEntity"/>
+        <mapping class="app.entities.DocumentsClientEntity"/>
+        <mapping class="app.entities.HouseEntity"/>
+        <mapping class="app.entities.SeriesHouseEntity"/>
+        <mapping class="app.entities.StreetEntity"/>
+        <mapping class="app.entities.NameStreetEntity"/>
+        <mapping class="app.entities.HouseView"/>
+
+    </session-factory>
+</hibernate-configuration>
