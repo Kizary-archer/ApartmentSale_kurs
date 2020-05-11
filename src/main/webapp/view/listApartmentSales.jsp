@@ -58,9 +58,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" charset="utf8">
-    <%@include file='./../js/houseSelect.js' %>
-</script>
+
     <script type="text/javascript">
         $(document).ready( function () {
             $('#tableApart').DataTable();

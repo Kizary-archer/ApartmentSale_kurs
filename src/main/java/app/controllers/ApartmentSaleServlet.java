@@ -31,16 +31,15 @@ public class ApartmentSaleServlet extends HttpServlet {
            requestDispatcher = request.getRequestDispatcher("view/listApartmentSales.jsp");
            requestDispatcher.forward(request, response);
        }
-       /* if(request.getServletPath().equals("/addApartment")) {
-            request.setAttribute("apartmentOwner", request.getParameter("idClient"));
-            requestDispatcher = request.getRequestDispatcher("view/addApartment.jsp");
-        }else { //вывод отпеделёной кв. или её обновление
+        if(request.getServletPath().equals("/addApartmentSale")) {
+            requestDispatcher = request.getRequestDispatcher("view/addApartmentSale.jsp");
+        }/*else { //вывод отпеделёной кв. или её обновление
             ApartmentEntity apartmentEntity = apartmentService.getApartmentAllChild(Integer.parseInt(request.getParameter("idApartment")));//получение определённой квартиры из бд
             request.setAttribute("apartment", apartmentEntity);
             requestDispatcher = request.getRequestDispatcher("view/viewApartment.jsp");
-        }
+        }*/
         assert requestDispatcher != null;
-        requestDispatcher.forward(request, response);*/
+        requestDispatcher.forward(request, response);
     }
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
@@ -52,14 +51,14 @@ public class ApartmentSaleServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-      /* if(request.getServletPath().equals("/addApartment")) {
-           if (apartmentService.addApartment(apartmentEntity)) {
-               request.setAttribute("isApartmentAdded", "true");
+       if(request.getServletPath().equals("/addApartmentSale")) {
+           if (apartmentSaleService.addApartment(apartmentSaleEntity)) {
+               request.setAttribute("isApartmentSaleAdded", "true");
            }
-           else request.setAttribute("isApartmentAdded", "false");
+           else request.setAttribute("isApartmentSaleAdded", "false");
            doGet(request, response);
         }
-
+/*
         if(request.getServletPath().equals("/searchHouse")) {
             HouseView houseView = null;
             try {

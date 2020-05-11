@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/addApartment","/searchHouse","/updApartment","/viewApartment","/delApartment","/listApartments"})
+@WebServlet(urlPatterns = {"/addApartment","/searchHouse","/updApartment","/viewApartment","/delApartment","/listApartments","/DTApart"})
 public class ApartmentServlet extends HttpServlet {
 
     @Override
@@ -65,6 +65,12 @@ public class ApartmentServlet extends HttpServlet {
             }
             List<HouseView> houseEntityList = (List<HouseView>) apartmentService.getHouses(1000,0,houseView);
             String json = new Gson().toJson(houseEntityList);
+            response.getWriter().write(json);
+        }
+
+        if(request.getServletPath().equals("/DTApart")) {
+            List<ApartmentEntity> apartmentEntityList = (List<ApartmentEntity>) apartmentService.getApartmentsList(1000,0,apartmentEntity);
+            String json = new Gson().toJson(apartmentEntityList);
             response.getWriter().write(json);
         }
 
