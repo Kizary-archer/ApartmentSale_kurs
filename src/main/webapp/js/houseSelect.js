@@ -1,7 +1,6 @@
 $(document).ready( function () {
     var table;
 
-
     $("#formSearchHouse").submit(function(event) {
         event.preventDefault();
         //window.location.reload();

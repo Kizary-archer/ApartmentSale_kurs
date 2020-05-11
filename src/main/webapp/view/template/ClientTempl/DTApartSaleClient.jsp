@@ -14,7 +14,7 @@
     </thead>
     <tbody>
     <c:forEach var="ApartmentSaleEntity" items="${client.apartmentSalesByIdClient}">
-        <tr>
+        <tr onclick="document.location = './viewApartmentSale?idSale=${ApartmentSaleEntity.idSale}'">
             <td><c:out value="${ApartmentSaleEntity.idSale}"/></td>
             <td><c:out value="${ApartmentSaleEntity.apartment}"/></td>
             <td><c:out value="${ApartmentSaleEntity.ownerApartment}"/></td>

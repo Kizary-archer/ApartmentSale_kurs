@@ -1,5 +1,4 @@
 $(document).ready( function () {
-
     $("#formApart").submit(function(event) {
         event.preventDefault();
 
