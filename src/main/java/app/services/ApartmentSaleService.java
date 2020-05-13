@@ -2,6 +2,7 @@ package app.services;
 
 import app.DAO.DAOinterfaces.ApartmentDAO;
 import app.DAO.DAOinterfaces.ApartmentSaleDAO;
+import app.DAO.DAOinterfaces.ClientDAO;
 import app.Util.DAOCreateFactoryUtil;
 import app.entities.ApartmentEntity;
 import app.entities.ApartmentSaleEntity;
@@ -13,6 +14,12 @@ public class ApartmentSaleService {
 
     public boolean addApartment(ApartmentSaleEntity apartmentSaleEntity){
         ApartmentSaleDAO apartmentSaleDAO = DAOCreateFactoryUtil.getInstance().getApartmentSaleDAO();
+        ApartmentService apartmentService = new ApartmentService();
+        ApartmentEntity apartmentEntity = new ApartmentEntity();
+        apartmentEntity.setIdApartment(apartmentSaleEntity.getApartment());
+        apartmentEntity.setApartmentOwner(apartmentSaleEntity.getBuyer());
+        if(!apartmentService.updApartment(apartmentEntity))return false;//покупка квартиры
+                                    
         return  apartmentSaleDAO.add(apartmentSaleEntity);
     }
     public boolean delApartment(ApartmentSaleEntity apartmentSaleEntity){

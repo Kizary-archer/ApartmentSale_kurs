@@ -44,10 +44,10 @@
         </div>
     </c:if>
 </div>
-<div class="mx-auto" style="width: 800px;">
-    <button type="button" class="btn btn-primary btn-lg" onclick="document.location = './addClient'">Добавить клиента</button>
-    <button type="button" class="btn btn-primary btn-lg" onclick="document.location = './addApartmentSale'">Добавить квартиру</button>
-    <button type="button" class="btn btn-primary btn-lg" onclick="document.location = './addApartmentSale'">Продать квартиру</button>
+<div class="mx-auto" style="width: 200px;">
+    <button type="button" class="btn btn-primary btn-lg m-3" onclick="document.location = './addClient'">Добавить клиента</button>
+    <button type="button" class="btn btn-primary btn-lg  m-3" onclick="document.location = './addApartmentSale'">Добавить квартиру</button>
+    <button type="button" class="btn btn-primary btn-lg  m-3" onclick="document.location = './addApartmentSale'">Продать квартиру</button>
 </div>
 </body>
 </html>
