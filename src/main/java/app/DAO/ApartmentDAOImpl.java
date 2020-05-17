@@ -1,8 +1,8 @@
 package app.DAO;
 
 import app.DAO.DAOinterfaces.ApartmentDAO;
-import app.entities.ApartmentEntity;
-import app.entities.HouseView;
+import app.entityes.ApartmentEntity;
+import app.entityes.HouseView;
 import org.hibernate.Session;
 
 import javax.persistence.Query;

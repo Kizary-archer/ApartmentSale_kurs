@@ -1,7 +1,6 @@
 package app.builder;
 
-import app.entities.ApartmentEntity;
-import app.entities.ApartmentSaleEntity;
+import app.entityes.ApartmentSaleEntity;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;

@@ -1,10 +1,8 @@
 package app.builder;
 
-import app.entities.ApartmentEntity;
-import app.entities.ClientEntity;
+import app.entityes.ApartmentEntity;
 
 import javax.servlet.http.HttpServletRequest;
-import java.sql.Date;
 
 public final class ApartmentBuilder {
     ApartmentEntity apartmentEntity = new ApartmentEntity();

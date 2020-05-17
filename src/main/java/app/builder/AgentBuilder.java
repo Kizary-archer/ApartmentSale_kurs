@@ -1,9 +1,8 @@
 package app.builder;
 
-import app.entities.AgentEntity;
+import app.entityes.AgentEntity;
 
 import javax.servlet.http.HttpServletRequest;
-import java.sql.Date;
 
 public final class AgentBuilder {
     AgentEntity agentEntity = new AgentEntity();

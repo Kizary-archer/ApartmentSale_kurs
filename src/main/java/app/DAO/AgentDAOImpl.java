@@ -1,9 +1,7 @@
 package app.DAO;
 
 import app.DAO.DAOinterfaces.AgentDAO;
-import app.DAO.DAOinterfaces.ClientDAO;
-import app.entities.AgentEntity;
-import app.entities.ClientEntity;
+import app.entityes.AgentEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;

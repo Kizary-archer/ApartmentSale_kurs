@@ -1,7 +1,6 @@
 package app.DAO.DAOinterfaces;
 
-import app.entities.ApartmentSaleEntity;
-import app.entities.ClientEntity;
+import app.entityes.ApartmentSaleEntity;
 
 import java.util.Collection;
 

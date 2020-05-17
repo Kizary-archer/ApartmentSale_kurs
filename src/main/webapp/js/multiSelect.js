@@ -2,13 +2,13 @@ $(document).ready( function () {
     $("#formApart").submit(function(event) {
         event.preventDefault();
 
-      var table = $('#DTApart').DataTable( {
+        const table = $('#DTApart').DataTable({
             destroy: true,
             'ajax': {
                 'type': 'POST',
                 'url': './DTApart',
                 "dataSrc": "",
-                "data": function ( d ) {
+                "data": function (d) {
                     d.idApartment = $('#idApartment').val();
                     d.numberApartment = $('#numberApartment').val();
                     d.countRoom = $('#countRoom').val();
@@ -17,13 +17,13 @@ $(document).ready( function () {
                 }
             },
             "columns": [
-                { "data": "idApartment" },
-                { "data": "numberApartment" },
-                { "data": "countRoom" },
-                { "data": "livingSpace" },
-                { "data": "house" },
-                { "data": "apartmentOwner" },
-                { "data": "meterPrice" }
+                {"data": "idApartment"},
+                {"data": "numberApartment"},
+                {"data": "countRoom"},
+                {"data": "livingSpace"},
+                {"data": "house"},
+                {"data": "apartmentOwner"},
+                {"data": "meterPrice"}
             ]
         });
         $('#DTApart tbody').on('click', 'tr', function () {

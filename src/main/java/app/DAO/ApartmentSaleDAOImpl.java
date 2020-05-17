@@ -1,9 +1,7 @@
 package app.DAO;
 
 import app.DAO.DAOinterfaces.ApartmentSaleDAO;
-import app.entities.ApartmentEntity;
-import app.entities.ApartmentSaleEntity;
-import app.entities.HouseView;
+import app.entityes.ApartmentSaleEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
@@ -12,7 +10,6 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class ApartmentSaleDAOImpl implements ApartmentSaleDAO {

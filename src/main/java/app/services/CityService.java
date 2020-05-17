@@ -1,12 +1,5 @@
 package app.services;
 
-import app.DAO.DAOinterfaces.CityDAO;
-import app.Util.DAOCreateFactoryUtil;
-import app.entities.CityEntity;
-
-import java.sql.SQLException;
-import java.util.Collection;
-
 public class CityService {
 /*
     public boolean addCity(String cityName) throws SQLException {

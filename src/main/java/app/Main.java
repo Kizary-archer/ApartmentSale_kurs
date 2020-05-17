@@ -1,15 +1,9 @@
 package app;
 
-import app.DAO.CityDAOImpl;
-import app.DAO.DAOinterfaces.CityDAO;
-import app.entities.*;
+import app.entityes.*;
 import app.services.ClientService;
 
-import java.sql.Date;
 import java.sql.SQLException;
-import java.util.Collection;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main (String args[]) throws SQLException {

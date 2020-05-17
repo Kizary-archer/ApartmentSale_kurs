@@ -1,9 +1,8 @@
-package app.entities;
+package app.entityes;
 
 import org.hibernate.annotations.Immutable;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
 @Immutable

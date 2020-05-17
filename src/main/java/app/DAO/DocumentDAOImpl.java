@@ -1,19 +1,11 @@
 package app.DAO;
 
-import app.DAO.DAOinterfaces.ClientDAO;
 import app.DAO.DAOinterfaces.DocumentDAO;
-import app.entities.ClientEntity;
-import app.entities.DocumentTypeEntity;
-import app.entities.DocumentsClientEntity;
+import app.entityes.DocumentTypeEntity;
+import app.entityes.DocumentsClientEntity;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class DocumentDAOImpl implements DocumentDAO {

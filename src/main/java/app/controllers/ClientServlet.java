@@ -1,9 +1,7 @@
 package app.controllers;
 
 import app.builder.ClientBuilder;
-import app.entities.ApartmentEntity;
-import app.entities.ApartmentSaleEntity;
-import app.entities.ClientEntity;
+import app.entityes.ClientEntity;
 import app.services.ClientService;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -16,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 @WebServlet(urlPatterns = {"/listClients","/addClient","/delClient","/updClient","/viewClient","/DTClient"})

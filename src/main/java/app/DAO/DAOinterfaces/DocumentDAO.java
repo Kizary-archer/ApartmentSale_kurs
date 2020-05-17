@@ -1,8 +1,7 @@
 package app.DAO.DAOinterfaces;
 
-import app.entities.ClientEntity;
-import app.entities.DocumentTypeEntity;
-import app.entities.DocumentsClientEntity;
+import app.entityes.DocumentTypeEntity;
+import app.entityes.DocumentsClientEntity;
 
 import java.util.Collection;
 

@@ -1,10 +1,9 @@
 package app.DAO.DAOinterfaces;
 
-import app.entities.ApartmentEntity;
-import app.entities.HouseView;
+import app.entityes.ApartmentEntity;
+import app.entityes.HouseView;
 
 import java.util.Collection;
-import java.util.List;
 
 public interface ApartmentDAO extends DAOMain<ApartmentEntity> {
 
