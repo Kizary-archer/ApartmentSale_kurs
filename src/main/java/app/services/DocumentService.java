@@ -1,11 +1,9 @@
 package app.services;
 
-import app.DAO.DAOinterfaces.ClientDAO;
 import app.DAO.DAOinterfaces.DocumentDAO;
 import app.Util.DAOCreateFactoryUtil;
-import app.entities.*;
+import app.entityes.*;
 
-import java.sql.Date;
 import java.util.Collection;
 
 public class DocumentService {

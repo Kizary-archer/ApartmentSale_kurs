@@ -1,11 +1,8 @@
 package app.controllers;
 
-import app.builder.ClientBuilder;
 import app.builder.DocumentBuilder;
-import app.entities.ClientEntity;
-import app.entities.DocumentTypeEntity;
-import app.entities.DocumentsClientEntity;
-import app.services.ClientService;
+import app.entityes.DocumentTypeEntity;
+import app.entityes.DocumentsClientEntity;
 import app.services.DocumentService;
 
 import javax.servlet.RequestDispatcher;
@@ -15,7 +12,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(urlPatterns = {"/addDocument","/delDocument","/updDocument","/viewDocument"})

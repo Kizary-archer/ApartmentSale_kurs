@@ -1,7 +1,6 @@
 package app.builder;
 
-import app.entities.ClientEntity;
-import app.entities.DocumentsClientEntity;
+import app.entityes.DocumentsClientEntity;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;

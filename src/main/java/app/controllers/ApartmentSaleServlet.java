@@ -1,14 +1,8 @@
 package app.controllers;
 
-import app.builder.ApartmentBuilder;
 import app.builder.ApartmentSaleBuilder;
-import app.builder.HouseViewBuilder;
-import app.entities.ApartmentEntity;
-import app.entities.ApartmentSaleEntity;
-import app.entities.HouseView;
+import app.entityes.ApartmentSaleEntity;
 import app.services.ApartmentSaleService;
-import app.services.ApartmentService;
-import com.google.gson.Gson;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

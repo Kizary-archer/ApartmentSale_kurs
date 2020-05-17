@@ -58,9 +58,6 @@
                         <a class="dropdown-item" href="./addAgent">Добавить агента</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#">Справочники</a>
-                </li>
             </ul>
         </div>
     </nav>

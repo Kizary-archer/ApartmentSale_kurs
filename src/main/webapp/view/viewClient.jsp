@@ -4,7 +4,7 @@
 <div class="p-3">
     <div class="w-50 m-3" >
         <form method="post">
-            <h2>Добавить клиента</h2>
+            <h2>Информация о клиенте</h2>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="name">Имя</label>

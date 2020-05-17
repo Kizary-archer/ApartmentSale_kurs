@@ -1,4 +1,4 @@
-package app.entities;
+package app.entityes;
 
 import javax.persistence.*;
 import java.sql.Date;

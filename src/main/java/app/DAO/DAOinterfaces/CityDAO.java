@@ -1,6 +1,6 @@
 package app.DAO.DAOinterfaces;
 
-import app.entities.CityEntity;
+import app.entityes.CityEntity;
 
 import java.sql.SQLException;
 import java.util.Collection;

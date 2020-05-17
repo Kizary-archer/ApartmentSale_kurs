@@ -1,10 +1,9 @@
 package app.builder;
 
-import app.entities.ClientEntity;
+import app.entityes.ClientEntity;
 
 import javax.servlet.http.HttpServletRequest;
 import java.sql.Date;
-import java.util.Iterator;
 
 public final class ClientBuilder {
     ClientEntity clientEntity = new ClientEntity();

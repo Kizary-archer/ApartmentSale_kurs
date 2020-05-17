@@ -2,11 +2,10 @@ package app.services;
 
 import app.DAO.DAOinterfaces.ApartmentDAO;
 import app.Util.DAOCreateFactoryUtil;
-import app.entities.ApartmentEntity;
-import app.entities.HouseView;
+import app.entityes.ApartmentEntity;
+import app.entityes.HouseView;
 
 import java.util.Collection;
-import java.util.List;
 
 public class ApartmentService {
 

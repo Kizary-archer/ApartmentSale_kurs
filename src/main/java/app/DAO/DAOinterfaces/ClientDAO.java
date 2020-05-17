@@ -1,8 +1,7 @@
 package app.DAO.DAOinterfaces;
 
-import app.entities.ClientEntity;
+import app.entityes.ClientEntity;
 
-import java.util.Date;
 import java.util.Collection;
 
 public interface ClientDAO extends DAOMain<ClientEntity> {

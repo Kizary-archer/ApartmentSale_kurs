@@ -1,6 +1,6 @@
 package app.builder;
 
-import app.entities.HouseView;
+import app.entityes.HouseView;
 
 import javax.servlet.http.HttpServletRequest;
 

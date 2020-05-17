@@ -124,7 +124,7 @@
                 <div id="collapseTwo" class="collapse multi-collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body">
                         <div class="w-50 p-3" >
-                            <h2>Добавить клиента</h2>
+                            <h2>Список клиентов</h2>
                             <form method="post" id = "formClient">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -200,7 +200,7 @@
                     <div class="card-body">
                         <div class="w-50 m-3" >
                             <form method="post" id = "formAgent">
-                                <h2>Агент</h2>
+                                <h2>Список Агентов</h2>
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label for="Aname">Имя</label>
@@ -229,7 +229,7 @@
                                         <input type="text" class="form-control" id="idAgent" name="idAgent">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary m-2" >Добавить</button>
+                                <button type="submit" class="btn btn-primary m-2" >Найти</button>
                             </form>
                         </div>
                         <table id="DTAgent" class="display">

@@ -1,11 +1,8 @@
 package app.controllers;
 
 import app.builder.AgentBuilder;
-import app.builder.ClientBuilder;
-import app.entities.AgentEntity;
-import app.entities.ClientEntity;
+import app.entityes.AgentEntity;
 import app.services.AgentService;
-import app.services.ClientService;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

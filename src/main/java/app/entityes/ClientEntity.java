@@ -1,4 +1,4 @@
-package app.entities;
+package app.entityes;
 
 import com.google.gson.annotations.Expose;
 

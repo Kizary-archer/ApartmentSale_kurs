@@ -2,7 +2,7 @@ package app.controllers;
 
 import app.builder.ApartmentBuilder;
 import app.builder.HouseViewBuilder;
-import app.entities.*;
+import app.entityes.*;
 import app.services.ApartmentService;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

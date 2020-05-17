@@ -17,19 +17,19 @@
         <property name="hibernate.connection.autoReconnect">true</property>
 
 
-        <mapping class="app.entities.AgentEntity"/>
-        <mapping class="app.entities.ApartmentEntity"/>
-        <mapping class="app.entities.ApartmentSaleEntity"/>
-        <mapping class="app.entities.CityEntity"/>
-        <mapping class="app.entities.ClientEntity"/>
-        <mapping class="app.entities.DistrictEntity"/>
-        <mapping class="app.entities.DocumentTypeEntity"/>
-        <mapping class="app.entities.DocumentsClientEntity"/>
-        <mapping class="app.entities.HouseEntity"/>
-        <mapping class="app.entities.SeriesHouseEntity"/>
-        <mapping class="app.entities.StreetEntity"/>
-        <mapping class="app.entities.NameStreetEntity"/>
-        <mapping class="app.entities.HouseView"/>
+        <mapping class="app.entityes.AgentEntity"/>
+        <mapping class="app.entityes.ApartmentEntity"/>
+        <mapping class="app.entityes.ApartmentSaleEntity"/>
+        <mapping class="app.entityes.CityEntity"/>
+        <mapping class="app.entityes.ClientEntity"/>
+        <mapping class="app.entityes.DistrictEntity"/>
+        <mapping class="app.entityes.DocumentTypeEntity"/>
+        <mapping class="app.entityes.DocumentsClientEntity"/>
+        <mapping class="app.entityes.HouseEntity"/>
+        <mapping class="app.entityes.SeriesHouseEntity"/>
+        <mapping class="app.entityes.StreetEntity"/>
+        <mapping class="app.entityes.NameStreetEntity"/>
+        <mapping class="app.entityes.HouseView"/>
 
     </session-factory>
 </hibernate-configuration>
